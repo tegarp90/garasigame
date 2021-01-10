@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pages extends CI_Controller {
+class Welcome extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,21 +20,6 @@ class Pages extends CI_Controller {
 	 */
 	public function index()
 	{
-
-		$data['status'] = 'tak login';
-		$data['content'] = 'contents/v_landing_page';
-		$this->load->view('tamplate/page',$data);
-	}
-
-	function profil()
-	{
-		$username = $this->input->post('username');
-		$password = $this->input->post('password');
-
-		$data['username'] = $username;
-		$data['password'] = $password;
-		$data['status'] = 'login';
-		$data['content'] = 'contents/v_profil';
-		$this->load->view('tamplate/page',$data);
+		$this->load->view('welcome_message');
 	}
 }
