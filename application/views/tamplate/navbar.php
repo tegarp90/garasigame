@@ -58,50 +58,33 @@
         <div class="collapse navbar-collapse" id="collapsingNavbar">
           <ul class="navbar-nav">
             <li class="nav-item dropdown dropdown-hover">
-              <a class="nav-link dropdown-toggle pl-lg-0" href="#" id="dropdownGaming_games" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Games </a>
-              <div class="dropdown-menu dropdown-menu-dark-lg" aria-labelledby="dropdownGaming_games">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Adventure</a>
-                <a class="dropdown-item" href="#">Cooperative</a>
-                <a class="dropdown-item" href="#">MMO</a>
-                <a class="dropdown-item" href="#">RPG</a>
-                <a class="dropdown-item" href="#">Simulation</a>
-                <a class="dropdown-item" href="#">Economy</a>
-                <a class="dropdown-item" href="#">Horror</a>
-                <a class="dropdown-item" href="#">Arcade</a>
-                <a class="dropdown-item" href="#">Hack & Slash</a>
-                <a class="dropdown-item" href="#">Puzzle</a>
+              <a class="nav-link dropdown-toggle pl-lg-0" href="#" id="dropdownTournament" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tournament </a>
+              <div class="dropdown-menu dropdown-menu-dark-lg" aria-labelledby="dropdownTournament">
+                <a class="dropdown-item" href="#">Tournament Garasi Game</a>
+                <a class="dropdown-item" href="#">Create Tournament</a>
               </div>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Marketplace </a>
+            </li>
             <li class="nav-item dropdown dropdown-hover">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdownGaming_software" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Software </a>
-              <div class="dropdown-menu dropdown-menu-dark-lg" aria-labelledby="dropdownGaming_software">
-                <a class="dropdown-item" href="#">Animation & Modeling</a>
-                <a class="dropdown-item" href="#">Audio Production</a>
-                <a class="dropdown-item" href="#">Design & Illustration</a>
-                <a class="dropdown-item" href="#">Education</a>
-                <a class="dropdown-item" href="#">Game Development</a>
-                <a class="dropdown-item" href="#">Photo Editing</a>
-                <a class="dropdown-item" href="#">Utilities</a>
-                <a class="dropdown-item" href="#">Video Production</a>
-                <a class="dropdown-item" href="#">Web Publishing</a>
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownNews" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News </a>
+              <div class="dropdown-menu dropdown-menu-dark-lg" aria-labelledby="dropdownNews">
+                <a class="dropdown-item" href="#">News Update </a>
+                <a class="dropdown-item" href="#">Games Update</a>
               </div>
             </li>
             <li class="nav-item dropdown dropdown-hover">
               <a class="nav-link dropdown-toggle" href="#" id="dropdownGaming_community" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community </a>
               <div class="dropdown-menu dropdown-menu-dark-lg" aria-labelledby="dropdownGaming_community">
-                <a class="dropdown-item" href="#">Discussions</a>
-                <a class="dropdown-item" href="#">Workshop</a>
-                <a class="dropdown-item" href="#">Market</a>
-                <a class="dropdown-item" href="#">Broadcasts</a>
+                <a class="dropdown-item" href="#">Gamers Forum</a>
+                <a class="dropdown-item" href="#">Media Social</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#">About Us</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Support</a>
-            </li>
+            
           </ul>
         </div>
       </div>
