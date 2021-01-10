@@ -53,10 +53,10 @@
             <a class="btn btn-sm text-light d-none d-sm-inline-block" href="#">Sign up</a>
             <ul class="nav navbar-nav d-none d-sm-inline-flex flex-row">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle small" href="#" id="dropdownGaming" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="mr-2 fas fa-globe"></i>EN </a>
+                <a class="nav-link dropdown-toggle small" href="#" id="dropdownGaming" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="mr-2 fas fa-globe"></i>ID </a>
                 <div class="dropdown-menu position-absolute" aria-labelledby="dropdownGaming">
+                  <a class="dropdown-item" href="#">Indonesia</a>
                   <a class="dropdown-item" href="#">English</a>
-                  <a class="dropdown-item" href="#">Deutsch</a>
                   <a class="dropdown-item" href="#">Español</a>
                 </div>
               </li>
