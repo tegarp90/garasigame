@@ -3,7 +3,7 @@
       <div class="container">
         <div class="row">
           <div class="col-4 col-sm-3 col-md-2 mr-auto">
-            <a class="navbar-brand logo" href="Home">
+            <a class="navbar-brand logo" href="<?php echo base_url(); ?>">
               <img src="assets/img/logo-gaming.png" alt="Wicodus" class="logo-light mx-auto">
             </a>
           </div>
@@ -16,16 +16,16 @@
             </form>
           </div>
           <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-4 ml-auto text-right">
-            <?php if ($_SESSION['web_sesi'] == false): ?>
+            <?php if (empty($_SESSION['web_sesi']) || $_SESSION['web_sesi'] == false): ?>
             <a class="btn btn-sm btn-warning text-secondary mr-2" href="#" data-toggle="modal" data-target="#userLogin">Sign in</a>
             <a class="btn btn-sm text-light d-none d-sm-inline-block" href="#">Sign up</a>
             <?php endif ?>
             <ul class="nav navbar-nav d-none d-sm-inline-flex flex-row">
-              <?php if ($_SESSION['web_sesi'] == true): ?>
+              <?php if (isset($_SESSION['web_sesi']) && $_SESSION['web_sesi'] == true): ?>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle small text-capitalize" href="#" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/img/avatar/2.jpg" class="img-xs rounded-circle mr-2" alt="Avatar"> <?php echo $_SESSION['username']; ?></a>
                 <div class="dropdown-menu position-absolute" aria-labelledby="dropdownUser">
-                  <a class="dropdown-item" href="Profile"><span class="mr-2"><i class="fas fa-user"></i></span>My Profile</a>
+                  <a class="dropdown-item" href="profile"><span class="mr-2"><i class="fas fa-user"></i></span>My Profile</a>
                   <a class="dropdown-item" href="#"><span class="mr-2"><i class="fas fa-wallet"></i></span>Wallet</a>
                   <a class="dropdown-item" href="#"><span class="mr-2"><i class="fas fa-cog"></i></span>Settings</a>
                   <a class="dropdown-item" href="logout"><span class="mr-2"><i class="fas fa-sign-out-alt"></i></span>Logout</a>
@@ -52,7 +52,7 @@
             <li class="nav-item dropdown dropdown-hover">
               <a class="nav-link dropdown-toggle pl-lg-0" href="#" id="dropdownTournament" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tournament </a>
               <div class="dropdown-menu dropdown-menu-dark-lg" aria-labelledby="dropdownTournament">
-                <a class="dropdown-item" href="Tournament">Tournament Garasi Game</a>
+                <a class="dropdown-item" href="tournament">Tournament Garasi Game</a>
                 <a class="dropdown-item" href="#">Create Tournament</a>
               </div>
             </li>

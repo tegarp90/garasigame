@@ -18,10 +18,13 @@ class Pages extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct()
+	{
+		parent::__construct();
+		
+	}
 	public function index()
 	{
-
-		$data['status'] = 'tak login';
 		$data['content'] = 'contents/v_landing_page';
 		$this->load->view('tamplate/page',$data);
 	}
