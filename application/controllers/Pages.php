@@ -26,7 +26,7 @@ class Pages extends CI_Controller {
 		$this->load->view('tamplate/page',$data);
 	}
 
-	function profil()
+	public function profil()
 	{
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
@@ -37,7 +37,7 @@ class Pages extends CI_Controller {
 		$data['content'] = 'contents/v_profil';
 		$this->load->view('tamplate/page',$data);
 	}
-	function turnamen()
+	public function turnamen()
 	{
 		$data['status'] = 'tak login';
 		$data['content'] = 'contents/v_tournament';

@@ -7,19 +7,19 @@
     <title>GarasiGame</title>
 
     <!-- CSS -->
-    <link href="<?php echo base_url();?>assets/css/fonts/etline-font.min.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>assets/css/fonts/fontawesome/all.min.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>assets/css/fonts/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/fonts/etline-font.min.css" rel="stylesheet">
+    <link href="assets/css/fonts/fontawesome/all.min.css" rel="stylesheet">
+    <link href="assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
+    <link href="assets/css/fonts/themify-icons.css" rel="stylesheet">
 
-    <link href="<?php echo base_url();?>assets/plugins/owl.carousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/plugins/owl.carousel/owl.carousel.min.css" rel="stylesheet">
 
-    <link href="<?php echo base_url();?>assets/css/main.css" rel="stylesheet">
-    <link href="<?php echo base_url();?>assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" href="<?php echo base_url();?>assets/img/apple-touch-icon.png">
-    <link rel="icon" href="<?php echo base_url();?>assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.png">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">

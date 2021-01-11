@@ -137,7 +137,8 @@
               <!-- tab item -->
               <div class="tab-pane fade show active" id="mp-01-c" role="tabpanel" aria-labelledby="mp-01-tab">
                 <div class="owl-carousel gs-carousel" data-carousel-margin="30" data-carousel-nav="true" data-carousel-navText="<span class='icon-cl-next pe-7s-angle-left'></span>, <span class='icon-cl-next pe-7s-angle-right'></span>">
-                  <!-- item -->
+                  <?php for ($i=0; $i < 6; $i++) { ?>
+                    <!-- item -->
                   <div class="item">
                     <div class="item-cont">
                       <figure class="owl_item_review">
@@ -147,7 +148,7 @@
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
+                                <span class="item_atc_text">Daftarkan <?php echo $i; ?></span>
                               </a>
                             </div>
                           </div>
@@ -165,118 +166,7 @@
                     </div>
                   </div>
                   <!-- /.item -->
-                  <!-- item -->
-                  <div class="item">
-                    <div class="item-cont">
-                      <figure class="owl_item_review">
-                        <div>
-                          <div class="position-relative overflow-hidden">
-                            <img class="m-0-auto" src="<?php echo base_url();?>assets/img/content/cont/cg_01.jpg" alt="Games Store">
-                            <div class="review_h text-light">
-                              <a href="#">
-                                <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
-                            <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
-                              <span class="owl_item_genre">
-                                Nama Game
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </figure>
-                    </div>
-                  </div>
-                  <!-- /.item -->
-                  <!-- item -->
-                  <div class="item">
-                    <div class="item-cont">
-                      <figure class="owl_item_review">
-                        <div>
-                          <div class="position-relative overflow-hidden">
-                            <img class="m-0-auto" src="<?php echo base_url();?>assets/img/content/cont/cg_01.jpg" alt="Games Store">
-                            <div class="review_h text-light">
-                              <a href="#">
-                                <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
-                            <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
-                              <span class="owl_item_genre">
-                                Nama Game
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </figure>
-                    </div>
-                  </div>
-                  <!-- /.item -->
-                  <!-- item -->
-                  <div class="item">
-                    <div class="item-cont">
-                      <figure class="owl_item_review">
-                        <div>
-                          <div class="position-relative overflow-hidden">
-                            <img class="m-0-auto" src="<?php echo base_url();?>assets/img/content/cont/cg_01.jpg" alt="Games Store">
-                            <div class="review_h text-light">
-                              <a href="#">
-                                <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
-                            <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
-                              <span class="owl_item_genre">
-                                Nama Game
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </figure>
-                    </div>
-                  </div>
-                  <!-- /.item -->
-                  <!-- item -->
-                  <div class="item">
-                    <div class="item-cont">
-                      <figure class="owl_item_review">
-                        <div>
-                          <div class="position-relative overflow-hidden">
-                            <img class="m-0-auto" src="<?php echo base_url();?>assets/img/content/cont/cg_01.jpg" alt="Games Store">
-                            <div class="review_h text-light">
-                              <a href="#">
-                                <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
-                            <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
-                              <span class="owl_item_genre">
-                                Nama Game
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </figure>
-                    </div>
-                  </div>
-                  <!-- /.item -->
+                  <?php } ?>
                 </div>
               </div>
               <!-- /.tab item -->
@@ -284,7 +174,8 @@
               <!-- tab item -->
               <div class="tab-pane fade" id="mp-02-c" role="tabpanel" aria-labelledby="mp-02-tab">
                 <div class="owl-carousel gs-carousel" data-carousel-margin="30" data-carousel-nav="true" data-carousel-navText="<span class='icon-cl-next pe-7s-angle-left'></span>, <span class='icon-cl-next pe-7s-angle-right'></span>">
-                  <!-- item -->
+                  <?php for ($i=0; $i < 6; $i++) { ?>
+                    <!-- item -->
                   <div class="item">
                     <div class="item-cont">
                       <figure class="owl_item_review">
@@ -294,35 +185,7 @@
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div>
-                            <h5 class="owl_item_title text-lt"><a href="">nama turnamen</a></h5>
-                            <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
-                              <span class="owl_item_genre">
-                                Nama Game
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </figure>
-                    </div>
-                  </div>
-                  <!-- /.item -->
-                  <!-- item -->
-                  <div class="item">
-                    <div class="item-cont">
-                      <figure class="owl_item_review">
-                        <div>
-                          <div class="position-relative overflow-hidden">
-                            <img class="m-0-auto" src="<?php echo base_url();?>assets/img/content/cont/cg_01.jpg" alt="Games Store">
-                            <div class="review_h text-light">
-                              <a href="#">
-                                <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
+                                <span class="item_atc_text">Daftarkan <?php echo $i; ?></span>
                               </a>
                             </div>
                           </div>
@@ -340,90 +203,7 @@
                     </div>
                   </div>
                   <!-- /.item -->
-                  <!-- item -->
-                  <div class="item">
-                    <div class="item-cont">
-                      <figure class="owl_item_review">
-                        <div>
-                          <div class="position-relative overflow-hidden">
-                            <img class="m-0-auto" src="<?php echo base_url();?>assets/img/content/cont/cg_01.jpg" alt="Games Store">
-                            <div class="review_h text-light">
-                              <a href="#">
-                                <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
-                            <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
-                              <span class="owl_item_genre">
-                                Nama Game
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </figure>
-                    </div>
-                  </div>
-                  <!-- /.item -->
-                  <!-- item -->
-                  <div class="item">
-                    <div class="item-cont">
-                      <figure class="owl_item_review">
-                        <div>
-                          <div class="position-relative overflow-hidden">
-                            <img class="m-0-auto" src="<?php echo base_url();?>assets/img/content/cont/cg_01.jpg" alt="Games Store">
-                            <div class="review_h text-light">
-                              <a href="#">
-                                <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
-                            <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
-                              <span class="owl_item_genre">
-                                Nama Game
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </figure>
-                    </div>
-                  </div>
-                  <!-- /.item -->
-                  <!-- item -->
-                  <div class="item">
-                    <div class="item-cont">
-                      <figure class="owl_item_review">
-                        <div>
-                          <div class="position-relative overflow-hidden">
-                            <img class="m-0-auto" src="<?php echo base_url();?>assets/img/content/cont/cg_01.jpg" alt="Games Store">
-                            <div class="review_h text-light">
-                              <a href="#">
-                                <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
-                              </a>
-                            </div>
-                          </div>
-                          <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
-                            <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
-                              <span class="owl_item_genre">
-                                Nama Game
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </figure>
-                    </div>
-                  </div>
-                  <!-- /.item -->
+                  <?php } ?>
                 </div>
               </div>
               <!-- /.tab item -->
@@ -601,181 +381,11 @@
       </section>
       <!-- /.content area -->
 
-      <!-- banner -->
-      <div class="content-section pt-0">
-        <div class="container">
-          <a href="#" class="d-block">
-            <div class="position-relative br-n bs-cont bp-c" style="background-image: url('<?php echo base_url();?>assets/img/content/banner_01.jpg');">
-              <img src="<?php echo base_url();?>assets/img/content/banner_01.jpg" alt="banner" class="invisible"/>
-            </div>
-          </a>
-        </div>
-      </div>
-      <!-- /.banner -->
-
     </main>
 
-    <!-- footer -->
-    <footer class="footer footer-dark bg-dark py-9">
-      <div class="container">
-          <div class="row gutters-y">
-              <div class="col-6 col-lg-3">
-                <a href="#" class="logo d-block mb-4"><img src="<?php echo base_url();?>assets/img/logo-gaming.png" alt="Wicodus" class="logo-dark"></a>
-                <p>Sumber guide game dan berita E-Sport Indonesia dan Dunia. Tak Hanya Game E-Sport PC, Tapi Juga Mobile</p>
-              </div>
-
-              <div class="col-6 col-lg-2">
-                <h6 class="text-uppercase fw-600 mb-4">About Us</h6>
-                <div class="nav flex-column">
-                  <a class="nav-link" href="#">Kebijakan & Privasi</a>
-                  <a class="nav-link" href="#">Syarat & Ketentuan</a>
-                </div>
-              </div>
-
-              <div class="col-6 col-lg-2">
-                <h6 class="text-uppercase fw-600 mb-4">Section</h6>
-                <div class="nav flex-column">
-                  <a class="nav-link" href="#">E-Sport</a>
-                  <a class="nav-link" href="#">Geek</a>
-                  <a class="nav-link" href="#">Hiburan</a>
-                  <a class="nav-link" href="#">Tekno</a>
-                </div>
-              </div>
-
-              <div class="col-6 col-lg-2">
-                <h6 class="text-uppercase fw-600 mb-4">Follow Us</h6>
-                <div class="nav flex-column social-buttons ">
-                  <a class="social-youtube" href="#"><i class="fab fa-youtube fa-lg">Youtube </i> </a>
-                  <a class="social-twitter" href="#"><i class="fab fa-twitter fa-lg">Twitter </i> </a>
-                  <a class="social-instagram" href="#"><i class="fab fa-instagram fa-lg">Instagram </i> </a>
-                  <a class="social-facebook" href="#"><i class="fab fa-facebook fa-lg">Facebook </i> </a>
-                </div>
-              </div>
-              
-              <div class="col col-lg-3 order-lg-last">
-                <div class="mb-6">
-                  <h6 class="text-uppercase fw-600 mb-4">Download On</h6>
-                  <div class="text-light lead-5 lh-1">
-                    <a href="#" class="social-twitter"><i class="fab fa-google-play fa-xs">Google Play</i></a></br>
-                    <a href="#" class="social-instagram"><i class="fab fa-app-store fa-xs">APP STORE</i></a>
-                  </div>
-                </div>
-          </div>
-      </div>
-    </footer>
-    <!-- /.footer -->
-
-    <!-- sign Up -->
-    <div class="modal fade" id="userLogin" tabindex="-1" role="dialog" aria-labelledby="userLoginTitle" aria-hidden="true">
-      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-        <div class="modal-content bg-dark text-light">
-          <div class="modal-header border-secondary">
-            <h5 class="modal-title" id="userLoginTitle">Log in</h5>
-            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div>
-              <div class="text-center my-6"> 
-                <a class="btn btn-circle btn-sm btn-google mr-2" href=""><i class="fab fa-google"></i></a>
-                <a class="btn btn-circle btn-sm btn-facebook mr-2" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-circle btn-sm btn-twitter" href=""><i class="fab fa-twitter"></i></a>
-              </div>
-              <span class="hr-text small my-6">Or</span>
-            </div>
-            <form class="input-transparent" action="pages/profil" method="post">
-              <div class="form-group">
-                <input type="text" class="form-control border-secondary" name="username" placeholder="Username">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control border-secondary" name="password" placeholder="Password">
-              </div>
-              <div class="form-group d-flex justify-content-between">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" checked="" id="rememberMeCheck">
-                  <label class="custom-control-label" for="rememberMeCheck">Remember me</label> 
-                </div>
-                <a class="small-3" href="#">Forgot password?</a>
-              </div>
-              <div class="form-group mt-6">
-                <button class="btn btn-block btn-warning" type="submit">Login</button>
-              </div>
-            </form>
-            <span class="small">Don't have an account? <a href="#">Create an account</a></span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /.sign Up -->
-
-    <!-- offcanvas-cart -->
-    <div id="offcanvas-cart" class="offcanvas-cart offcanvas text-light h-100 r-0 l-auto d-flex flex-column" data-animation="slideRight">
-      <div>
-        <button type="button" data-toggle="offcanvas-close" class="close float-right ml-4 text-light o-1 fw-100" data-dismiss="offcanvas" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-        <hr class="border-light o-20 mt-8 mb-4">
-      </div>
-      <div class="offcanvas-cart-body flex-1">
-        <div class="offcanvas-cart-list row align-items-center no-gutters">
-          <div class="ocs-cart-item col-12">
-            <div class="row align-items-center no-gutters">
-              <div class="col-3 item_img d-none d-sm-block">
-                <a href="store-product.html"><img class="img bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Product"></a>
-              </div>
-              <div class="col-7 flex-1 flex-grow pl-0 pl-sm-4 pr-4">
-                <a href="store-product.html"><span class="d-block item_title text-lt ls-1 lh-1 small-1 fw-600 text-uppercase mb-2">Integer sagittis semper</span></a>
-                <div class="position-relative lh-1">
-                  <div class="number-input">
-                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ><i class="ti-minus"></i></button>
-                    <input class="quantity" min="0" name="quantity" value="1" type="number">
-                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i class="ti-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-              <div class="col-2">
-                <div class="row align-items-center h-100 no-gutters">
-                  <div class="ml-auto text-center">
-                    <a href="#"><i class="far fa-trash-alt"></i></a><br>
-                    <span class="fw-500 text-warning">Price pool €44.99</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="ocs-cart-item col-12">
-            <div class="row align-items-center no-gutters">
-              <div class="col-3 item_img d-none d-sm-block">
-                <a href="store-product.html"><img class="img bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Product"></a>
-              </div>
-              <div class="col-7 flex-1 flex-grow pl-0 pl-sm-4 pr-4">
-                <a href="store-product.html"><span class="d-block item_title text-lt ls-1 lh-1 small-1 fw-600 text-uppercase mb-2">Integer sagittis semper</span></a>
-                <div class="position-relative lh-1">
-                  <div class="number-input">
-                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ><i class="ti-minus"></i></button>
-                    <input class="quantity" min="0" name="quantity" value="1" type="number">
-                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i class="ti-plus"></i></button>
-                  </div>
-                </div>
-              </div>
-              <div class="col-2">
-                <div class="row align-items-center h-100 no-gutters">
-                  <div class="ml-auto text-center">
-                    <a href="#"><i class="far fa-trash-alt"></i></a><br>
-                    <span class="fw-500 text-warning">€27.59</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <a href="checkout-order.html" class="btn btn-lg btn-block btn-outline-light">View cart</a>
-      </div>
-    </div>
-    <!-- /.offcanvas-cart -->
+<?php
+  $this->load->view('tamplate/footer');
+?>
 
     <!-- jQuery -->
     <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>

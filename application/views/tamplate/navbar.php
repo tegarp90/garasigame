@@ -3,7 +3,7 @@
       <div class="container">
         <div class="row">
           <div class="col-4 col-sm-3 col-md-2 mr-auto">
-            <a class="navbar-brand logo" href="#">
+            <a class="navbar-brand logo" href="<?php echo base_url();?>">
               <img src="<?php echo base_url();?>assets/img/logo-gaming.png" alt="Wicodus" class="logo-light mx-auto">
             </a>
           </div>
@@ -39,14 +39,6 @@
                   <a class="dropdown-item" href="#">English </a>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link small" href="" data-toggle="offcanvas" data-target="#offcanvas-cart">
-                  <span class="p-relative d-inline-flex">
-                    <span class="badge-cart badge badge-counter badge-warning position-absolute l-1">2</span>
-                    <i class="fas fa-shopping-cart"></i>
-                  </span>
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -60,7 +52,7 @@
             <li class="nav-item dropdown dropdown-hover">
               <a class="nav-link dropdown-toggle pl-lg-0" href="#" id="dropdownTournament" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tournament </a>
               <div class="dropdown-menu dropdown-menu-dark-lg" aria-labelledby="dropdownTournament">
-                <a class="dropdown-item" href="<?php echo base_url(); ?>pages/turnamen">Tournament Garasi Game</a>
+                <a class="dropdown-item" href="<?php echo base_url(); ?>Tournament">Tournament Garasi Game</a>
                 <a class="dropdown-item" href="#">Create Tournament</a>
               </div>
             </li>
