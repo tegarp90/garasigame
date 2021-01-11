@@ -1,14 +1,14 @@
-    <!-- header -->
+<!-- header -->
     <header class="pt-10 p-relative">
-      <div class="overlay br-n bs-c bp-r pe-n" data-parallax="scroll" data-z-index="1" data-image-src="<?php echo base_url();?>assets/img/bg/bg_a.jpg"></div>
+      <div class="overlay br-n bs-c bp-r pe-n" data-parallax="scroll" data-z-index="1" data-image-src="assets/img/bg/bg_a.jpg"></div>
       <div class="position-relative zi-1 d-flex align-items-end flex-wrap h-100">
         <div class="release-subheader">
           <div class="release-container">
             <div class="pb-9 w-100 text-light text-center">
-              <div class="img-xl position-relative br-n bp-c bs-c article-image ar-1_1 mx-auto rounded-circle border border-secondary mb-6" style="background-image: url(<?php echo base_url();?>assets/img/avatar/2.jpg)">
+              <div class="img-xl position-relative br-n bp-c bs-c article-image ar-1_1 mx-auto rounded-circle border border-secondary mb-6" style="background-image: url(assets/img/avatar/2.jpg)">
                 <span class="position-absolute b-0 r-0 text-secondary lead-3 d-block bg-warning p-2 rounded-circle lh-1"><input type="file" class="custom-file-input position-absolute l-0 t-0 b-0 h-auto" id="customFile"><i class="far fa-image"></i></span>
               </div>
-              <h3><?php echo $username;?></h3>
+              <h3><?php echo $_SESSION['username']; ?></h3>
               <span class="d-flex align-items-center justify-content-center fw-500 text-shadow"><i class="fas fa-circle text-warning small-6 mr-1"></i>Online</span>
             </div>
           </div>
@@ -72,7 +72,7 @@
 
       <!-- overlay -->
       <div class="bg-theme overlay pe-n zi-1">
-        <div class="overlay pe-n br-n bp-c bs-c o-30" style="background-image: url(<?php echo base_url();?>assets/img/bg/bg_shape.png);"></div>
+        <div class="overlay pe-n br-n bp-c bs-c o-30" style="background-image: url(assets/img/bg/bg_shape.png);"></div>
       </div>
       <!-- /.overlay -->
 
@@ -118,7 +118,7 @@
                                 <figure class="owl_item_review">
                                   <div>
                                     <div class="position-relative overflow-hidden">
-                                      <img class="mb-2" src="<?php echo base_url();?>assets/img/avatar/1.jpg" alt="Avatar">
+                                      <img class="mb-2" src="assets/img/avatar/1.jpg" alt="Avatar">
                                       <div class="review_h text-light">
                                         <a href="#" class="d-block">
                                           Dewei Tsou
@@ -137,7 +137,7 @@
                                 <figure class="owl_item_review">
                                   <div>
                                     <div class="position-relative overflow-hidden">
-                                      <img class="mb-2" src="<?php echo base_url();?>assets/img/avatar/1.jpg" alt="Avatar">
+                                      <img class="mb-2" src="assets/img/avatar/1.jpg" alt="Avatar">
                                       <div class="review_h text-light">
                                         <a href="#" class="d-block">
                                           Dewei Tsou
@@ -156,7 +156,7 @@
                                 <figure class="owl_item_review">
                                   <div>
                                     <div class="position-relative overflow-hidden">
-                                      <img class="mb-2" src="<?php echo base_url();?>assets/img/avatar/1.jpg" alt="Avatar">
+                                      <img class="mb-2" src="assets/img/avatar/1.jpg" alt="Avatar">
                                       <div class="review_h text-light">
                                         <a href="#" class="d-block">
                                           Dewei Tsou
@@ -175,7 +175,7 @@
                                 <figure class="owl_item_review">
                                   <div>
                                     <div class="position-relative overflow-hidden">
-                                      <img class="mb-2" src="<?php echo base_url();?>assets/img/avatar/2.jpg" alt="Avatar">
+                                      <img class="mb-2" src="assets/img/avatar/2.jpg" alt="Avatar">
                                       <div class="review_h text-light">
                                         <a href="#" class="d-block">
                                           George Collins
@@ -194,7 +194,7 @@
                                 <figure class="owl_item_review">
                                   <div>
                                     <div class="position-relative overflow-hidden">
-                                      <img class="mb-2" src="<?php echo base_url();?>assets/img/avatar/3.jpg" alt="Avatar">
+                                      <img class="mb-2" src="assets/img/avatar/3.jpg" alt="Avatar">
                                       <div class="review_h text-light">
                                         <a href="#" class="d-block">
                                           Sying Wei
@@ -224,7 +224,7 @@
                           <div class="owl-carousel carousel_sm" data-carousel-items="1, 2, 3, 3" data-carousel-margin="10" data-carousel-nav="false" data-carousel-dots="true">
                             <div class="item">
                               <a href="#">
-                                <div class="d-flex h-100 bs-c br-n bp-c ar-8_5 position-relative" style="background-image: url(<?php echo base_url();?>assets/img/content/img_01.jpg);">
+                                <div class="d-flex h-100 bs-c br-n bp-c ar-8_5 position-relative" style="background-image: url(assets/img/content/img_01.jpg);">
                                   <div class="position-absolute w-100 l-0 b-0 bg-dark_A-80 text-light">
                                     <div class="px-4 py-3 lh-1">
                                       <h6 class="text-lt mb-1 small-1 text-light text-uppercase">Phasellus</h6>
@@ -238,7 +238,7 @@
                             </div>
                             <div class="item">
                               <a href="#">
-                                <div class="d-flex h-100 bs-c br-n bp-c ar-8_5 position-relative" style="background-image: url(<?php echo base_url();?>assets/img/content/img_01.jpg);">
+                                <div class="d-flex h-100 bs-c br-n bp-c ar-8_5 position-relative" style="background-image: url(assets/img/content/img_01.jpg);">
                                   <div class="position-absolute w-100 l-0 b-0 bg-dark_A-80 text-light">
                                     <div class="px-4 py-3 lh-1">
                                       <h6 class="text-lt mb-1 small-1 text-light text-uppercase">Phasellus</h6>
@@ -252,7 +252,7 @@
                             </div>
                             <div class="item">
                               <a href="#">
-                                <div class="d-flex h-100 bs-c br-n bp-c ar-8_5 position-relative" style="background-image: url(<?php echo base_url();?>assets/img/content/img_01.jpg);">
+                                <div class="d-flex h-100 bs-c br-n bp-c ar-8_5 position-relative" style="background-image: url(assets/img/content/img_01.jpg);">
                                   <div class="position-absolute w-100 l-0 b-0 bg-dark_A-80 text-light">
                                     <div class="px-4 py-3 lh-1">
                                       <h6 class="text-lt mb-1 small-1 text-light text-uppercase">Phasellus</h6>
@@ -266,7 +266,7 @@
                             </div>
                             <div class="item">
                               <a href="#">
-                                <div class="d-flex h-100 bs-c br-n bp-c ar-8_5 position-relative" style="background-image: url(<?php echo base_url();?>assets/img/content/img_01.jpg);">
+                                <div class="d-flex h-100 bs-c br-n bp-c ar-8_5 position-relative" style="background-image: url(assets/img/content/img_01.jpg);">
                                   <div class="position-absolute w-100 l-0 b-0 bg-dark_A-80 text-light">
                                     <div class="px-4 py-3 lh-1">
                                       <h6 class="text-lt mb-1 small-1 text-light text-uppercase">Phasellus</h6>
@@ -295,7 +295,7 @@
                           <form action="#" class="input-transparent pb-8 border-bottom border-secondary">
                             <div class="form-row">
                               <div class="form-group col-3 col-sm-2">
-                                <img class="rounded" src="<?php echo base_url();?>assets/img/avatar/2.jpg" alt="Avatar">
+                                <img class="rounded" src="assets/img/avatar/2.jpg" alt="Avatar">
                               </div>
                               <div class="form-group col-9 col-sm-10">
                                 <textarea class="form-control form-control" rows="4" placeholder="Your Message" name="message" required=""></textarea>
@@ -327,7 +327,7 @@
                               <div class="form-row">
                                 <div class="col-3 col-sm-2">
                                   <div class="comment-img">
-                                    <img src="<?php echo base_url();?>assets/img/avatar/1.jpg" class="rounded" alt="User">
+                                    <img src="assets/img/avatar/1.jpg" class="rounded" alt="User">
                                   </div>
                                 </div>
                                 <div class="col-9 col-sm-10">
@@ -353,7 +353,7 @@
                               <div class="form-row">
                                 <div class="col-3 col-sm-2">
                                   <div class="comment-img">
-                                    <img src="<?php echo base_url();?>assets/img/avatar/3.jpg" class="rounded" alt="User">
+                                    <img src="assets/img/avatar/3.jpg" class="rounded" alt="User">
                                   </div>
                                 </div>
                                 <div class="col-9 col-sm-10">
@@ -387,7 +387,7 @@
                         <div class="mb-6">
                           <div class="row no-gutters">
                             <div class="col-2 item_img d-none d-sm-flex align-items-center">
-                              <a href="store-product.html" class="product-item"><img class="img img-lg bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
+                              <a href="store-product.html" class="product-item"><img class="img img-lg bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
                             </div>
                             <div class="col-6 item_content flex-1 flex-grow pl-0 pl-sm-3 pr-3">
                               <a href="store-product.html" class="product-item"><h6 class="item_title text-lt ls-1 small-1 fw-600 text-uppercase mb-0">Integer sagittis semper</h6></a>
@@ -406,7 +406,7 @@
                         <div class="mb-6">
                           <div class="row no-gutters">
                             <div class="col-2 item_img d-none d-sm-flex align-items-center">
-                              <a href="store-product.html" class="product-item"><img class="img img-lg bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
+                              <a href="store-product.html" class="product-item"><img class="img img-lg bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
                             </div>
                             <div class="col-6 item_content flex-1 flex-grow pl-0 pl-sm-3 pr-3">
                               <a href="store-product.html" class="product-item"><h6 class="item_title text-lt ls-1 small-1 fw-600 text-uppercase mb-0">Integer sagittis semper</h6></a>
@@ -425,7 +425,7 @@
                         <div class="mb-0">
                           <div class="row no-gutters">
                             <div class="col-2 item_img d-none d-sm-flex align-items-center">
-                              <a href="store-product.html" class="product-item"><img class="img img-lg bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
+                              <a href="store-product.html" class="product-item"><img class="img img-lg bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
                             </div>
                             <div class="col-6 item_content flex-1 flex-grow pl-0 pl-sm-3 pr-3">
                               <a href="store-product.html" class="product-item"><h6 class="item_title text-lt ls-1 small-1 fw-600 text-uppercase mb-0">Integer sagittis semper</h6></a>
@@ -449,7 +449,7 @@
                         <div class="mb-6">
                           <div class="row no-gutters">
                             <div class="col-2 item_img d-none d-sm-flex align-items-center">
-                              <a href="store-product.html" class="product-item"><img class="img img-lg bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
+                              <a href="store-product.html" class="product-item"><img class="img img-lg bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
                             </div>
                             <div class="col-12 col-sm-10 item_content flex-1 flex-grow pl-0 pl-sm-3 pr-3">
                               <a href="store-product.html" class="product-item"><h6 class="item_title text-lt ls-1 small-1 fw-600 text-uppercase mb-0">Integer sagittis semper</h6></a>
@@ -460,7 +460,7 @@
                         <div class="mb-0">
                           <div class="row no-gutters">
                             <div class="col-2 item_img d-none d-sm-flex align-items-center">
-                              <a href="store-product.html" class="product-item"><img class="img img-lg bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
+                              <a href="store-product.html" class="product-item"><img class="img img-lg bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
                             </div>
                             <div class="col-12 col-sm-10 item_content flex-1 flex-grow pl-0 pl-sm-3 pr-3">
                               <a href="store-product.html" class="product-item"><h6 class="item_title text-lt ls-1 small-1 fw-600 text-uppercase mb-0">Integer sagittis semper</h6></a>
@@ -491,7 +491,7 @@
                         <figure class="owl_item_review">
                           <div>
                             <div class="position-relative overflow-hidden">
-                              <img class="m-0-auto" src="<?php echo base_url();?>assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                              <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
                             </div>
                             <div>
                               <h5 class="owl_item_title text-lt"><a href="">Donec dignissim</a></h5>
@@ -529,7 +529,7 @@
                         <figure class="owl_item_review">
                           <div>
                             <div class="position-relative overflow-hidden">
-                              <img class="m-0-auto" src="<?php echo base_url();?>assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                              <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
                             </div>
                             <div>
                               <h5 class="owl_item_title text-lt"><a href="">Donec dignissim</a></h5>
@@ -567,7 +567,7 @@
                         <figure class="owl_item_review">
                           <div>
                             <div class="position-relative overflow-hidden">
-                              <img class="m-0-auto" src="<?php echo base_url();?>assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                              <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
                             </div>
                             <div>
                               <h5 class="owl_item_title text-lt"><a href="">Donec dignissim</a></h5>
@@ -605,7 +605,7 @@
                         <figure class="owl_item_review">
                           <div>
                             <div class="position-relative overflow-hidden">
-                              <img class="m-0-auto" src="<?php echo base_url();?>assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                              <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
                             </div>
                             <div>
                               <h5 class="owl_item_title text-lt"><a href="">Donec dignissim</a></h5>
@@ -643,7 +643,7 @@
                         <figure class="owl_item_review">
                           <div>
                             <div class="position-relative overflow-hidden">
-                              <img class="m-0-auto" src="<?php echo base_url();?>assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                              <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
                             </div>
                             <div>
                               <h5 class="owl_item_title text-lt"><a href="">Donec dignissim</a></h5>
@@ -697,7 +697,7 @@
                       <div class="border border-secondary">
                         <div class="row align-items-center no-gutters">
                           <div class="item_img d-none d-md-block">
-                            <img class="profile-glib img bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store">
+                            <img class="profile-glib img bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store">
                           </div>
                           <div class="item_content flex-1 flex-grow pl-4 pl-sm-6 pr-6 py-4">
                             <h6 class="item_title ls-1 small-1 fw-600 text-uppercase mb-2">Integer sagittis semper</h6>
@@ -731,7 +731,7 @@
                       <div class="border border-secondary">
                         <div class="row align-items-center no-gutters">
                           <div class="item_img d-none d-md-block">
-                            <img class="profile-glib img bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store">
+                            <img class="profile-glib img bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store">
                           </div>
                           <div class="item_content flex-1 flex-grow pl-4 pl-sm-6 pr-6 py-4">
                             <h6 class="item_title ls-1 small-1 fw-600 text-uppercase mb-2">Integer sagittis semper</h6>
@@ -765,7 +765,7 @@
                       <div class="border border-secondary">
                         <div class="row align-items-center no-gutters">
                           <div class="item_img d-none d-md-block">
-                            <img class="profile-glib img bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store">
+                            <img class="profile-glib img bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store">
                           </div>
                           <div class="item_content flex-1 flex-grow pl-4 pl-sm-6 pr-6 py-4">
                             <h6 class="item_title ls-1 small-1 fw-600 text-uppercase mb-2">Integer sagittis semper</h6>
@@ -799,7 +799,7 @@
                       <div class="border border-secondary">
                         <div class="row align-items-center no-gutters">
                           <div class="item_img d-none d-md-block">
-                            <img class="profile-glib img bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store">
+                            <img class="profile-glib img bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store">
                           </div>
                           <div class="item_content flex-1 flex-grow pl-4 pl-sm-6 pr-6 py-4">
                             <h6 class="item_title ls-1 small-1 fw-600 text-uppercase mb-2">Integer sagittis semper</h6>
@@ -833,7 +833,7 @@
                       <div class="border border-secondary">
                         <div class="row align-items-center no-gutters">
                           <div class="item_img d-none d-md-block">
-                            <img class="profile-glib img bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store">
+                            <img class="profile-glib img bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store">
                           </div>
                           <div class="item_content flex-1 flex-grow pl-4 pl-sm-6 pr-6 py-4">
                             <h6 class="item_title ls-1 small-1 fw-600 text-uppercase mb-2">Integer sagittis semper</h6>
@@ -867,7 +867,7 @@
                       <div class="border border-secondary">
                         <div class="row align-items-center no-gutters">
                           <div class="item_img d-none d-md-block">
-                            <img class="profile-glib img bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store">
+                            <img class="profile-glib img bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store">
                           </div>
                           <div class="item_content flex-1 flex-grow pl-4 pl-sm-6 pr-6 py-4">
                             <h6 class="item_title ls-1 small-1 fw-600 text-uppercase mb-2">Integer sagittis semper</h6>
@@ -1366,7 +1366,7 @@
                         <div class="product-item">
                           <div class="row align-items-center no-gutters">
                             <div class="item_img d-none d-sm-block">
-                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
+                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
                             </div>
                             <div class="item_content flex-1 flex-grow pl-0 pl-sm-6 pr-6">
                               <a href="store-product.html"><h6 class="item_title ls-1 small-1 fw-600 text-uppercase mb-1">Integer sagittis semper</h6></a>
@@ -1401,7 +1401,7 @@
                         <div class="product-item">
                           <div class="row align-items-center no-gutters">
                             <div class="item_img d-none d-sm-block">
-                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
+                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
                             </div>
                             <div class="item_content flex-1 flex-grow pl-0 pl-sm-6 pr-6">
                               <a href="store-product.html"><h6 class="item_title ls-1 small-1 fw-600 text-uppercase mb-1">Integer sagittis semper</h6></a>
@@ -1436,7 +1436,7 @@
                         <div class="product-item">
                           <div class="row align-items-center no-gutters">
                             <div class="item_img d-none d-sm-block">
-                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
+                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
                             </div>
                             <div class="item_content flex-1 flex-grow pl-0 pl-sm-6 pr-6">
                               <a href="store-product.html"><h6 class="item_title ls-1 small-1 fw-600 text-uppercase mb-1">Integer sagittis semper</h6></a>
@@ -1471,7 +1471,7 @@
                         <div class="product-item">
                           <div class="row align-items-center no-gutters">
                             <div class="item_img d-none d-sm-block">
-                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
+                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
                             </div>
                             <div class="item_content flex-1 flex-grow pl-0 pl-sm-6 pr-6">
                               <a href="store-product.html"><h6 class="item_title ls-1 small-1 fw-600 text-uppercase mb-1">Integer sagittis semper</h6></a>
@@ -1506,7 +1506,7 @@
                         <div class="product-item">
                           <div class="row align-items-center no-gutters">
                             <div class="item_img d-none d-sm-block">
-                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
+                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
                             </div>
                             <div class="item_content flex-1 flex-grow pl-0 pl-sm-6 pr-6">
                               <a href="store-product.html"><h6 class="item_title ls-1 small-1 fw-600 text-uppercase mb-1">Integer sagittis semper</h6></a>
@@ -1541,7 +1541,7 @@
                         <div class="product-item">
                           <div class="row align-items-center no-gutters">
                             <div class="item_img d-none d-sm-block">
-                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
+                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
                             </div>
                             <div class="item_content flex-1 flex-grow pl-0 pl-sm-6 pr-6">
                               <a href="store-product.html"><h6 class="item_title ls-1 small-1 fw-600 text-uppercase mb-1">Integer sagittis semper</h6></a>
@@ -1576,7 +1576,7 @@
                         <div class="product-item">
                           <div class="row align-items-center no-gutters">
                             <div class="item_img d-none d-sm-block">
-                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
+                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
                             </div>
                             <div class="item_content flex-1 flex-grow pl-0 pl-sm-6 pr-6">
                               <a href="store-product.html"><h6 class="item_title ls-1 small-1 fw-600 text-uppercase mb-1">Integer sagittis semper</h6></a>
@@ -1611,7 +1611,7 @@
                         <div class="product-item">
                           <div class="row align-items-center no-gutters">
                             <div class="item_img d-none d-sm-block">
-                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
+                              <a href="store-product.html"><img class="img img-xl bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Games Store"></a>
                             </div>
                             <div class="item_content flex-1 flex-grow pl-0 pl-sm-6 pr-6">
                               <a href="store-product.html"><h6 class="item_title ls-1 small-1 fw-600 text-uppercase mb-1">Integer sagittis semper</h6></a>
@@ -2089,7 +2089,7 @@
                           <div class="row align-items-center no-gutters">
                             <div class="item_img d-none d-sm-block">
                               <a href="store-product.html">
-                                <div class="gr-img aspect-ratio-1_1 bs-c bp-c br-n border border-secondary" style="background: url(<?php echo base_url();?>assets/img/content/img_01.jpg);"></div>
+                                <div class="gr-img aspect-ratio-1_1 bs-c bp-c br-n border border-secondary" style="background: url(assets/img/content/img_01.jpg);"></div>
                               </a>
                             </div>
                             <div class="item_content flex-1 flex-grow pl-0 pl-sm-4 pr-4">
@@ -2118,7 +2118,7 @@
                           <div class="row align-items-center no-gutters">
                             <div class="item_img d-none d-sm-block">
                               <a href="store-product.html">
-                                <div class="gr-img aspect-ratio-1_1 bs-c bp-c br-n border border-secondary" style="background: url(<?php echo base_url();?>assets/img/content/img_01.jpg);"></div>
+                                <div class="gr-img aspect-ratio-1_1 bs-c bp-c br-n border border-secondary" style="background: url(assets/img/content/img_01.jpg);"></div>
                               </a>
                             </div>
                             <div class="item_content flex-1 flex-grow pl-0 pl-sm-4 pr-4">
@@ -2147,7 +2147,7 @@
                           <div class="row align-items-center no-gutters">
                             <div class="item_img d-none d-sm-block">
                               <a href="store-product.html">
-                                <div class="gr-img aspect-ratio-1_1 bs-c bp-c br-n border border-secondary" style="background: url(<?php echo base_url();?>assets/img/content/img_01.jpg);"></div>
+                                <div class="gr-img aspect-ratio-1_1 bs-c bp-c br-n border border-secondary" style="background: url(assets/img/content/img_01.jpg);"></div>
                               </a>
                             </div>
                             <div class="item_content flex-1 flex-grow pl-0 pl-sm-4 pr-4">
@@ -2176,7 +2176,7 @@
                           <div class="row align-items-center no-gutters">
                             <div class="item_img d-none d-sm-block">
                               <a href="store-product.html">
-                                <div class="gr-img aspect-ratio-1_1 bs-c bp-c br-n border border-secondary" style="background: url(<?php echo base_url();?>assets/img/content/img_01.jpg);"></div>
+                                <div class="gr-img aspect-ratio-1_1 bs-c bp-c br-n border border-secondary" style="background: url(assets/img/content/img_01.jpg);"></div>
                               </a>
                             </div>
                             <div class="item_content flex-1 flex-grow pl-0 pl-sm-4 pr-4">
@@ -2205,7 +2205,7 @@
                           <div class="row align-items-center no-gutters">
                             <div class="item_img d-none d-sm-block">
                               <a href="store-product.html">
-                                <div class="gr-img aspect-ratio-1_1 bs-c bp-c br-n border border-secondary" style="background: url(<?php echo base_url();?>assets/img/content/img_01.jpg);"></div>
+                                <div class="gr-img aspect-ratio-1_1 bs-c bp-c br-n border border-secondary" style="background: url(assets/img/content/img_01.jpg);"></div>
                               </a>
                             </div>
                             <div class="item_content flex-1 flex-grow pl-0 pl-sm-4 pr-4">
@@ -2303,9 +2303,77 @@
     </main>
     <!-- /.main content -->
 
-<?php
-  $this->load->view('tamplate/footer');
-?>
+    <!-- footer -->
+    <footer class="footer footer-dark bg-dark py-9">
+      <div class="container">
+          <div class="row gutters-y">
+              <div class="col-6 col-lg-3">
+                <a href="#" class="logo d-block mb-4"><img src="assets/img/logo-gaming.png" alt="Wicodus" class="logo-dark"></a>
+                <p>Wicodus is a online store where you can find digital goods at the best prices.</p>
+                <div class="social-buttons">
+                  <a class="social-twitter" href="#"><i class="fab fa-twitter"></i></a>
+                  <a class="social-dribbble" href="#"><i class="fab fa-dribbble"></i></a>
+                  <a class="social-instagram" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-2">
+                <h6 class="text-uppercase fw-600 mb-4">About</h6>
+                <div class="nav flex-column">
+                  <a class="nav-link" href="about.html">Our team</a>
+                  <a class="nav-link" href="about.html">Careers</a>
+                  <a class="nav-link" href="about.html">Cookie Policy</a>
+                  <a class="nav-link" href="about.html">Privacy Policy</a>
+                  
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-2">
+                <h6 class="text-uppercase fw-600 mb-4">Community</h6>
+                <div class="nav flex-column">
+                  <a class="nav-link" href="news.html">Forum</a>
+                  <a class="nav-link" href="news.html">Blog</a>
+                  <a class="nav-link" href="news.html">News</a>
+                  <a class="nav-link" href="news.html">Team</a>
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-2">
+                <h6 class="text-uppercase fw-600 mb-4">Help</h6>
+                <div class="nav flex-column">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                  <a class="nav-link" href="contact.html">Support</a>
+                  <a class="nav-link" href="contact.html">Terms & conditions</a>
+                  <a class="nav-link" href="contact.html">Refund policy</a>
+                </div>
+              </div>
+              
+              <div class="col col-lg-3 order-lg-last">
+                <div class="mb-6">
+                  <h6 class="text-uppercase fw-600 mb-4">Ways to pay</h6>
+                  <div class="text-light lead-5 lh-1">
+                    <a href="store.html" class="mr-2"><i class="fab fa-cc-paypal"></i></a>
+                    <a href="store.html" class="mr-2"><i class="fab fa-cc-visa"></i></a>
+                    <a href="store.html" class="mr-2"><i class="fab fa-cc-amazon-pay"></i></a>
+                    <a href="store.html" class="mr-2"><i class="fab fa-cc-stripe"></i></a>
+                    <a href="store.html" class="mr-2"><i class="fab fa-cc-jcb"></i></a>
+                  </div>
+                </div>
+                <div>
+                  <h6 class="mb-2">Reviews</h6>
+                  <div class="text-warning lead-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star text-secondary"></i>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+    </footer>
+    <!-- /.footer -->
 
     <!-- offcanvas-cart -->
     <div id="offcanvas-cart" class="offcanvas-cart offcanvas text-light h-100 r-0 l-auto d-flex flex-column" data-animation="slideRight">
@@ -2320,7 +2388,7 @@
           <div class="ocs-cart-item col-12">
             <div class="row align-items-center no-gutters">
               <div class="col-3 item_img d-none d-sm-block">
-                <a href="store-product.html"><img class="img bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Product"></a>
+                <a href="store-product.html"><img class="img bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Product"></a>
               </div>
               <div class="col-7 flex-1 flex-grow pl-0 pl-sm-4 pr-4">
                 <a href="store-product.html"><span class="d-block item_title text-lt ls-1 lh-1 small-1 fw-600 text-uppercase mb-2">Integer sagittis semper</span></a>
@@ -2345,7 +2413,7 @@
           <div class="ocs-cart-item col-12">
             <div class="row align-items-center no-gutters">
               <div class="col-3 item_img d-none d-sm-block">
-                <a href="store-product.html"><img class="img bl-3 text-primary" src="<?php echo base_url();?>assets/img/content/cont/cg-h_01.jpg" alt="Product"></a>
+                <a href="store-product.html"><img class="img bl-3 text-primary" src="assets/img/content/cont/cg-h_01.jpg" alt="Product"></a>
               </div>
               <div class="col-7 flex-1 flex-grow pl-0 pl-sm-4 pr-4">
                 <a href="store-product.html"><span class="d-block item_title text-lt ls-1 lh-1 small-1 fw-600 text-uppercase mb-2">Integer sagittis semper</span></a>
@@ -2376,15 +2444,15 @@
     <!-- /.offcanvas-cart -->
 
     <!-- jQuery -->
-    <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
 
     <!-- Bootstrap -->
-    <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 
     <!-- User JS -->
-    <script src="<?php echo base_url();?>assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 
     <!-- Main JS -->
-    <script src="<?php echo base_url();?>assets/js/main.js" id="_mainJS" data-plugins="load"></script>
+    <script src="assets/js/main.js" id="_mainJS" data-plugins="load"></script>
   </body>
 </html>

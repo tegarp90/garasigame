@@ -13,7 +13,7 @@
         <div class="carousel-inner a-cont">
           <!-- carousel-item -->
           <div class="carousel-item active">
-            <div class="h-fullscreen__page bs-c br-n ow-h" style="background-image: url(<?php echo base_url();?>assets/img/content/carousel/slide_01.jpg);">
+            <div class="h-fullscreen__page bs-c br-n ow-h" style="background-image: url(assets/img/content/carousel/slide_01.jpg);">
               <div class="w-100 d-flex jc-c overlay">
                 <!-- sm-overlay -->
                 <div class="overlay bg-light_A-20 d-lg-none"></div>
@@ -44,7 +44,7 @@
 
           <!-- carousel-item -->
           <div class="carousel-item">
-            <div class="h-fullscreen__page bs-c br-n ow-h" style="background-image: url(<?php echo base_url();?>assets/img/content/carousel/slide_02.jpg);">
+            <div class="h-fullscreen__page bs-c br-n ow-h" style="background-image: url(assets/img/content/carousel/slide_02.jpg);">
               <div class="w-100 d-flex jc-c overlay">
                 <!-- sm-overlay -->
                 <div class="overlay bg-light_A-20 d-lg-none"></div>
@@ -75,7 +75,7 @@
 
           <!-- carousel-item -->
           <div class="carousel-item">
-            <div class="h-fullscreen__page bs-c br-n ow-h" style="background-image: url(<?php echo base_url();?>assets/img/content/carousel/slide_03.jpg);">
+            <div class="h-fullscreen__page bs-c br-n ow-h" style="background-image: url(assets/img/content/carousel/slide_03.jpg);">
               <div class="w-100 d-flex jc-c overlay">
                 <!-- sm-overlay -->
                 <div class="overlay bg-light_A-20 d-lg-none"></div>
@@ -115,7 +115,7 @@
     <main class="main-content">
 
       <!-- content area -->
-      <section class="content-section owl-carousel-spotlight carousel-spotlight ig-carousel text-light" style="background-image: url(<?php echo base_url();?>assets/img/bg/bg_shape.png);">
+      <section class="content-section owl-carousel-spotlight carousel-spotlight ig-carousel text-light" style="background-image: url(assets/img/bg/bg_shape.png);">
         <div class="container">
           <header class="header">
             <h2>Tournaments</h2>
@@ -144,7 +144,7 @@
                       <figure class="owl_item_review">
                         <div>
                           <div class="position-relative overflow-hidden">
-                            <img class="m-0-auto" src="<?php echo base_url();?>assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                            <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
@@ -181,7 +181,7 @@
                       <figure class="owl_item_review">
                         <div>
                           <div class="position-relative overflow-hidden">
-                            <img class="m-0-auto" src="<?php echo base_url();?>assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                            <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
@@ -218,7 +218,7 @@
       <!-- content area -->
       <section class="section gs_features">
         <div class="row no-gutters">
-          <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c effect-wrapper effect-grayscale position-relative hover" style="background-image: url('<?php echo base_url();?>assets/img/content/cont/cg-fl_01.jpg');">
+          <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c effect-wrapper effect-grayscale position-relative hover" style="background-image: url('assets/img/content/cont/cg-fl_01.jpg');">
             <div class="overlay bg-dark_A-90 d-md-none"></div>
             <div class="row h-100 align-items-center content">
               <div class="col-12 col-md-8 ml-auto text-light text-md-right">
@@ -230,11 +230,11 @@
             </div>
             <figure class="d-none d-md-block effect-layla effect-layla-light"></figure>
           </div>
-          <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c" style="background-image: url('<?php echo base_url();?>assets/img/content/cont/cg-fl_03.jpg');" data-overlay="7">
+          <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c" style="background-image: url('assets/img/content/cont/cg-fl_03.jpg');" data-overlay="7">
             <div class="row align-items-center h-100">
               <div class="col-sm-6 col-md-4 mb-5 mb-md-0">
                 <figure class="position-relative my-0">
-                  <div style="background-image: url('<?php echo base_url();?>assets/img/content/cont/cg_07.jpg');" class="main-fb-product bs-c bp-c br-n">
+                  <div style="background-image: url('assets/img/content/cont/cg_07.jpg');" class="main-fb-product bs-c bp-c br-n">
                     <div class="position-absolute t-0 r-0 px-4 py-1 bg-danger text-white text-uppercase fw-600">-50%</div>
                     <div class="position-absolute b-0 w-100 text-center">
                       <div data-countdown="2020/01/25 12:34:56" class="countdown-coupon bg-dark_A-50 py-3 text-light fw-700 timer"></div>
@@ -251,11 +251,11 @@
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-xl-6 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c" style="background-image: url('<?php echo base_url();?>assets/img/content/cont/cg-fl_04.jpg');" data-overlay="7">
+          <div class="col-xl-6 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c" style="background-image: url('assets/img/content/cont/cg-fl_04.jpg');" data-overlay="7">
             <div class="row align-items-center h-100">
               <div class="col-sm-6 col-md-4 order-md-2 mb-6 mb-md-0">
                 <figure class="position-relative my-0">
-                  <div style="background-image: url('<?php echo base_url();?>assets/img/content/cont/cg_08.jpg');" class="main-fb-product bs-c bp-c br-n">
+                  <div style="background-image: url('assets/img/content/cont/cg_08.jpg');" class="main-fb-product bs-c bp-c br-n">
                     <div class="position-absolute t-0 r-0 px-4 py-1 bg-danger text-white text-uppercase fw-600">-72%</div>
                     <div class="position-absolute b-0 w-100 text-center">
                       <div data-countdown="2020/02/11 12:34:56" class="countdown-coupon bg-dark_A-50 py-3 text-light fw-700 timer"></div>
@@ -270,7 +270,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-6 col-sm-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c effect-wrapper effect-grayscale position-relative hover" style="background-image: url('<?php echo base_url();?>assets/img/content/cont/cg-fl_02.jpg');">
+          <div class="col-xl-6 col-sm-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c effect-wrapper effect-grayscale position-relative hover" style="background-image: url('assets/img/content/cont/cg-fl_02.jpg');">
             <div class="overlay bg-dark_A-90 d-md-none"></div>
             <div class="row h-100 align-items-center content">
               <div class="col-12 col-md-6 mr-auto text-light text-left">
@@ -298,7 +298,7 @@
               <div class="row">
                 <div class="col-lg-4 mb-6 mb-lg-0">
                   <div class="card">
-                    <div class="img__news_wrapper"><img src="<?php echo base_url();?>assets/img/content/img_01.jpg" alt="News"></div>
+                    <div class="img__news_wrapper"><img src="assets/img/content/img_01.jpg" alt="News"></div>
                     <div class="badges badges-left badges-bottom text-white">
                       <div class="rating_circle-wrapper"> 
                         <span class="rating_circle-foreground">
@@ -326,7 +326,7 @@
               <div class="row">
                 <div class="col-lg-4 mb-6 mb-lg-0">
                   <div class="card">
-                    <div class="img__news_wrapper"><img src="<?php echo base_url();?>assets/img/content/img_02.jpg" alt="News"></div>
+                    <div class="img__news_wrapper"><img src="assets/img/content/img_02.jpg" alt="News"></div>
                     <div class="badges badges-left badges-bottom text-white">
                       <div class="rating_circle-wrapper"> 
                         <span class="rating_circle-foreground">
@@ -354,7 +354,7 @@
               <div class="row">
                 <div class="col-lg-4 mb-6 mb-lg-0">
                   <div class="card">
-                    <div class="img__news_wrapper"><img src="<?php echo base_url();?>assets/img/content/img_03.jpg" alt="News"></div>
+                    <div class="img__news_wrapper"><img src="assets/img/content/img_03.jpg" alt="News"></div>
                     <div class="badges badges-left badges-bottom text-white">
                       <div class="rating_circle-wrapper"> 
                         <span class="rating_circle-foreground">
@@ -388,15 +388,15 @@
 ?>
 
     <!-- jQuery -->
-    <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
 
     <!-- Bootstrap -->
-    <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 
     <!-- User JS -->
-    <script src="<?php echo base_url();?>assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 
     <!-- Main JS -->
-    <script src="<?php echo base_url();?>assets/js/main.js" id="_mainJS" data-plugins="load"></script>
+    <script src="assets/js/main.js" id="_mainJS" data-plugins="load"></script>
   </body>
 </html>

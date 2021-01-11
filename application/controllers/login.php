@@ -21,16 +21,34 @@ class Login extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('crud');
 	}
 	public function index()
 	{
-
-		$data['status'] = 'tak login';
-		$data['content'] = 'contents/v_landing_page';
-		$this->load->view('tamplate/page',$data);
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		if ($username != "") {
+			$arraysesi = array('username' => $username, 'web_sesi' => true);
+			$this->session->set_userdata($arraysesi);
+		}else{
+			$this->session->set_userdata('web_sesi',false);
+		?>
+			<script type="text/javascript">
+			alert("username atau Password Salah!");			
+			</script>
+		<?php
+		}	
+		redirect('Home');
 	}
-
+	function logout()
+	{
+		$this->session->sess_destroy();
+		?>
+			<script type="text/javascript">
+			alert("Sign Out Berhasil!");			
+			</script>
+		<?php
+		redirect(base_url());
+	}
 	function google_login()
 	{
 		include_once APPATH . "libraries/vendor/autoload.php";
