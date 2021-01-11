@@ -17,7 +17,7 @@
               </div>
               <span class="hr-text small my-6">Or</span>
             </div>
-            <form class="input-transparent" action="pages/profil" method="post">
+            <form class="input-transparent" action="Profile" method="post">
               <div class="form-group">
                 <input type="text" class="form-control border-secondary" name="username" placeholder="Username">
               </div>

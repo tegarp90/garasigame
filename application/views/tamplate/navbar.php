@@ -3,8 +3,8 @@
       <div class="container">
         <div class="row">
           <div class="col-4 col-sm-3 col-md-2 mr-auto">
-            <a class="navbar-brand logo" href="<?php echo base_url();?>">
-              <img src="<?php echo base_url();?>assets/img/logo-gaming.png" alt="Wicodus" class="logo-light mx-auto">
+            <a class="navbar-brand logo" href="Home">
+              <img src="assets/img/logo-gaming.png" alt="Wicodus" class="logo-light mx-auto">
             </a>
           </div>
           <div class="col-4 d-none d-lg-block mx-auto">
@@ -23,12 +23,12 @@
             <ul class="nav navbar-nav d-none d-sm-inline-flex flex-row">
               <?php if ($status == "login"): ?>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle small text-capitalize" href="#" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?php echo base_url();?>assets/img/avatar/2.jpg" class="img-xs rounded-circle mr-2" alt="Avatar"><?php echo $username;?> </a>
+                <a class="nav-link dropdown-toggle small text-capitalize" href="#" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/img/avatar/2.jpg" class="img-xs rounded-circle mr-2" alt="Avatar"><?php echo $username;?> </a>
                 <div class="dropdown-menu position-absolute" aria-labelledby="dropdownUser">
                   <a class="dropdown-item" href="#"><span class="mr-2"><i class="fas fa-user"></i></span>My Profile</a>
                   <a class="dropdown-item" href="#"><span class="mr-2"><i class="fas fa-wallet"></i></span>Wallet</a>
                   <a class="dropdown-item" href="#"><span class="mr-2"><i class="fas fa-cog"></i></span>Settings</a>
-                  <a class="dropdown-item" href="<?php echo base_url();?>pages"><span class="mr-2"><i class="fas fa-sign-out-alt"></i></span>Logout</a>
+                  <a class="dropdown-item" href="pages"><span class="mr-2"><i class="fas fa-sign-out-alt"></i></span>Logout</a>
                 </div>
               </li>
               <?php endif ?>
