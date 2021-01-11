@@ -37,4 +37,10 @@ class Pages extends CI_Controller {
 		$data['content'] = 'contents/v_profil';
 		$this->load->view('tamplate/page',$data);
 	}
+	function turnamen()
+	{
+		$data['status'] = 'tak login';
+		$data['content'] = 'contents/v_tournament';
+		$this->load->view('tamplate/page',$data);
+	}
 }

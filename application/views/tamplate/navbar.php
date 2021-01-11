@@ -60,7 +60,7 @@
             <li class="nav-item dropdown dropdown-hover">
               <a class="nav-link dropdown-toggle pl-lg-0" href="#" id="dropdownTournament" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tournament </a>
               <div class="dropdown-menu dropdown-menu-dark-lg" aria-labelledby="dropdownTournament">
-                <a class="dropdown-item" href="#">Tournament Garasi Game</a>
+                <a class="dropdown-item" href="<?php echo base_url(); ?>pages/turnamen">Tournament Garasi Game</a>
                 <a class="dropdown-item" href="#">Create Tournament</a>
               </div>
             </li>
