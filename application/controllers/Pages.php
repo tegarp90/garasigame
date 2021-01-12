@@ -25,7 +25,7 @@ class Pages extends CI_Controller {
 	}
 	public function index()
 	{
-		$data['content'] = 'contents/v_landing_page';
+		$data['content'] = 'contents/v_landing_page2';
 		$this->load->view('tamplate/page',$data);
 	}
 
