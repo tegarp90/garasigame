@@ -1,3 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wicodus - Home</title>
+
+    <!-- CSS -->
+    <link href="assets/css/fonts/etline-font.min.css" rel="stylesheet">
+    <link href="assets/css/fonts/fontawesome/all.min.css" rel="stylesheet">
+    <link href="assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
+    <link href="assets/css/fonts/themify-icons.css" rel="stylesheet">
+
+    <link href="assets/plugins/owl.carousel/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="page-body">
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-nav zi-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 col-sm-3 col-md-2 mr-auto">
+            <a class="navbar-brand logo" href="#">
+              <img src="assets/img/logo-gaming.png" alt="Wicodus" class="logo-light mx-auto">
+            </a>
+          </div>
+          <div class="col-4 d-none d-lg-block mx-auto">
+            <form class="input-group border-0 bg-transparent">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-sm btn-warning text-secondary my-0 mx-0" type="submit"><i class="fas fa-search"></i></button>
+              </div>
+            </form>
+          </div>
+          <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-4 ml-auto text-right">
+            <a class="btn btn-sm btn-warning text-secondary mr-2" href="#" data-toggle="modal" data-target="#userLogin">Sign in</a>
+            <a class="btn btn-sm text-light d-none d-sm-inline-block" href="#">Sign up</a>
+            <ul class="nav navbar-nav d-none d-sm-inline-flex flex-row">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle small" href="#" id="dropdownGaming" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="mr-2 fas fa-globe"></i>EN </a>
+                <div class="dropdown-menu position-absolute" aria-labelledby="dropdownGaming">
+                  <a class="dropdown-item" href="#">English</a>
+                  <a class="dropdown-item" href="#">Deutsch</a>
+                  <a class="dropdown-item" href="#">Español</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link small" href="" data-toggle="offcanvas" data-target="#offcanvas-cart">
+                  <span class="p-relative d-inline-flex">
+                    <span class="badge-cart badge badge-counter badge-warning position-absolute l-1">2</span>
+                    <i class="fas fa-shopping-cart"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <button class="navbar-toggler navbar-toggler-fixed" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <div class="collapse navbar-collapse" id="collapsingNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown dropdown-hover">
+              <a class="nav-link dropdown-toggle pl-lg-0" href="#" id="dropdownGaming_games" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Games </a>
+              <div class="dropdown-menu dropdown-menu-dark-lg" aria-labelledby="dropdownGaming_games">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Adventure</a>
+                <a class="dropdown-item" href="#">Cooperative</a>
+                <a class="dropdown-item" href="#">MMO</a>
+                <a class="dropdown-item" href="#">RPG</a>
+                <a class="dropdown-item" href="#">Simulation</a>
+                <a class="dropdown-item" href="#">Economy</a>
+                <a class="dropdown-item" href="#">Horror</a>
+                <a class="dropdown-item" href="#">Arcade</a>
+                <a class="dropdown-item" href="#">Hack & Slash</a>
+                <a class="dropdown-item" href="#">Puzzle</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-hover">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownGaming_software" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Software </a>
+              <div class="dropdown-menu dropdown-menu-dark-lg" aria-labelledby="dropdownGaming_software">
+                <a class="dropdown-item" href="#">Animation & Modeling</a>
+                <a class="dropdown-item" href="#">Audio Production</a>
+                <a class="dropdown-item" href="#">Design & Illustration</a>
+                <a class="dropdown-item" href="#">Education</a>
+                <a class="dropdown-item" href="#">Game Development</a>
+                <a class="dropdown-item" href="#">Photo Editing</a>
+                <a class="dropdown-item" href="#">Utilities</a>
+                <a class="dropdown-item" href="#">Video Production</a>
+                <a class="dropdown-item" href="#">Web Publishing</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-hover">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownGaming_community" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community </a>
+              <div class="dropdown-menu dropdown-menu-dark-lg" aria-labelledby="dropdownGaming_community">
+                <a class="dropdown-item" href="#">Discussions</a>
+                <a class="dropdown-item" href="#">Workshop</a>
+                <a class="dropdown-item" href="#">Market</a>
+                <a class="dropdown-item" href="#">Broadcasts</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Support</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- /.navbar -->
+
     <!-- header -->
     <header class="header">
       <div id="carousel_main" class="carousel carousel-header slide carousel-fade fl-scn" data-ride="carousel">
@@ -27,7 +158,7 @@
                   <div class="row align-items-center h-100">
                     <div class="col-12 mr-auto ml-lg-0 col-lg-5">
                       <div class="main_carousel__content ad-900ms fadeIn text-light px-8 px-md-6 mx-lg-4 mx-xl-0">
-                        <h2 class="carousel__heading text-light fadeInDown ad-500ms">Pengumuman / Promosi</h2>
+                        <h2 class="carousel__heading text-light fadeInDown ad-500ms">Integer Ornare Erat</h2>
                         <p class="carousel__text lead-1 mb-6 fadeInDown ad-600ms">Class aptent taciti sociosqu ad litora torquent per conubia, per inceptos himenaeos. Quisque gravida eu lacus et consequat. Interdum et malesuada fames ac ante, ipsum primis in faucibus mollis.</p>
                         <div class="d-flex fadeInLeft ad-900ms">
                         <a class="disabled btn btn-lg bg-dark_A-50 o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span class="d-block text-warning"><span class="carousel__discount td-lt text-light">349$</span> 299$</span></a>
@@ -58,7 +189,7 @@
                   <div class="row align-items-center h-100">
                     <div class="col-12 mr-auto ml-lg-0 col-lg-5">
                       <div class="main_carousel__content ad-900ms fadeIn text-light px-8 px-md-6 mx-lg-4 mx-xl-0">
-                        <h2 class="carousel__heading text-light fadeInDown ad-500ms">Pengumuman / Promosi</h2>
+                        <h2 class="carousel__heading text-light fadeInDown ad-500ms">Donec Luctus</h2>
                         <p class="carousel__text lead-1 mb-6 fadeInDown ad-600ms">Class aptent taciti sociosqu ad litora torquent per conubia, per inceptos himenaeos. Quisque gravida eu lacus et consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                         <div class="d-flex fadeInLeft ad-900ms">
                         <a class="disabled btn btn-lg bg-dark_A-50 o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span class="d-block text-warning"><span class="carousel__discount td-lt text-light">349$</span> 299$</span></a>
@@ -89,7 +220,7 @@
                   <div class="row align-items-center h-100">
                     <div class="col-12 mr-auto ml-lg-0 col-lg-5">
                       <div class="main_carousel__content ad-900ms fadeIn text-light px-8 px-md-6 mx-lg-4 mx-xl-0">
-                        <h2 class="carousel__heading text-light fadeInDown ad-500ms">Pengumuman / Promosi</h2>
+                        <h2 class="carousel__heading text-light fadeInDown ad-500ms">Nunc Lacinia Tincidunt</h2>
                         <p class="carousel__text lead-1 mb-6 fadeInDown ad-600ms">Class aptent taciti sociosqu ad litora torquent per conubia, per inceptos himenaeos. Quisque gravida eu lacus et consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                         <div class="d-flex fadeInLeft ad-900ms">
                         <a class="disabled btn btn-lg bg-dark_A-50 o-1 text-light br-round-0tr br-round-0br parallelogram un_text mb-0"><span class="d-block text-warning"><span class="carousel__discount td-lt text-light">349$</span> 299$</span></a>
@@ -118,16 +249,19 @@
       <section class="content-section owl-carousel-spotlight carousel-spotlight ig-carousel text-light" style="background-image: url(assets/img/bg/bg_shape.png);">
         <div class="container">
           <header class="header">
-            <h2>Tournaments</h2>
+            <h2>Most popular products</h2>
           </header>
           <div class="position-relative">
             <!-- nav tabs -->
             <ul class="spotlight-tabs spotlight-tabs-dark nav nav-tabs border-0 mb-5 position-relative flex-nowrap" id="most_popular_products-carousel" role="tablist">
               <li class="nav-item text-fnwp pg-none relative">
-                <a class="nav-link active" id="mp-01-tab" data-toggle="tab" href="#mp-01-c" role="tab" aria-controls="mp-01-c" aria-selected="true">Popular</a>
+                <a class="nav-link active" id="mp-01-tab" data-toggle="tab" href="#mp-01-c" role="tab" aria-controls="mp-01-c" aria-selected="true">New</a>
               </li>
               <li class="nav-item text-fnwp relative">
-                <a class="nav-link" id="mp-02-tab" data-toggle="tab" href="#mp-02-c" role="tab" aria-controls="mp-02-c" aria-selected="false">New</a>
+                <a class="nav-link" id="mp-02-tab" data-toggle="tab" href="#mp-02-c" role="tab" aria-controls="mp-02-c" aria-selected="false">Highlights</a>
+              </li>
+              <li class="nav-item text-fnwp relative">
+                <a class="nav-link" id="mp-03-tab" data-toggle="tab" href="#mp-03-c" role="tab" aria-controls="mp-03-c" aria-selected="false">Coming Soon</a>
               </li>
             </ul>
             <!-- /.nav tabs -->
@@ -147,16 +281,16 @@
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
+                                <span class="item_atc_text">Add to cart</span>
                               </a>
                             </div>
                           </div>
                           <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
+                            <h5 class="owl_item_title text-lt"><a href="">Donec dignissim ...</a></h5>
                             <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
+                              <span class="owl_item_price">€44.99</span>
                               <span class="owl_item_genre">
-                                Nama Game
+                                Action, Adventure
                               </span>
                             </div>
                           </div>
@@ -175,16 +309,16 @@
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
+                                <span class="item_atc_text">Add to cart</span>
                               </a>
                             </div>
                           </div>
                           <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
+                            <h5 class="owl_item_title text-lt"><a href="">Donec dignissim ...</a></h5>
                             <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
+                              <span class="owl_item_price">€44.99</span>
                               <span class="owl_item_genre">
-                                Nama Game
+                                Action, Adventure
                               </span>
                             </div>
                           </div>
@@ -203,16 +337,16 @@
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
+                                <span class="item_atc_text">Add to cart</span>
                               </a>
                             </div>
                           </div>
                           <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
+                            <h5 class="owl_item_title text-lt"><a href="">Donec dignissim ...</a></h5>
                             <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
+                              <span class="owl_item_price">€44.99</span>
                               <span class="owl_item_genre">
-                                Nama Game
+                                Action, Adventure
                               </span>
                             </div>
                           </div>
@@ -231,16 +365,16 @@
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
+                                <span class="item_atc_text">Add to cart</span>
                               </a>
                             </div>
                           </div>
                           <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
+                            <h5 class="owl_item_title text-lt"><a href="">Donec dignissim ...</a></h5>
                             <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
+                              <span class="owl_item_price">€44.99</span>
                               <span class="owl_item_genre">
-                                Nama Game
+                                Action, Adventure
                               </span>
                             </div>
                           </div>
@@ -259,16 +393,16 @@
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
+                                <span class="item_atc_text">Add to cart</span>
                               </a>
                             </div>
                           </div>
                           <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
+                            <h5 class="owl_item_title text-lt"><a href="">Donec dignissim ...</a></h5>
                             <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
+                              <span class="owl_item_price">€44.99</span>
                               <span class="owl_item_genre">
-                                Nama Game
+                                Action, Adventure
                               </span>
                             </div>
                           </div>
@@ -294,16 +428,16 @@
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
+                                <span class="item_atc_text">Add to cart</span>
                               </a>
                             </div>
                           </div>
                           <div>
-                            <h5 class="owl_item_title text-lt"><a href="">nama turnamen</a></h5>
+                            <h5 class="owl_item_title text-lt"><a href="">Donec dignissim ...</a></h5>
                             <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
+                              <span class="owl_item_price">€44.99</span>
                               <span class="owl_item_genre">
-                                Nama Game
+                                Action, Adventure
                               </span>
                             </div>
                           </div>
@@ -322,16 +456,16 @@
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
+                                <span class="item_atc_text">Add to cart</span>
                               </a>
                             </div>
                           </div>
                           <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
+                            <h5 class="owl_item_title text-lt"><a href="">Donec dignissim ...</a></h5>
                             <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
+                              <span class="owl_item_price">€44.99</span>
                               <span class="owl_item_genre">
-                                Nama Game
+                                Action, Adventure
                               </span>
                             </div>
                           </div>
@@ -350,16 +484,16 @@
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
+                                <span class="item_atc_text">Add to cart</span>
                               </a>
                             </div>
                           </div>
                           <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
+                            <h5 class="owl_item_title text-lt"><a href="">Donec dignissim ...</a></h5>
                             <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
+                              <span class="owl_item_price">€44.99</span>
                               <span class="owl_item_genre">
-                                Nama Game
+                                Action, Adventure
                               </span>
                             </div>
                           </div>
@@ -378,16 +512,16 @@
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
+                                <span class="item_atc_text">Add to cart</span>
                               </a>
                             </div>
                           </div>
                           <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
+                            <h5 class="owl_item_title text-lt"><a href="">Donec dignissim ...</a></h5>
                             <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
+                              <span class="owl_item_price">€44.99</span>
                               <span class="owl_item_genre">
-                                Nama Game
+                                Action, Adventure
                               </span>
                             </div>
                           </div>
@@ -406,16 +540,163 @@
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
-                                <span class="item_atc_text">Daftarkan</span>
+                                <span class="item_atc_text">Add to cart</span>
                               </a>
                             </div>
                           </div>
                           <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
+                            <h5 class="owl_item_title text-lt"><a href="">Donec dignissim ...</a></h5>
                             <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
+                              <span class="owl_item_price">€44.99</span>
                               <span class="owl_item_genre">
-                                Nama Game
+                                Action, Adventure
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+                  </div>
+                  <!-- /.item -->
+                </div>
+              </div>
+              <!-- /.tab item -->
+
+              <!-- tab item -->
+              <div class="tab-pane fade" id="mp-03-c" role="tabpanel" aria-labelledby="mp-03-tab">
+                <div class="owl-carousel gs-carousel" data-carousel-margin="30" data-carousel-nav="true" data-carousel-navText="<span class='icon-cl-next pe-7s-angle-left'></span>, <span class='icon-cl-next pe-7s-angle-right'></span>">
+                  <!-- item -->
+                  <div class="item">
+                    <div class="item-cont">
+                      <figure class="owl_item_review">
+                        <div>
+                          <div class="position-relative overflow-hidden">
+                            <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                            <div class="review_h text-light">
+                              <a href="#">
+                                <i class="item_icon_cart fas fa-shopping-cart"></i>
+                                <span class="item_atc_text">Add to cart</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div>
+                            <h5 class="owl_item_title text-lt"><a href="">Donec dignissim ...</a></h5>
+                            <div class="relative small-1">
+                              <span class="owl_item_price">€44.99</span>
+                              <span class="owl_item_genre">
+                                Action, Adventure
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+                  </div>
+                  <!-- /.item -->
+                  <!-- item -->
+                  <div class="item">
+                    <div class="item-cont">
+                      <figure class="owl_item_review">
+                        <div>
+                          <div class="position-relative overflow-hidden">
+                            <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                            <div class="review_h text-light">
+                              <a href="#">
+                                <i class="item_icon_cart fas fa-shopping-cart"></i>
+                                <span class="item_atc_text">Add to cart</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div>
+                            <h5 class="owl_item_title text-lt"><a href="">Donec dignissim ...</a></h5>
+                            <div class="relative small-1">
+                              <span class="owl_item_price">€44.99</span>
+                              <span class="owl_item_genre">
+                                Action, Adventure
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+                  </div>
+                  <!-- /.item -->
+                  <!-- item -->
+                  <div class="item">
+                    <div class="item-cont">
+                      <figure class="owl_item_review">
+                        <div>
+                          <div class="position-relative overflow-hidden">
+                            <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                            <div class="review_h text-light">
+                              <a href="#">
+                                <i class="item_icon_cart fas fa-shopping-cart"></i>
+                                <span class="item_atc_text">Add to cart</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div>
+                            <h5 class="owl_item_title text-lt"><a href="">Donec dignissim ...</a></h5>
+                            <div class="relative small-1">
+                              <span class="owl_item_price">€44.99</span>
+                              <span class="owl_item_genre">
+                                Action, Adventure
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+                  </div>
+                  <!-- /.item -->
+                  <!-- item -->
+                  <div class="item">
+                    <div class="item-cont">
+                      <figure class="owl_item_review">
+                        <div>
+                          <div class="position-relative overflow-hidden">
+                            <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                            <div class="review_h text-light">
+                              <a href="#">
+                                <i class="item_icon_cart fas fa-shopping-cart"></i>
+                                <span class="item_atc_text">Add to cart</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div>
+                            <h5 class="owl_item_title text-lt"><a href="">Donec dignissim ...</a></h5>
+                            <div class="relative small-1">
+                              <span class="owl_item_price">€44.99</span>
+                              <span class="owl_item_genre">
+                                Action, Adventure
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </figure>
+                    </div>
+                  </div>
+                  <!-- /.item -->
+                  <!-- item -->
+                  <div class="item">
+                    <div class="item-cont">
+                      <figure class="owl_item_review">
+                        <div>
+                          <div class="position-relative overflow-hidden">
+                            <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                            <div class="review_h text-light">
+                              <a href="#">
+                                <i class="item_icon_cart fas fa-shopping-cart"></i>
+                                <span class="item_atc_text">Add to cart</span>
+                              </a>
+                            </div>
+                          </div>
+                          <div>
+                            <h5 class="owl_item_title text-lt"><a href="">Donec dignissim ...</a></h5>
+                            <div class="relative small-1">
+                              <span class="owl_item_price">€44.99</span>
+                              <span class="owl_item_genre">
+                                Action, Adventure
                               </span>
                             </div>
                           </div>
@@ -621,45 +902,67 @@
           <div class="row gutters-y">
               <div class="col-6 col-lg-3">
                 <a href="#" class="logo d-block mb-4"><img src="assets/img/logo-gaming.png" alt="Wicodus" class="logo-dark"></a>
-                <p>Sumber guide game dan berita E-Sport Indonesia dan Dunia. Tak Hanya Game E-Sport PC, Tapi Juga Mobile</p>
-              </div>
-
-              <div class="col-6 col-lg-2">
-                <h6 class="text-uppercase fw-600 mb-4">About Us</h6>
-                <div class="nav flex-column">
-                  <a class="nav-link" href="#">Kebijakan & Privasi</a>
-                  <a class="nav-link" href="#">Syarat & Ketentuan</a>
+                <p>Wicodus is a online store where you can find digital goods at the best prices.</p>
+                <div class="social-buttons">
+                  <a class="social-twitter" href="#"><i class="fab fa-twitter"></i></a>
+                  <a class="social-dribbble" href="#"><i class="fab fa-dribbble"></i></a>
+                  <a class="social-instagram" href="#"><i class="fab fa-instagram"></i></a>
                 </div>
               </div>
 
               <div class="col-6 col-lg-2">
-                <h6 class="text-uppercase fw-600 mb-4">Section</h6>
+                <h6 class="text-uppercase fw-600 mb-4">About</h6>
                 <div class="nav flex-column">
-                  <a class="nav-link" href="#">E-Sport</a>
-                  <a class="nav-link" href="#">Geek</a>
-                  <a class="nav-link" href="#">Hiburan</a>
-                  <a class="nav-link" href="#">Tekno</a>
+                  <a class="nav-link" href="about.html">Our team</a>
+                  <a class="nav-link" href="about.html">Careers</a>
+                  <a class="nav-link" href="about.html">Cookie Policy</a>
+                  <a class="nav-link" href="about.html">Privacy Policy</a>
+                  
                 </div>
               </div>
 
               <div class="col-6 col-lg-2">
-                <h6 class="text-uppercase fw-600 mb-4">Follow Us</h6>
-                <div class="nav flex-column social-buttons ">
-                  <a class="social-youtube" href="#"><i class="fab fa-youtube fa-lg">Youtube </i> </a>
-                  <a class="social-twitter" href="#"><i class="fab fa-twitter fa-lg">Twitter </i> </a>
-                  <a class="social-instagram" href="#"><i class="fab fa-instagram fa-lg">Instagram </i> </a>
-                  <a class="social-facebook" href="#"><i class="fab fa-facebook fa-lg">Facebook </i> </a>
+                <h6 class="text-uppercase fw-600 mb-4">Community</h6>
+                <div class="nav flex-column">
+                  <a class="nav-link" href="news.html">Forum</a>
+                  <a class="nav-link" href="news.html">Blog</a>
+                  <a class="nav-link" href="news.html">News</a>
+                  <a class="nav-link" href="news.html">Team</a>
+                </div>
+              </div>
+
+              <div class="col-6 col-lg-2">
+                <h6 class="text-uppercase fw-600 mb-4">Help</h6>
+                <div class="nav flex-column">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                  <a class="nav-link" href="contact.html">Support</a>
+                  <a class="nav-link" href="contact.html">Terms & conditions</a>
+                  <a class="nav-link" href="contact.html">Refund policy</a>
                 </div>
               </div>
               
               <div class="col col-lg-3 order-lg-last">
                 <div class="mb-6">
-                  <h6 class="text-uppercase fw-600 mb-4">Download On</h6>
+                  <h6 class="text-uppercase fw-600 mb-4">Ways to pay</h6>
                   <div class="text-light lead-5 lh-1">
-                    <a href="#" class="social-twitter"><i class="fab fa-google-play fa-xs">Google Play</i></a></br>
-                    <a href="#" class="social-instagram"><i class="fab fa-app-store fa-xs">APP STORE</i></a>
+                    <a href="store.html" class="mr-2"><i class="fab fa-cc-paypal"></i></a>
+                    <a href="store.html" class="mr-2"><i class="fab fa-cc-visa"></i></a>
+                    <a href="store.html" class="mr-2"><i class="fab fa-cc-amazon-pay"></i></a>
+                    <a href="store.html" class="mr-2"><i class="fab fa-cc-stripe"></i></a>
+                    <a href="store.html" class="mr-2"><i class="fab fa-cc-jcb"></i></a>
                   </div>
                 </div>
+                <div>
+                  <h6 class="mb-2">Reviews</h6>
+                  <div class="text-warning lead-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star text-secondary"></i>
+                  </div>
+                </div>
+              </div>
           </div>
       </div>
     </footer>
@@ -738,7 +1041,7 @@
                 <div class="row align-items-center h-100 no-gutters">
                   <div class="ml-auto text-center">
                     <a href="#"><i class="far fa-trash-alt"></i></a><br>
-                    <span class="fw-500 text-warning">Price pool €44.99</span>
+                    <span class="fw-500 text-warning">€44.99</span>
                   </div>
                 </div>
               </div>

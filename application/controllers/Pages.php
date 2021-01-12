@@ -46,4 +46,8 @@ class Pages extends CI_Controller {
 		$data['content'] = 'contents/v_tournament';
 		$this->load->view('tamplate/page',$data);
 	}
+	public function tes()
+	{
+		$this->load->view('welcome_message');
+	}
 }
