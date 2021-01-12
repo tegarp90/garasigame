@@ -137,14 +137,18 @@
               <!-- tab item -->
               <div class="tab-pane fade show active" id="mp-01-c" role="tabpanel" aria-labelledby="mp-01-tab">
                 <div class="owl-carousel gs-carousel" data-carousel-margin="30" data-carousel-nav="true" data-carousel-navText="<span class='icon-cl-next pe-7s-angle-left'></span>, <span class='icon-cl-next pe-7s-angle-right'></span>">
-                  <?php for ($i=0; $i < 6; $i++) { ?>
+                  <?php $games = array(' ','PUBG MOBILE','FREE FIRE','Mobile Legends','Among us','clash of clans');
+                  $pricepol = array(' ','Rp.15.000.000','Rp.10.000.000','Rp.20.000.000','Rp.2.000.000','Rp.3.000.000');
+                  for ($i=1; $i < 6; $i++) { ?>
                     <!-- item -->
                   <div class="item">
                     <div class="item-cont">
                       <figure class="owl_item_review">
                         <div>
                           <div class="position-relative overflow-hidden">
-                            <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                            <div>
+                            <img class="m-0-auto" src="assets/img/content/cont/<?php echo $i; ?>_small.jpg" alt="Games Store">
+                            </div>
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
@@ -153,11 +157,11 @@
                             </div>
                           </div>
                           <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
+                            <h5 class="owl_item_title text-lt"><a href="">Turnamen <?php echo $games[$i]; ?></a></h5>
                             <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
+                              <span class="owl_item_price">Total Hadiah <?php echo $pricepol[$i]; ?></span>
                               <span class="owl_item_genre">
-                                Nama Game
+                                <?php echo $games[$i]; ?>
                               </span>
                             </div>
                           </div>
@@ -174,14 +178,15 @@
               <!-- tab item -->
               <div class="tab-pane fade" id="mp-02-c" role="tabpanel" aria-labelledby="mp-02-tab">
                 <div class="owl-carousel gs-carousel" data-carousel-margin="30" data-carousel-nav="true" data-carousel-navText="<span class='icon-cl-next pe-7s-angle-left'></span>, <span class='icon-cl-next pe-7s-angle-right'></span>">
-                  <?php for ($i=0; $i < 6; $i++) { ?>
+                  <?php 
+                  for ($i=1; $i < 6; $i++) { ?>
                     <!-- item -->
                   <div class="item">
                     <div class="item-cont">
                       <figure class="owl_item_review">
                         <div>
                           <div class="position-relative overflow-hidden">
-                            <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                            <img class="m-0-auto" src="assets/img/content/cont/<?php echo $i; ?>_small.jpg" alt="Games Store">
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
@@ -190,11 +195,11 @@
                             </div>
                           </div>
                           <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen</a></h5>
+                            <h5 class="owl_item_title text-lt"><a href="">Turnamen Online<?php echo $games[$i]; ?></a></h5>
                             <div class="relative small-1">
-                              <span class="owl_item_price">Price pool €44.99</span>
+                              <span class="owl_item_price">Total Hadiah <?php echo $pricepol[$i]; ?></span>
                               <span class="owl_item_genre">
-                                Nama Game
+                                <?php echo $games[$i]; ?>
                               </span>
                             </div>
                           </div>
