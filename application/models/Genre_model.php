@@ -20,4 +20,10 @@ class Genre_model extends CI_Model {
 
         $this->db->insert('GENRE', $data);
     }
+
+    public function hapusGenre($id)
+    {
+        $this->db->where('ID_GENRE', $id);
+        $this->db->delete('GENRE');
+    }
 }

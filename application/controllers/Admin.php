@@ -35,6 +35,13 @@ class Admin extends CI_Controller {
     public function tambahGenre()
     {
         $data['genre'] = $this->Genre_model->createGenre($_POST);
+        sleep(2); redirect('admin/indexGenre');
+    }
+
+    public function hapusGenre()
+    {   
+        $id = $this->input->post('id');
+        $this->Genre_model->hapusGenre($id);
         redirect('admin/indexGenre');
     }
 

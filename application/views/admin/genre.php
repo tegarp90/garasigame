@@ -104,7 +104,7 @@
                                                         <?php endif; ?>
                                                         <th scope="col" class="text-center">
                                                             <a href="" class="badge badge-primary">Edit</a>
-                                                            <a href="" class="badge badge-danger">Hapus</a>
+                                                            <a onclick="deleteData(<?= $g['ID_GENRE']; ?>)" class="badge badge-danger">Hapus</a>
                                                         </th>
                                                     </tr>
                                                 <?php endforeach; ?>
@@ -250,7 +250,7 @@
                             <input type="text" class="form-control" id="nama" name="nama" placeholder="Ex : MMORPG" required>
                         </div>
                         <div class="form-group">
-                            <label for="status" class="text-info">Example select</label>
+                            <label for="status" class="text-info">Status</label>
                             <select class="form-control" id="status" name="status">
                                 <option value=1>Aktif</option>
                                 <option value=0>Tidak Aktif</option>
@@ -259,9 +259,50 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-primary" name="tambahGenre">Tambah Genre</button>
+                    <button type="submit" class="btn btn-primary" name="tambahGenre" onclick="Swal.fire('GENRE', 'Genre Berhasil Ditambahkan !', 'success')">Tambah Genre</button>
                 </div>
                 </form>
             </div>
         </div>
     </div>
+
+    <!-- Sweet Alert Delete Confirmation -->
+    <script>
+        function deleteData(id) {
+            console.log(id);
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        type: "POST",
+                        url: "<?php echo base_url(); ?>admin/hapusGenre",
+                        data: {
+                            id: id
+                        },
+                        success: function() {
+                            Swal.fire({
+                                title: "Konfirmasi",
+                                text: "Data Genre Berhasil Dihapus",
+                                icon: "success"
+                            });
+                            setTimeout(function() {
+                                window.location.href = "<?php echo base_url(); ?>admin/indexGenre";
+                            }, 2000);
+                        },
+                        error: function() {
+                            alert('error');
+                        }
+
+
+                    });
+                }
+            })
+        }
+    </script>

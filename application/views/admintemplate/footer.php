@@ -193,5 +193,8 @@
 
     <!-- Main JS -->
     <script src="<?= base_url();?>assets/js/main.js" id="_mainJS" data-plugins="load"></script>
+
+    <!-- Sweet Alert Plugin -->
+    <script src="<?= base_url();?>assets/js/swal/sweetalert2.all.min.js"></script>
   </body>
 </html>
