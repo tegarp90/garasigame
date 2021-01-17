@@ -38,7 +38,7 @@ class Login extends CI_Controller {
 			</script>
 		<?php
 		}	
-		redirect(base_url());
+		redirect('profile');
 	}
 	function logout()
 	{
