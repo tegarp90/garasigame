@@ -54,13 +54,13 @@
           <div class="modal-body">
             <form class="input-transparent" action="signup" method="post">
               <div class="form-group">
-                <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                <input type="email" class="form-control" name="email" placeholder="Email" id="email" required="email">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="username" placeholder="Username" id="username">
+                <input type="text" class="form-control" name="username" placeholder="Username" id="username" required>
               </div>
               <div class="form-group">
-                <input type="password" class="form-control" name="password" placeholder="Password">
+                <input type="password" class="form-control" name="password" placeholder="Password" required>
               </div>
               <label>Birthday</label>
               <div class="row mx-1">

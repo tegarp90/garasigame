@@ -40,6 +40,20 @@ class Login extends CI_Controller {
 		}	
 		redirect('profile');
 	}
+	function register()
+	{
+		$email = $this->input->post('email');
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$y = $this->input->post('year');
+		$m = $this->input->post('month');
+		$d = $this->input->post('day');
+		$birthday = $y.'-'.$m.'-'.$d;
+
+		$data = array('' => , );
+
+		echo $email.' '.$username.' '.$password.' '.$birthday;
+	}
 	function logout()
 	{
 		$this->session->sess_destroy();

@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'pages';
 $route['tes'] = 'pages/tes';
 $route['login'] = 'login';
+$route['signup'] = 'login/register';
 $route['google_login'] = 'login/google_login';
 $route['logout'] = 'login/logout';
 $route['profile'] = 'pages/profil';
