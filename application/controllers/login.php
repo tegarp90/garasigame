@@ -80,7 +80,7 @@ class Login extends CI_Controller {
 					$user_data = array(
 						'NAMA' => $data['given_name']+''+$data['family_name'],
 						'EMAIL' => $data['email'],
-						'AVATAR' = $data['picture'],
+						'AVATAR' => $data['picture'],
 						'UPDATE_DATE' => $current
 					);
 					$this->crud->update('USER','GOOGLE_ID',$data['id'],$user_data);
@@ -89,7 +89,7 @@ class Login extends CI_Controller {
 						'GOOGLE_ID' => $data['id'],
 						'NAMA' => $data['given_name']+''+$data['family_name'],
 						'EMAIL' => $data['email'],
-						'AVATAR' = $data['pictur'],
+						'AVATAR' => $data['pictur'],
 						'CREATED_DATE' => $current
 					);
 					$this->crud->insert('USER',$user_data);
