@@ -21,6 +21,7 @@ class Login extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('crud');
 	}
 	public function index()
 	{
@@ -49,7 +50,7 @@ class Login extends CI_Controller {
 		<?php
 		redirect(base_url());
 	}
-	function google_login()
+	public function google_login()
 	{
 		include_once APPATH . "libraries/vendor/autoload.php";
 
@@ -62,7 +63,42 @@ class Login extends CI_Controller {
 
 		$google_client->addScope('profile');
 		if (isset($_GET["code"])) {
+
+			$token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
+
+			if (!isset($token["error"])) {
+				$google_client->setAccessToken($token['access_token']);
+				$this->session->userdata('access_token', $token['access_token']);
+
+				$google_service = new Google_Service_Oauth2($google_client);
+
+				$data = $google_service->userinfo->get();
+
+				$current = date('Y-m-d H:i:s');
+
+				if ($this->crud->cekid('USER','GOOGLE_ID',$data['id'])) {
+					$user_data = array(
+						'NAMA' => $data['given_name']+''+$data['family_name'],
+						'EMAIL' => $data['email'],
+						'AVATAR' = $data['picture'],
+						'UPDATE_DATE' => $current
+					);
+					$this->crud->update('USER','GOOGLE_ID',$data['id'],$user_data);
+				}else{
+					$user_data = array(
+						'GOOGLE_ID' => $data['id'],
+						'NAMA' => $data['given_name']+''+$data['family_name'],
+						'EMAIL' => $data['email'],
+						'AVATAR' = $data['pictur'],
+						'CREATED_DATE' => $current
+					);
+					$this->crud->insert('USER',$user_data);
+				}
+				$this->session->set_userdata('web_sesi',true);
+				$this->session->userdata('user_data',$user_data);
+			}
 			
 		}
+
 	}
 }
