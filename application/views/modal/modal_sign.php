@@ -1,4 +1,4 @@
-<!-- sign Up Modal-->
+<!-- sign in Modal-->
     <div class="modal fade" id="userLogin" tabindex="-1" role="dialog" aria-labelledby="userLoginTitle" aria-hidden="true">
       <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
         <div class="modal-content bg-dark text-light">
@@ -9,14 +9,6 @@
             </button>
           </div>
           <div class="modal-body">
-            <div>
-              <div class="text-center my-6"> 
-                <a class="btn btn-circle btn-sm btn-google mr-2" href=""><i class="fab fa-google"></i></a>
-                <a class="btn btn-circle btn-sm btn-facebook mr-2" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-circle btn-sm btn-twitter" href=""><i class="fab fa-twitter"></i></a>
-              </div>
-              <span class="hr-text small my-6">Or</span>
-            </div>
             <form class="input-transparent" action="login" method="post">
               <div class="form-group">
                 <input type="text" class="form-control border-secondary" name="username" placeholder="Username">
@@ -35,9 +27,74 @@
                 <button class="btn btn-block btn-warning" type="submit">Login</button>
               </div>
             </form>
-            <span class="small">Don't have an account? <a href="#">Create an account</a></span>
+            <span class="small">Don't have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#userSignup">Create an account</a></span>
+            <div>
+              <span class="hr-text small my-6">Or</span>
+              <div class="text-center my-6"> 
+                <a class="btn btn-circle btn-sm btn-google mr-2" href=""><i class="fab fa-google"></i></a>
+                <a class="btn btn-circle btn-sm btn-facebook mr-2" href=""><i class="fab fa-facebook-f"></i></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- /.sign Up -->
+    <!-- /.sign in -->
+
+    <!-- sign up Modal-->
+    <div class="modal fade" id="userSignup" tabindex="-1" role="dialog" aria-labelledby="userSignupTitle" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="userSignupTitle">Sign Up</h5>
+            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="input-transparent" action="signup" method="post">
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="username" placeholder="Username" id="username">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+              </div>
+              <label>Birthday</label>
+              <div class="row mx-1">
+                <div class="form-group  mx-2">
+                  <select class="form-control" name="year" placeholder="year">
+                    <option value="2015">Year</option>
+                    <?php for ($i=2021; $i > 1990; $i--) { ?>
+                      <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                  </select>
+                </div>
+                <div class="form-group  mx-2">
+                  <select class="form-control" name="month" placeholder="month">
+                      <option value="1">Month</option>
+                    <?php for ($i=1; $i < 13; $i++) { ?>
+                      <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                  </select>
+                </div>
+                <div class="form-group  mx-2">
+                  <select class="form-control" name="day" placeholder="day">
+                      <option value="1">Day</option>
+                    <?php for ($i=1; $i < 30; $i++) { ?>
+                      <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                    <?php } ?>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group mt-6">
+                <button class="btn btn-block btn-warning" type="submit">Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.sign up -->

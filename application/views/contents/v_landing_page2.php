@@ -117,52 +117,51 @@
       <!-- content area -->
       <section class="content-section text-light" style="background-image: url(assets/img/bg/bg_shape.png);">
         <div class="container-fluid">
-          <header class="header text-center">
+          <header class="header text-center text-uppercase">
             <h2>Most Popular Tournaments</h2>
           </header>
-            <div class="row">
-              <?php for ($i=1; $i < 6; $i++) { ?>
+            <div class="text-center">
+              <?php for ($i=1; $i < 7; $i++) { ?>
                 <img class="w-15 pl-3 mt-3" src="assets/img/content/cont/<?php echo $i; ?>_small.jpg" alt="Responsive image">
               <?php } ?>
-              <div class="d-flex align-items-end flex-column w-25 px-3"> 
-                <a href="" class="btn btn-lg btn-warning mt-auto w-100">More</a>
-
-                <a href="" class="btn btn-lg btn-warning mt-2 w-100">Create Own Tournament</a>
-              </div>
             </div>
-        </div>  
+            <div class="text-center my-3">
+                <a href="" class="btn btn-lg btn-warning w-100">More Tournament</a>
+                <a href="" class="btn btn-lg btn-warning mt-3 w-100">Create Own Tournament</a>
+            </div>
+        </div>
       </section>
       <!-- /.content area -->
 
       <!-- content area -->
       <section class="section gs_features">
         <div class="row no-gutters">
-          <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c effect-wrapper effect-grayscale position-relative hover" style="background-image: url('assets/img/content/cont/cg-fl_01.jpg');">
+          <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c effect-wrapper effect-grayscale position-relative hover" style="background-image: url('assets/img/content/cont/hottest_produk.jpg');">
             <div class="overlay bg-dark_A-90 d-md-none"></div>
             <div class="row h-100 align-items-center content">
               <div class="col-12 col-md-8 ml-auto text-light text-md-right">
-                <small class="d-block text-uppercase fw-600 ls-3">New</small>
-                <h2 class="mb-4">An Incredible Journey</h2>
-                <span class="d-block text-uppercase ls-3 mb-6">Only On Wicodus</span>
+                <small class="d-block text-uppercase fw-600 ls-3">Hottest Product</small>
+                <h2 class="mb-4">Accecories Gaming</h2>
+                <span class="d-block text-uppercase ls-3 mb-6">Only On Garasi Games</span>
                 <a href="#" class="btn btn-lg btn-outline-light btn-round">Explore</a>
               </div>
             </div>
             <figure class="d-none d-md-block effect-layla effect-layla-light"></figure>
           </div>
-          <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c" style="background-image: url('assets/img/content/cont/cg-fl_03.jpg');" data-overlay="7">
+          <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c" style="background-image: url('assets/img/content/cont/hottest_game.jpg');" data-overlay="7">
             <div class="row align-items-center h-100">
               <div class="col-sm-6 col-md-4 mb-5 mb-md-0">
                 <figure class="position-relative my-0">
-                  <div style="background-image: url('assets/img/content/cont/cg_07.jpg');" class="main-fb-product bs-c bp-c br-n">
+                  <div style="background-image: url('assets/img/content/cont/1_small.jpg');" class="main-fb-product bs-c bp-c br-n">
                     <div class="position-absolute t-0 r-0 px-4 py-1 bg-danger text-white text-uppercase fw-600">-50%</div>
                     <div class="position-absolute b-0 w-100 text-center">
-                      <div data-countdown="2020/01/25 12:34:56" class="countdown-coupon bg-dark_A-50 py-3 text-light fw-700 timer"></div>
+                      <div data-countdown="2021/01/25 12:34:56" class="countdown-coupon bg-dark_A-50 py-3 text-light fw-700 timer"></div>
                     </div>
                   </div>
                 </figure>
               </div>
               <div class="col-md-8 text-light">
-                <h2 class="text-light mb-4">Vestibulum</h2>
+                <h2 class="text-light mb-4">Item Promo</h2>
                 <p class="mb-7">Mauris euismod aliquam erat, a vestibulum tortor bibendum sit amet. Duis vitae augue non dolor fermentum faucibus non quis justo. Sed consequat accumsan turpis et semper. Nulla blandit blandit est, nec tincidunt neque sollicitudin vitae.</p>
                 <a href="#" class="btn btn-lg btn-danger btn-round"><i class="fa fa-shopping-cart mr-5" aria-hidden="true"></i>Buy</a>
               </div>
@@ -170,31 +169,31 @@
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-xl-6 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c" style="background-image: url('assets/img/content/cont/cg-fl_04.jpg');" data-overlay="7">
+          <div class="col-xl-6 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c" style="background-image: url('assets/img/content/cont/hottest_game2.jpg');" data-overlay="7">
             <div class="row align-items-center h-100">
               <div class="col-sm-6 col-md-4 order-md-2 mb-6 mb-md-0">
                 <figure class="position-relative my-0">
-                  <div style="background-image: url('assets/img/content/cont/cg_08.jpg');" class="main-fb-product bs-c bp-c br-n">
+                  <div style="background-image: url('assets/img/content/cont/2_small.jpg');" class="main-fb-product bs-c bp-c br-n">
                     <div class="position-absolute t-0 r-0 px-4 py-1 bg-danger text-white text-uppercase fw-600">-72%</div>
                     <div class="position-absolute b-0 w-100 text-center">
-                      <div data-countdown="2020/02/11 12:34:56" class="countdown-coupon bg-dark_A-50 py-3 text-light fw-700 timer"></div>
+                      <div data-countdown="2021/02/11 12:34:56" class="countdown-coupon bg-dark_A-50 py-3 text-light fw-700 timer"></div>
                     </div>
                   </div>
                 </figure>
               </div>
               <div class="col-md-8 order-md-1 text-light text-md-right">
-                <h2 class="mb-4">Explore vestibulum</h2>
+                <h2 class="mb-4">Item Promo</h2>
                 <p class="mb-7">Mauris euismod aliquam erat, a vestibulum tortor bibendum sit amet. Duis vitae augue non dolor fermentum faucibus non quis justo. Sed consequat accumsan turpis et semper. Nulla blandit blandit est, nec tincidunt neque sollicitudin vitae.</p>
                 <a href="#" class="btn btn-lg btn-danger btn-round"><i class="fa fa-shopping-cart mr-5" aria-hidden="true"></i>Buy</a>
               </div>
             </div>
           </div>
-          <div class="col-xl-6 col-sm-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c effect-wrapper effect-grayscale position-relative hover" style="background-image: url('assets/img/content/cont/cg-fl_02.jpg');">
+          <div class="col-xl-6 col-sm-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c effect-wrapper effect-grayscale position-relative hover" style="background-image: url('assets/img/content/cont/hottest_produk2.jpg');">
             <div class="overlay bg-dark_A-90 d-md-none"></div>
             <div class="row h-100 align-items-center content">
               <div class="col-12 col-md-6 mr-auto text-light text-left">
-                <small class="d-block text-uppercase fw-600 ls-3">Action</small>
-                <h2 class="mb-4">Sed consequat</h2>
+                <small class="d-block text-uppercase fw-600 ls-3">Hottest Product</small>
+                <h2 class="mb-4">Laptop Gaming</h2>
                 <span class="d-block lead-1 text-uppercase ls-3 mb-7">An amazing experience from beginning to end.</span>
                 <a href="#" class="btn btn-lg btn-outline-light btn-round">Explore the Sky</a>
               </div>

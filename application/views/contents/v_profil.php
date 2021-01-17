@@ -1,11 +1,11 @@
 <!-- header -->
     <header class="pt-10 p-relative">
-      <div class="overlay br-n bs-c bp-r pe-n" data-parallax="scroll" data-z-index="1" data-image-src="assets/img/bg/bg_a.jpg"></div>
+      <div class="overlay br-n bs-c bp-r pe-n" data-parallax="scroll" data-z-index="1" data-image-src="assets/img/bg/bg_profil.jpg"></div>
       <div class="position-relative zi-1 d-flex align-items-end flex-wrap h-100">
         <div class="release-subheader">
           <div class="release-container">
             <div class="pb-9 w-100 text-light text-center">
-              <div class="img-xl position-relative br-n bp-c bs-c article-image ar-1_1 mx-auto rounded-circle border border-secondary mb-6" style="background-image: url(assets/img/avatar/2.jpg)">
+              <div class="img-xl position-relative br-n bp-c bs-c article-image ar-1_1 mx-auto rounded-circle border border-secondary mb-6" style="background-image: url(assets/img/avatar/default.jpg)">
                 <span class="position-absolute b-0 r-0 text-secondary lead-3 d-block bg-warning p-2 rounded-circle lh-1"><input type="file" class="custom-file-input position-absolute l-0 t-0 b-0 h-auto" id="customFile"><i class="far fa-image"></i></span>
               </div>
               <h3><?php echo $_SESSION['username']; ?></h3>
@@ -25,7 +25,7 @@
                   <li class="py-2 py-lg-0">
                     <a id="mp-2-01-tab" data-toggle="tab" href="#mp-2-01-c" role="tab" aria-controls="mp-2-01-c" aria-selected="true" class="profile-nav-link text-uppercase text-center active show">
                       <span class="pr-icon-nav ti-layout-cta-left lead-4 d-block mb-3"></span>
-                      <span class="small-2 fw-400 ls-1">About</span>
+                      <span class="small-2 fw-400 ls-1">Dashboard</span>
                     </a>
                   </li>
                   <li class="py-2 py-lg-0">
@@ -35,27 +35,15 @@
                     </a>
                   </li>
                   <li class="py-2 py-lg-0">
-                    <a id="mp-2-03-tab" data-toggle="tab" href="#mp-2-03-c" role="tab" aria-controls="mp-2-03-c" aria-selected="false" class="profile-nav-link text-uppercase text-center">
-                      <span class="pr-icon-nav ti-wallet lead-4 d-block mb-3"></span>
-                      <span class="small-2 fw-400 ls-1">Wallet</span>
+                    <a id="mp-2-06-tab" data-toggle="tab" href="#mp-2-06-c" role="tab" aria-controls="mp-2-06-c" aria-selected="false" class="profile-nav-link text-uppercase text-center">
+                      <span class="pr-icon-nav ti-user lead-4 d-block mb-3"></span>
+                      <span class="small-2 fw-400 ls-1">Groups</span>
                     </a>
                   </li>
                   <li class="py-2 py-lg-0">
                     <a id="mp-2-04-tab" data-toggle="tab" href="#mp-2-04-c" role="tab" aria-controls="mp-2-04-c" aria-selected="false" class="profile-nav-link text-uppercase text-center">
                       <span class="pr-icon-nav ti-settings lead-4 d-block mb-3"></span>
                       <span class="small-2 fw-400 ls-1">Settings</span>
-                    </a>
-                  </li>
-                  <li class="py-2 py-lg-0">
-                    <a id="mp-2-05-tab" data-toggle="tab" href="#mp-2-05-c" role="tab" aria-controls="mp-2-05-c" aria-selected="false" class="profile-nav-link text-uppercase text-center">
-                      <span class="pr-icon-nav ti-heart lead-4 d-block mb-3"></span>
-                      <span class="small-2 fw-400 ls-1">Wishlist</span>
-                    </a>
-                  </li>
-                  <li class="py-2 py-lg-0">
-                    <a id="mp-2-06-tab" data-toggle="tab" href="#mp-2-06-c" role="tab" aria-controls="mp-2-06-c" aria-selected="false" class="profile-nav-link text-uppercase text-center">
-                      <span class="pr-icon-nav ti-user lead-4 d-block mb-3"></span>
-                      <span class="small-2 fw-400 ls-1">Groups</span>
                     </a>
                   </li>
                 </ul>
