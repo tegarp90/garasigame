@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'hostname' => 'sonya.jagoanhosting.com',
+	'username' => 'garasig1_dashboard',
+	'password' => '6&#pZxEl$5nL',
+	'database' => 'garasig1_new',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
