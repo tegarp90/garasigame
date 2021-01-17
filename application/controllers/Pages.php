@@ -30,7 +30,6 @@ class Pages extends CI_Controller {
 		$data['content'] = 'contents/v_landing_page2';
 		$this->load->view('tamplate/page',$data);
 	}
-
 	public function profil()
 	{
 		$username = $this->input->post('username');
@@ -50,6 +49,7 @@ class Pages extends CI_Controller {
 	}
 	public function tes()
 	{
-		$this->load->view('welcome_message');
+		$data['content'] = 'contents/v_landing_page';
+		$this->load->view('tamplate/page',$data);
 	}
 }

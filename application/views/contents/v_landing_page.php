@@ -223,7 +223,7 @@
       <!-- content area -->
       <section class="section gs_features">
         <div class="row no-gutters">
-          <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c effect-wrapper effect-grayscale position-relative hover" style="background-image: url('assets/img/content/cont/cg-fl_01.jpg');">
+          <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c effect-wrapper effect-grayscale position-relative hover" style="background-image: url('assets/img/content/cont/hottest_produk.jpg');">
             <div class="overlay bg-dark_A-90 d-md-none"></div>
             <div class="row h-100 align-items-center content">
               <div class="col-12 col-md-8 ml-auto text-light text-md-right">
@@ -235,7 +235,7 @@
             </div>
             <figure class="d-none d-md-block effect-layla effect-layla-light"></figure>
           </div>
-          <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c" style="background-image: url('assets/img/content/cont/cg-fl_03.jpg');" data-overlay="7">
+          <div class="col-xl-6 col-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 br-n bs-c" style="background-image: url('assets/img/content/cont/hottest_game.jpg');" data-overlay="7">
             <div class="row align-items-center h-100">
               <div class="col-sm-6 col-md-4 mb-5 mb-md-0">
                 <figure class="position-relative my-0">
@@ -256,7 +256,7 @@
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-xl-6 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c" style="background-image: url('assets/img/content/cont/cg-fl_04.jpg');" data-overlay="7">
+          <div class="col-xl-6 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c" style="background-image: url('assets/img/content/cont/hottest_game2.jpg');" data-overlay="7">
             <div class="row align-items-center h-100">
               <div class="col-sm-6 col-md-4 order-md-2 mb-6 mb-md-0">
                 <figure class="position-relative my-0">
@@ -275,7 +275,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-6 col-sm-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c effect-wrapper effect-grayscale position-relative hover" style="background-image: url('assets/img/content/cont/cg-fl_02.jpg');">
+          <div class="col-xl-6 col-sm-12 py-8 px-4 px-sm-8 py-md-9 px-md-9 bs-c effect-wrapper effect-grayscale position-relative hover" style="background-image: url('assets/img/content/cont/hottest_produk2.jpg');">
             <div class="overlay bg-dark_A-90 d-md-none"></div>
             <div class="row h-100 align-items-center content">
               <div class="col-12 col-md-6 mr-auto text-light text-left">
