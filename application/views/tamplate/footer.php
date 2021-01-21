@@ -45,5 +45,62 @@
                 </div>
           </div>
       </div>
+      <div class="view_modal" style="display:none;"></div>
     </footer>
     <!-- /.footer -->
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- User JS -->
+    <script src="assets/js/scripts.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js" id="_mainJS" data-plugins="load"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+
+        $('.login-button').click(function(e){
+          e.preventDefault();
+
+          $.ajax({
+            url: "<?= site_url('login/formlogin') ?>",
+            dataType: "json",
+            success: function (response) {
+              $('.view_modal').html(response.data).show();
+              
+              $('#userLogin').modal('show');
+            },
+            error: function(xhr, ajaxOptions, thrownError){
+              alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
+            }
+          });
+
+        });
+
+        $('.reg-button').click(function(e){
+          e.preventDefault();
+
+          $.ajax({
+            url: "<?= site_url('login/formlogin') ?>",
+            dataType: "json",
+            success: function (response) {
+              $('.view_modal').html(response.data).show();
+              
+              $('#userSignup').modal('show');
+            },
+            error: function(xhr, ajaxOptions, thrownError){
+              alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
+            }
+          });
+
+        });
+        
+      });
+    </script>
+  </body>
+</html>

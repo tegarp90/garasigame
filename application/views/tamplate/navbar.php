@@ -17,8 +17,8 @@
           </div>
           <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-4 ml-auto text-right">
             <?php if (empty($_SESSION['web_sesi']) || $_SESSION['web_sesi'] == false): ?>
-            <a class="btn btn-sm btn-warning text-secondary mr-2" href="#" data-toggle="modal" data-target="#userLogin">Sign in</a>
-            <a class="btn btn-sm text-light d-none d-sm-inline-block" href="#" data-toggle="modal" data-target="#userSignup">Sign up</a>
+            <button class="btn btn-sm btn-warning text-secondary mr-2 login-button">Sign in</button>
+            <a class="btn btn-sm text-light d-none d-sm-inline-block reg-button" >Sign up</a>
             <?php endif ?>
             <ul class="nav navbar-nav d-none d-sm-inline-flex flex-row">
               <?php if (isset($_SESSION['web_sesi']) && $_SESSION['web_sesi'] == true): ?>

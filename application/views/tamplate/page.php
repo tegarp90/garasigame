@@ -6,5 +6,4 @@
     {
     $this->load->view(@$content);
     }
-    $this->load->view('modal/modal_sign');
 ?>

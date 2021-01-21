@@ -25,7 +25,7 @@
                   <li class="py-2 py-lg-0">
                     <a id="mp-2-01-tab" data-toggle="tab" href="#mp-2-01-c" role="tab" aria-controls="mp-2-01-c" aria-selected="true" class="profile-nav-link text-uppercase text-center active show">
                       <span class="pr-icon-nav ti-layout-cta-left lead-4 d-block mb-3"></span>
-                      <span class="small-2 fw-400 ls-1">Dashboard</span>
+                      <span class="small-2 fw-400 ls-1">Posts</span>
                     </a>
                   </li>
                   <li class="py-2 py-lg-0">
@@ -76,7 +76,7 @@
                   <div class="col-lg-7 mb-9 mb-lg-0">
     
                     <div id="about" class="mb-8">
-                      <h4>About</h4>
+                      <h4>Posts</h4>
                       <hr class="w-10 border-top-2 mt-5 mb-5 ml-0 mr-auto border-warning">
                       <div class="row">
                         <div class="col-10 col-lg-11">

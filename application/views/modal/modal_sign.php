@@ -9,12 +9,14 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="input-transparent" action="login" method="post">
+            <div class="invalid-feedback"></div>
+            <form method="post" class="input-transparent form-login" id="form_login">
               <div class="form-group">
-                <input type="text" class="form-control border-secondary" name="username" placeholder="Username">
+                <input type="text" class="form-control border-secondary" id="username" name="username" placeholder="Username">
+
               </div>
               <div class="form-group">
-                <input type="password" class="form-control border-secondary" name="password" placeholder="Password">
+                <input type="password" class="form-control border-secondary" id="password" name="password" placeholder="Password" >
               </div>
               <div class="form-group d-flex justify-content-between">
                 <div class="custom-control custom-checkbox">
@@ -24,7 +26,7 @@
                 <a class="small-3" href="#">Forgot password?</a>
               </div>
               <div class="form-group mt-6">
-                <button class="btn btn-block btn-warning" type="submit">Login</button>
+                <button type="submit" class="btn btn-block btn-warning btn-login">Login</button>
               </div>
             </form>
             <span class="small">Don't have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#userSignup">Create an account</a></span>
@@ -40,7 +42,6 @@
       </div>
     </div>
     <!-- /.sign in -->
-
     <!-- sign up Modal-->
     <div class="modal fade" id="userSignup" tabindex="-1" role="dialog" aria-labelledby="userSignupTitle" aria-hidden="true">
       <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
@@ -98,3 +99,36 @@
       </div>
     </div>
     <!-- /.sign up -->
+
+    <script>
+      $(document).ready(function () {
+        
+        $('#form-login').submit(function(e){
+          e.preventDefault();
+
+          $.ajax({
+            type: "POST",
+            url: "/validate",
+            data: $(this).serialize(),
+            dataType: "json",
+            beforeSend:function(){
+              $('btn-login').attr('disable','disabled');
+              $('btn-login').html('<i class="fa fa-spin fa-spinner"> </i>');
+
+            },
+            success: function (response) {
+              if(response.error){
+                $('.invalid-feedback').css('display','block');
+	              $('.invalid-feedback').html(response.error);
+              }
+              
+            },
+            error: function(xhr, ajaxOptions, thrownError){
+              alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
+            }
+          });
+          return false;
+        })
+
+      });
+    </script>

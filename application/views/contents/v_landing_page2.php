@@ -304,17 +304,3 @@
 <?php
   $this->load->view('tamplate/footer');
 ?>
-
-    <!-- jQuery -->
-    <script src="assets/js/jquery.min.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="assets/js/bootstrap.min.js"></script>
-
-    <!-- User JS -->
-    <script src="assets/js/scripts.js"></script>
-
-    <!-- Main JS -->
-    <script src="assets/js/main.js" id="_mainJS" data-plugins="load"></script>
-  </body>
-</html>

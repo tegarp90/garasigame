@@ -25,23 +25,57 @@ class Login extends CI_Controller {
 	}
 	public function index()
 	{
-		$username = $this->input->post('username');
-		$password = $this->input->post('password');
-		if ($username != "") {
-			$arraysesi = array('username' => $username, 'web_sesi' => true);
-			$this->session->set_userdata($arraysesi);
+		if($this->input->is_ajax_request()){
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('username', 'username', 'required');
+			$this->form_validation->set_rules('password', 'password', 'required|min_length[6]');
+			
+			if ($this->form_validation->run() == FALSE){
+				$errors = validation_errors();
+				echo json_encode(['error'=>$errors]);
+			}else{
+			   echo json_encode(['success'=>'Record added successfully.']);
+			}
+			 
 		}else{
-			$this->session->set_userdata('web_sesi',false);
-		?>
-			<script type="text/javascript">
-			alert("username atau Password Salah!");			
-			</script>
-		<?php
-		}	
-		redirect('profile');
+			echo "Maaf Tidak di proses";
+		}
+		
 	}
+	public function formlogin()
+	{
+		if($this->input->is_ajax_request()){
+			$msg = [
+				'data' => $this->load->view('modal/modal_sign', '', TRUE)
+			];
+
+			echo json_encode($msg);
+		}else{
+			echo "Maaf Tidak di proses";
+		}
+	}
+	public function validate() {
+
+        if($this->input->is_ajax_request()){
+			$this->load->library('form_validation');
+			$this->form_validation->set_rules('username', 'username', 'required');
+			$this->form_validation->set_rules('password', 'password', 'required|min_length[6]');
+			
+			if ($this->form_validation->run() == FALSE){
+				$errors = validation_errors();
+				echo json_encode(['error'=>$errors]);
+			}else{
+			   echo json_encode(['success'=>'Record added successfully.']);
+			}
+			 
+		}else{
+			echo "Maaf Tidak di proses";
+		}
+
+    }
 	function register()
 	{
+
 		$email = $this->input->post('email');
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
@@ -49,8 +83,6 @@ class Login extends CI_Controller {
 		$m = $this->input->post('month');
 		$d = $this->input->post('day');
 		$birthday = $y.'-'.$m.'-'.$d;
-
-		$data = array('' => , );
 
 		echo $email.' '.$username.' '.$password.' '.$birthday;
 	}
