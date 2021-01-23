@@ -25,22 +25,7 @@ class Login extends CI_Controller {
 	}
 	public function index()
 	{
-		if($this->input->is_ajax_request()){
-			$this->load->library('form_validation');
-			$this->form_validation->set_rules('username', 'username', 'required');
-			$this->form_validation->set_rules('password', 'password', 'required|min_length[6]');
-			
-			if ($this->form_validation->run() == FALSE){
-				$errors = validation_errors();
-				echo json_encode(['error'=>$errors]);
-			}else{
-			   echo json_encode(['success'=>'Record added successfully.']);
-			}
-			 
-		}else{
-			echo "Maaf Tidak di proses";
-		}
-		
+		redirect('profile');
 	}
 	public function formlogin()
 	{
@@ -54,11 +39,23 @@ class Login extends CI_Controller {
 			echo "Maaf Tidak di proses";
 		}
 	}
+	public function formregister()
+	{
+		if($this->input->is_ajax_request()){
+			$msg = [
+				'data' => $this->load->view('modal/modal_register', '', TRUE)
+			];
+
+			echo json_encode($msg);
+		}else{
+			echo "Maaf Tidak di proses";
+		}
+	}
 	public function validate() {
 
         if($this->input->is_ajax_request()){
-			$this->form_validation->set_rules('username', 'username', 'required|min_length[6]');
-			$this->form_validation->set_rules('password', 'password', 'required|min_length[6]');
+			$this->form_validation->set_rules('username', 'Username', 'required|min_length[6]');
+			$this->form_validation->set_rules('password', 'Password', 'required|min_length[6]');
 
 			if ($this->form_validation->run() == FALSE){
 				$errors = [
@@ -69,7 +66,62 @@ class Login extends CI_Controller {
 				];
 				echo json_encode($errors);
 			}else{
-			   echo json_encode(['success'=>'Record added successfully.']);
+				$username = $this->input->post('username');
+				$password = $this->input->post('password');
+				$cek = $this->crud->cekid('user','USERNAME',$username);
+				if ($cek == false) {
+					echo json_encode(['auth'=>'Username Tidak Terdaftar']);
+				}else{
+					$cekpass = $this->crud->cekpass('user','USERNAME',$username,$password);
+					if ($cekpass == false) {
+						echo json_encode(['auth'=>'Password Salah']);
+					}else{
+						$arraysesi = array('username' => $username, 'web_sesi' => true);
+						$this->session->set_userdata($arraysesi);
+					   	echo json_encode(['success'=>'Login Success']);
+					}
+				}
+			}
+			 
+		}else{
+			echo "Maaf Tidak di proses";
+		}
+
+    }
+    public function validatereg() {
+
+        if($this->input->is_ajax_request()){
+        	$this->form_validation->set_rules('email-reg', 'Email', 'trim|required|valid_email|is_unique[user.EMAIL]');
+			$this->form_validation->set_rules('username-reg', 'Username', 'trim|required|min_length[6]|is_unique[user.USERNAME]');
+			$this->form_validation->set_rules('password-reg', 'Password', 'trim|required|min_length[6]');
+			$this->form_validation->set_rules('password-reg2', 'Confirm Password', 'trim|required|matches[password-reg]');
+
+			if ($this->form_validation->run() == FALSE){
+				$errors = [
+					'error' =>[
+						'email' => form_error('email-reg'),
+						'username' => form_error('username-reg'),
+						'password' => form_error('password-reg'),
+						'password2' => form_error('password-reg2')
+					]
+				];
+				echo json_encode($errors);
+			}else{
+				$email = $this->input->post('email-reg');
+				$username = $this->input->post('username-reg');
+				$password = $this->input->post('password-reg');
+
+				$data = array(
+					'EMAIL'			=> $email,
+					'USERNAME' 		=> $username,
+					'PASSWORD' 		=> password_hash($password,PASSWORD_DEFAULT),
+					'CREATED_DATE' 	=> time(),
+					'UPDATE_DATE' 	=> time(),
+					'STATUS'		=> 1,
+					 );
+
+				$this->crud->insert('user',$data);
+				echo json_encode(['success'=>'registration is successful, please activate via your email']);
 			}
 			 
 		}else{

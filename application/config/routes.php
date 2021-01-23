@@ -54,6 +54,7 @@ $route['tes'] = 'pages/tes';
 $route['login'] = 'login';
 $route['formlogin'] = 'login/formlogin';
 $route['validate'] = 'login/validate';
+$route['validatereg'] = 'login/validatereg';
 $route['signup'] = 'login/register';
 $route['google_login'] = 'login/google_login';
 $route['logout'] = 'login/logout';

@@ -10,15 +10,15 @@
           </div>
           <div class="modal-body">
             
-            <form action="validate" method="post" class="input-transparent form-login" id="form_login">
+            <form action="validate" method="post" class="input-transparent form-login">
               <div class="invalid-feedback"></div>
               <div class="form-group">
                 <input type="text" class="form-control border-secondary" id="username" name="username" placeholder="Username">
-                <div class="invalid-feedback username-error fs-2"></div>
+                <div class="invalid-feedback username-error"></div>
               </div>
               <div class="form-group">
                 <input type="password" class="form-control border-secondary" id="password" name="password" placeholder="Password" >
-                <div class="invalid-feedback password-error fs-2"></div>
+                <div class="invalid-feedback password-error"></div>
               </div>
               <div class="form-group d-flex justify-content-between">
                 <div class="custom-control custom-checkbox">
@@ -44,63 +44,6 @@
       </div>
     </div>
     <!-- /.sign in -->
-    <!-- sign up Modal-->
-    <div class="modal fade" id="userSignup" tabindex="-1" role="dialog" aria-labelledby="userSignupTitle" aria-hidden="true">
-      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-        <div class="modal-content bg-dark text-light">
-          <div class="modal-header">
-            <h5 class="modal-title" id="userSignupTitle">Sign Up</h5>
-            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form class="input-transparent" action="signup" method="post">
-              <div class="form-group">
-                <input type="email" class="form-control" name="email" placeholder="Email" id="email" required="email">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="username" placeholder="Username" id="username" required>
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" name="password" placeholder="Password" required>
-              </div>
-              <label>Birthday</label>
-              <div class="row mx-1">
-                <div class="form-group  mx-2">
-                  <select class="form-control" name="year" placeholder="year">
-                    <option value="2015">Year</option>
-                    <?php for ($i=2021; $i > 1990; $i--) { ?>
-                      <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                    <?php } ?>
-                  </select>
-                </div>
-                <div class="form-group  mx-2">
-                  <select class="form-control" name="month" placeholder="month">
-                      <option value="1">Month</option>
-                    <?php for ($i=1; $i < 13; $i++) { ?>
-                      <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                    <?php } ?>
-                  </select>
-                </div>
-                <div class="form-group  mx-2">
-                  <select class="form-control" name="day" placeholder="day">
-                      <option value="1">Day</option>
-                    <?php for ($i=1; $i < 30; $i++) { ?>
-                      <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                    <?php } ?>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group mt-6">
-                <button class="btn btn-block btn-warning" type="submit">Register</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /.sign up -->
 
     <script>
       $(document).ready(function () {
@@ -126,14 +69,23 @@
                 if (response.error.username) {
                   $("#username").addClass('is-invalid');
                   $('.username-error').html(response.error.username); 
+                }else{
+                  $("#username").removeClass('is-invalid');
+                  $('.username-error').html(''); 
                 }
                 if (response.error.password){
                   $("#password").addClass('is-invalid');
                   $('.password-error').html(response.error.password);
+                }else{
+                  $("#password").removeClass('is-invalid');
+                  $('.password-error').html('');
                 }
+              }else if (response.auth){
+                alert(response.auth);
               }else{
-                alert(response.success);
+                window.location.replace("login"); 
               }
+
               
             },
             error: function(xhr, ajaxOptions, thrownError){
@@ -141,7 +93,7 @@
             }
           });
           return false;
-        })
+        });
 
       });
     </script>

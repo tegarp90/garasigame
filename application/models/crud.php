@@ -16,6 +16,18 @@ class Crud extends CI_Model {
             return false;
         }
     }
+    function cekpass($table,$column,$id,$pass)
+    {
+        $this->db->where($column,$id);
+        $query = $this->db->get($table)->row()->PASSWORD;
+
+        if (password_verify($pass, $query)) {
+            return true;
+        }else{
+            return false;
+        }
+
+    }
     function update($table,$column,$id,$data)
     {
         $this->db->where($column,$id);

@@ -46,6 +46,7 @@
           </div>
       </div>
       <div class="view_modal" style="display:none;"></div>
+      <div class="view_modal2" style="display:none;"></div>
     </footer>
     <!-- /.footer -->
 
@@ -86,10 +87,10 @@
           e.preventDefault();
 
           $.ajax({
-            url: "<?= site_url('login/formlogin') ?>",
+            url: "<?= site_url('login/formregister') ?>",
             dataType: "json",
             success: function (response) {
-              $('.view_modal').html(response.data).show();
+              $('.view_modal2').html(response.data).show();
               
               $('#userSignup').modal('show');
             },
@@ -102,5 +103,6 @@
         
       });
     </script>
+    
   </body>
 </html>
