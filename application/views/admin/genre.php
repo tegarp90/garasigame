@@ -46,7 +46,7 @@
             <header class="header mb-8">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb-product breadcrumb breadcrumb-nowrap breadcrumb-angle bg-transparent pl-0 pr-0 mb-0">
-                        <li class="breadcrumb-item"><a href="#">Garasi Game</a></li>
+                        <li class="breadcrumb-item"><a href="<?php base_url(); ?>index">Halaman Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page"><?= $title; ?></li>
                     </ol>
                 </nav>
@@ -69,7 +69,7 @@
                         <div class="mb08 ml-4">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#formModal">Tambah Genre</button>
+                                    <button type="button" class="btn btn-warning createNew" data-toggle="modal" data-target="#formModal">Tambah Genre</button>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +103,9 @@
                                                             <td style="text-align:center;"><button type="button" class="btn btn-success">Aktif</button></td>
                                                         <?php endif; ?>
                                                         <th scope="col" class="text-center">
-                                                            <a href="" class="badge badge-primary">Edit</a>
+                                                            <button type="button" class="badge badge-primary editModal" data-toggle="modal" data-target="#formModal" data-id="<?= $g['ID_GENRE']; ?>">
+                                                            Edit
+                                                            </button>
                                                             <a onclick="deleteData(<?= $g['ID_GENRE']; ?>)" class="badge badge-danger">Hapus</a>
                                                         </th>
                                                     </tr>
@@ -244,7 +246,7 @@
                 </div>
                 <div class="modal-body">
                     <form action="<?= base_url(); ?>admin/tambahGenre" method="POST" id="formGenre">
-                        <input type="hidden" name="id" id="id">
+                        <input type="hidden" class="form-control" id="id" name="id" required>
                         <div class="form-group">
                             <label for="nama" class="text-info">Nama Genre</label>
                             <input type="text" class="form-control" id="nama" name="nama" placeholder="Ex : MMORPG" required>
@@ -259,7 +261,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-primary" name="tambahGenre" onclick="Swal.fire('GENRE', 'Genre Berhasil Ditambahkan !', 'success')">Tambah Genre</button>
+                    <button type="submit" class="btn btn-primary" id="tambahGenre" onclick="Swal.fire('GENRE', 'Genre Berhasil Ditambahkan !', 'success')">Tambah Genre</button>
                 </div>
                 </form>
             </div>
@@ -297,7 +299,11 @@
                             }, 2000);
                         },
                         error: function() {
-                            alert('error');
+                            Swal.fire({
+                                title: "Error",
+                                text: "Genre Sudah Terpakai Pada Data Game",
+                                icon: "warning"
+                            });
                         }
 
 

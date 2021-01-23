@@ -196,5 +196,8 @@
 
     <!-- Sweet Alert Plugin -->
     <script src="<?= base_url();?>assets/js/swal/sweetalert2.all.min.js"></script>
+
+    <!-- My Script -->
+    <script src="<?= base_url();?>assets/js/myscript.js"> </script>
   </body>
 </html>
