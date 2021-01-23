@@ -9,14 +9,16 @@
             </button>
           </div>
           <div class="modal-body">
-            <div class="invalid-feedback"></div>
-            <form method="post" class="input-transparent form-login" id="form_login">
+            
+            <form action="validate" method="post" class="input-transparent form-login" id="form_login">
+              <div class="invalid-feedback"></div>
               <div class="form-group">
                 <input type="text" class="form-control border-secondary" id="username" name="username" placeholder="Username">
-
+                <div class="invalid-feedback username-error fs-2"></div>
               </div>
               <div class="form-group">
                 <input type="password" class="form-control border-secondary" id="password" name="password" placeholder="Password" >
+                <div class="invalid-feedback password-error fs-2"></div>
               </div>
               <div class="form-group d-flex justify-content-between">
                 <div class="custom-control custom-checkbox">
@@ -103,23 +105,34 @@
     <script>
       $(document).ready(function () {
         
-        $('#form-login').submit(function(e){
+        $('.form-login').submit(function(e){
           e.preventDefault();
 
           $.ajax({
             type: "POST",
-            url: "/validate",
+            url: $(this).attr("action"),
             data: $(this).serialize(),
             dataType: "json",
             beforeSend:function(){
-              $('btn-login').attr('disable','disabled');
-              $('btn-login').html('<i class="fa fa-spin fa-spinner"> </i>');
-
+              $('.btn-login').attr('disable','disabled');
+              $('.btn-login').html('<i class="fa fa-spin fa-spinner"> </i>');
+            },
+            complete: function() {
+              $('.btn-login').removeAttr('disable','disabled');
+              $('.btn-login').html('Login');
             },
             success: function (response) {
               if(response.error){
-                $('.invalid-feedback').css('display','block');
-	              $('.invalid-feedback').html(response.error);
+                if (response.error.username) {
+                  $("#username").addClass('is-invalid');
+                  $('.username-error').html(response.error.username); 
+                }
+                if (response.error.password){
+                  $("#password").addClass('is-invalid');
+                  $('.password-error').html(response.error.password);
+                }
+              }else{
+                alert(response.success);
               }
               
             },

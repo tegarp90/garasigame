@@ -57,13 +57,17 @@ class Login extends CI_Controller {
 	public function validate() {
 
         if($this->input->is_ajax_request()){
-			$this->load->library('form_validation');
-			$this->form_validation->set_rules('username', 'username', 'required');
+			$this->form_validation->set_rules('username', 'username', 'required|min_length[6]');
 			$this->form_validation->set_rules('password', 'password', 'required|min_length[6]');
-			
+
 			if ($this->form_validation->run() == FALSE){
-				$errors = validation_errors();
-				echo json_encode(['error'=>$errors]);
+				$errors = [
+					'error' =>[
+						'username' => form_error('username'),
+						'password' => form_error('password')
+					]
+				];
+				echo json_encode($errors);
 			}else{
 			   echo json_encode(['success'=>'Record added successfully.']);
 			}
