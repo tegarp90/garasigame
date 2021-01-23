@@ -37,14 +37,13 @@ class Admin extends CI_Controller {
     public function tambahGenre()
     {
         $data['genre'] = $this->Genre_model->createGenre($_POST);
-        sleep(2); redirect('admin/indexGenre');
+        sleep(2); redirect('genre');
     }
 
     public function hapusGenre()
     {   
         $id = $this->input->post('id');
         $this->Genre_model->hapusGenre($id);
-        redirect('admin/indexGenre');
     }
 
     public function getUbah()
@@ -57,7 +56,7 @@ class Admin extends CI_Controller {
     {
         $id = $this->input->post('id');
         $data['genre'] = json_encode($this->Genre_model->ubahGenre($id));
-        sleep(2); redirect('admin/indexGenre');
+        sleep(2); redirect('genre');
     }
 
 // -------------------- END HALAMAN ADMIN GENRE --------------------
@@ -110,14 +109,14 @@ class Admin extends CI_Controller {
             'IMAGE_GAME' => $image
         );
         $this->Game_model->createGame($data);
-        sleep(2); redirect('admin/indexGame');
+        sleep(2); redirect('games');
     }
 
     public function hapusGame()
     {
         $id = $this->input->post('id');
         $this->Game_model->hapusGame($id);
-        redirect('admin/indexGame');
+        redirect('games');
     }
 
     public function getGameId()

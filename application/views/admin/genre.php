@@ -46,7 +46,7 @@
             <header class="header mb-8">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb-product breadcrumb breadcrumb-nowrap breadcrumb-angle bg-transparent pl-0 pr-0 mb-0">
-                        <li class="breadcrumb-item"><a href="<?php base_url(); ?>index">Halaman Admin</a></li>
+                        <li class="breadcrumb-item"><a href="admin">Halaman Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page"><?= $title; ?></li>
                     </ol>
                 </nav>
@@ -245,7 +245,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="<?= base_url(); ?>admin/tambahGenre" method="POST" id="formGenre">
+                    <form action="admin/tambahGenre" method="POST" id="formGenre">
                         <input type="hidden" class="form-control" id="id" name="id" required>
                         <div class="form-group">
                             <label for="nama" class="text-info">Nama Genre</label>
@@ -295,7 +295,7 @@
                                 icon: "success"
                             });
                             setTimeout(function() {
-                                window.location.href = "<?php echo base_url(); ?>admin/indexGenre";
+                                window.location.href = "genre";
                             }, 2000);
                         },
                         error: function() {

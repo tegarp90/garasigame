@@ -46,7 +46,7 @@
             <header class="header mb-8">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb-product breadcrumb breadcrumb-nowrap breadcrumb-angle bg-transparent pl-0 pr-0 mb-0">
-                        <li class="breadcrumb-item"><a href="<?php base_url(); ?>index">Halaman Admin</a></li>
+                        <li class="breadcrumb-item"><a href="admin">Halaman Admin</a></li>
                         <li class="breadcrumb-item active" aria-current="page"><?= $title; ?></li>
                     </ol>
                 </nav>

@@ -14,11 +14,11 @@
               <div class="invalid-feedback"></div>
               <div class="form-group">
                 <input type="text" class="form-control border-secondary" id="username" name="username" placeholder="Username">
-                <div class="invalid-feedback username-error"></div>
+                <div class="invalid-feedback username-error"></div><div class="invalid-feedback username2-error"></div>
               </div>
               <div class="form-group">
                 <input type="password" class="form-control border-secondary" id="password" name="password" placeholder="Password" >
-                <div class="invalid-feedback password-error"></div>
+                <div class="invalid-feedback password-error"></div><div class="invalid-feedback password2-error"></div>
               </div>
               <div class="form-group d-flex justify-content-between">
                 <div class="custom-control custom-checkbox">
@@ -80,9 +80,24 @@
                   $("#password").removeClass('is-invalid');
                   $('.password-error').html('');
                 }
-              }else if (response.auth){
-                alert(response.auth);
               }else{
+                if (response.auths){
+                  $("#username").addClass('is-invalid');
+                  $('.username-error').html(response.auths); 
+                  // alert(response.auths + response.authp);
+                }else{
+                  $("#username").removeClass('is-invalid');
+                  $('.username-error').html(''); 
+                } 
+                if (response.authp) {
+                  $("#password").addClass('is-invalid');
+                  $('.password-error').html(response.authp);
+                }else{
+                  $("#password").removeClass('is-invalid');
+                  $('.password-error').html('');
+                }
+              }
+              if(response.success){
                 window.location.replace("login"); 
               }
 

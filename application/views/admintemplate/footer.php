@@ -183,21 +183,21 @@
     <!-- /.offcanvas-cart -->
 
     <!-- jQuery -->
-    <script src="<?= base_url();?>assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
 
     <!-- Bootstrap -->
-    <script src="<?= base_url();?>assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 
     <!-- User JS -->
-    <script src="<?= base_url();?>assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 
     <!-- Main JS -->
-    <script src="<?= base_url();?>assets/js/main.js" id="_mainJS" data-plugins="load"></script>
+    <script src="assets/js/main.js" id="_mainJS" data-plugins="load"></script>
 
     <!-- Sweet Alert Plugin -->
-    <script src="<?= base_url();?>assets/js/swal/sweetalert2.all.min.js"></script>
+    <script src="assets/js/swal/sweetalert2.all.min.js"></script>
 
     <!-- My Script -->
-    <script src="<?= base_url();?>assets/js/myscript.js"> </script>
+    <script src="assets/js/myscript.js"> </script>
   </body>
 </html>

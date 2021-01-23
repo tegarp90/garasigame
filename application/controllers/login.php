@@ -70,11 +70,11 @@ class Login extends CI_Controller {
 				$password = $this->input->post('password');
 				$cek = $this->crud->cekid('user','USERNAME',$username);
 				if ($cek == false) {
-					echo json_encode(['auth'=>'Username Tidak Terdaftar']);
+					echo json_encode(['auths'=>'<p>Username Tidak Terdaftar</p>']);
 				}else{
 					$cekpass = $this->crud->cekpass('user','USERNAME',$username,$password);
 					if ($cekpass == false) {
-						echo json_encode(['auth'=>'Password Salah']);
+						echo json_encode(['authp'=>'<p>Password Salah</p>']);
 					}else{
 						$arraysesi = array('username' => $username, 'web_sesi' => true);
 						$this->session->set_userdata($arraysesi);

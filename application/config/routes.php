@@ -61,5 +61,7 @@ $route['logout'] = 'login/logout';
 $route['profile'] = 'pages/profil';
 $route['tournament'] = 'pages/turnamen';
 $route['admin'] = 'admin';
+$route['genre'] = 'admin/indexGenre';
+$route['games'] = 'admin/indexGame';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

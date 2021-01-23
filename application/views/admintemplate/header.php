@@ -7,15 +7,15 @@
     <title><?php echo $title; ?></title>
 
     <!-- CSS -->
-    <link href="<?= base_url();?>assets/css/fonts/etline-font.min.css" rel="stylesheet">
-    <link href="<?= base_url();?>assets/css/fonts/fontawesome/all.min.css" rel="stylesheet">
-    <link href="<?= base_url();?>assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
-    <link href="<?= base_url();?>assets/css/fonts/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/fonts/etline-font.min.css" rel="stylesheet">
+    <link href="assets/css/fonts/fontawesome/all.min.css" rel="stylesheet">
+    <link href="assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
+    <link href="assets/css/fonts/themify-icons.css" rel="stylesheet">
 
-    <link href="<?= base_url();?>assets/plugins/owl.carousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/plugins/owl.carousel/owl.carousel.min.css" rel="stylesheet">
 
-    <link href="<?= base_url();?>assets/css/main.css" rel="stylesheet">
-    <link href="<?= base_url();?>assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
