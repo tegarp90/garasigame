@@ -72,13 +72,18 @@ class Login extends CI_Controller {
 				if ($cek == false) {
 					echo json_encode(['auths'=>'<p>Username Tidak Terdaftar</p>']);
 				}else{
-					$cekpass = $this->crud->cekpass('user','USERNAME',$username,$password);
-					if ($cekpass == false) {
-						echo json_encode(['authp'=>'<p>Password Salah</p>']);
+					$cekstatus = $this->crud->get_where('user',['USERNAME' => $username])->row_array();
+					if($cekstatus['STATUS'] == 0){
+						echo json_encode(['auth'=>'<p>Your Accounnt Need Activated</p>']);
 					}else{
-						$arraysesi = array('username' => $username, 'web_sesi' => true);
-						$this->session->set_userdata($arraysesi);
-					   	echo json_encode(['success'=>'Login Success']);
+						$cekpass = $this->crud->cekpass('user','USERNAME',$username,$password);
+						if ($cekpass == false) {
+							echo json_encode(['authp'=>'<p>Password Salah</p>']);
+						}else{
+							$arraysesi = array('username' => $username, 'web_sesi' => true);
+							$this->session->set_userdata($arraysesi);
+						   	echo json_encode(['success'=>'Login Success']);
+						}
 					}
 				}
 			}
@@ -117,10 +122,20 @@ class Login extends CI_Controller {
 					'PASSWORD' 		=> password_hash($password,PASSWORD_DEFAULT),
 					'CREATED_DATE' 	=> time(),
 					'UPDATE_DATE' 	=> time(),
-					'STATUS'		=> 1,
+					'STATUS'		=> 0,
 					 );
 
+				$token = base64_encode(random_bytes(32));
+				$data_token = [
+					'EMAIL' => $email,
+					'TOKEN'	=> $token,
+					'DATE_CREATED' 	=> time()
+				];
+
 				$this->crud->insert('user',$data);
+				$this->crud->insert('user_token',$data_token);
+
+				$this->_sendEmail($token,$email,'verify');
 				echo json_encode(['success'=>'registration is successful, please activate via your email']);
 			}
 			 
@@ -129,19 +144,63 @@ class Login extends CI_Controller {
 		}
 
     }
-	function register()
-	{
+    private function _sendEmail($token,$email,$type)
+    {
+    	$config = [
+    		'protocol' 	=> 'smtp',
+    		'smtp_host'	=> 'ssl://smtp.googlemail.com',
+    		'smtp_user' => 'garasigame21@gmail.com',
+    		'smtp_pass'	=> '*#G4ras1G4m3',
+    		'smtp_port'	=> 465,
+    		'mailtype'	=> 'html',
+    		'charset'	=> 'utf-8',
+    		'newline'	=> "\r\n"
+    	];
+    	$this->email->initialize($config);
+    	
+    	$this->email->from('garasigame21@gmail.com','Garasi Game');
+    	$this->email->to($email);
+    	if ($type == 'verify') {
+    		$this->email->subject('Account Verification');
+    		$this->email->message('Click this lin to verify your acccount : <a href="'.base_url().'login/verify?email='.$email.'&token='.urlencode($token).'">Activate</a>');
+    	}else{
+    		$this->email->subject('Account Verification');
+    		$this->email->message('Click this lin to verify your acccount : <a href="'.base_url().'login/reset?email='.$email.'&token='.urlencode($token).'">Reset Password</a>');
+    	}
+    	
+    	
+    	if($this->email->send()){
+    		return true;
+    	}else{
+    		echo $this->email->print_debugger();
+    		die;
+    	}
+    }
+    public function verify()
+    {
+    	$email = $this->input->get('email');
+    	$token = $this->input->get('token');
 
-		$email = $this->input->post('email');
-		$username = $this->input->post('username');
-		$password = $this->input->post('password');
-		$y = $this->input->post('year');
-		$m = $this->input->post('month');
-		$d = $this->input->post('day');
-		$birthday = $y.'-'.$m.'-'.$d;
-
-		echo $email.' '.$username.' '.$password.' '.$birthday;
-	}
+    	$user = $this->crud->get_where('user',['EMAIL' => $email])->row_array();
+    	if($user){
+    		$user_token = $this->crud->get_where('user_token',['TOKEN' => $token])->row_array();
+    		if ($user_token) {
+    			if (time() - $user_token['DATE_CREATED'] < (60*60*24)) {
+    				$this->crud->update('user','EMAIL',$email,['STATUS' => 1]);
+    				$this->crud->delete('user_token',['EMAIL' => $email]);
+    				redirect(base_url());
+    			}else{
+    				$this->crud->delete('user',['EMAIL' => $email]);
+    				$this->crud->delete('user_token',['EMAIL' => $email]);
+    				show_error('Token was Expired.','103','Activation Failed!!');
+    			}
+    		}else{
+    			show_error('Token is Invalid.','102','Activation Failed!!');
+    		}
+    	}else{
+    		show_error('Email is Invalid.','101','Activation Failed!!');
+    	}
+    }
 	function logout()
 	{
 		$this->session->sess_destroy();

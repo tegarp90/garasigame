@@ -64,4 +64,5 @@ $route['admin'] = 'admin';
 $route['genre'] = 'admin/indexGenre';
 $route['games'] = 'admin/indexGame';
 $route['404_override'] = '';
+$route['general_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

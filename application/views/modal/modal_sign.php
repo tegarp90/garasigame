@@ -11,7 +11,7 @@
           <div class="modal-body">
             
             <form action="validate" method="post" class="input-transparent form-login">
-              <div class="invalid-feedback"></div>
+              <div class="auth" role="alert"></div>
               <div class="form-group">
                 <input type="text" class="form-control border-secondary" id="username" name="username" placeholder="Username">
                 <div class="invalid-feedback username-error"></div><div class="invalid-feedback username2-error"></div>
@@ -81,6 +81,11 @@
                   $('.password-error').html('');
                 }
               }else{
+                if (response.auth) {
+                  $('.auth').html(response.auth); 
+                }else{
+                  $('.auth').html('');
+                }
                 if (response.auths){
                   $("#username").addClass('is-invalid');
                   $('.username-error').html(response.auths); 

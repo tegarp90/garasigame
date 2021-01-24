@@ -37,4 +37,12 @@ class Crud extends CI_Model {
     {
         $this->db->insert($table,$data);
     }
+    function delete($table,$data)
+    {
+        $this->db->delete($table,$data);
+    }
+    function get_where($table,$where)
+    {
+        return $this->db->get_where($table,$where);
+    }
 }
