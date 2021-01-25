@@ -25,7 +25,7 @@ class Login extends CI_Controller {
 	}
 	public function index()
 	{
-		redirect('profile');
+		redirect('profile?user='.$_SESSION['username']);
 	}
 	public function formlogin()
 	{
@@ -70,7 +70,7 @@ class Login extends CI_Controller {
 				$password = $this->input->post('password');
 				$cek = $this->crud->cekid('user','USERNAME',$username);
 				if ($cek == false) {
-					echo json_encode(['auths'=>'<p>Username Tidak Terdaftar</p>']);
+					echo json_encode(['auths'=>'<p>Username is not Exist</p>']);
 				}else{
 					$cekstatus = $this->crud->get_where('user',['USERNAME' => $username])->row_array();
 					if($cekstatus['STATUS'] == 0){
@@ -78,7 +78,7 @@ class Login extends CI_Controller {
 					}else{
 						$cekpass = $this->crud->cekpass('user','USERNAME',$username,$password);
 						if ($cekpass == false) {
-							echo json_encode(['authp'=>'<p>Password Salah</p>']);
+							echo json_encode(['authp'=>'<p>Password Invalid!</p>']);
 						}else{
 							$arraysesi = array('username' => $username, 'web_sesi' => true);
 							$this->session->set_userdata($arraysesi);

@@ -21,8 +21,7 @@ class Pages extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-
-		
+		$this->load->model('crud');
 	}
 	public function index()
 	{
@@ -32,14 +31,19 @@ class Pages extends CI_Controller {
 	}
 	public function profil()
 	{
-		$username = $this->input->post('username');
-		$password = $this->input->post('password');
-
-		$data['username'] = $username;
-		$data['password'] = $password;
-		$data['status'] = 'login';
-		$data['content'] = 'contents/v_profil';
-		$this->load->view('tamplate/page',$data);
+		$i = $this->input->get('user');
+		$data = $this->crud->get_where('user',['USERNAME' => $i])->row_array();
+		if($data){
+			$data['content'] = 'contents/v_profil';
+			$this->load->view('tamplate/page',$data);
+		}else{
+			if ($_SESSION['web_sesi']) {
+				redirect('profile?user='.$_SESSION['username']);
+			}else{
+				redirect(base_url());
+			}
+		}
+		
 	}
 	public function turnamen()
 	{
