@@ -50,7 +50,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'pages';
-$route['tes'] = 'pages/tes';
 $route['login'] = 'login';
 $route['formlogin'] = 'login/formlogin';
 $route['validate'] = 'login/validate';
@@ -59,7 +58,9 @@ $route['signup'] = 'login/register';
 $route['google_login'] = 'login/google_login';
 $route['logout'] = 'login/logout';
 $route['profile'] = 'pages/profil';
+$route['c_profil'] = 'pages/complete_p';
 $route['tournament'] = 'pages/turnamen';
+$route['news'] = 'pages/news';
 $route['admin'] = 'admin';
 $route['genre'] = 'admin/indexGenre';
 $route['games'] = 'admin/indexGame';

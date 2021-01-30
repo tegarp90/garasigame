@@ -62,7 +62,7 @@
             <li class="nav-item dropdown dropdown-hover">
               <a class="nav-link dropdown-toggle" href="#" id="dropdownNews" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News </a>
               <div class="dropdown-menu dropdown-menu-dark-lg" aria-labelledby="dropdownNews">
-                <a class="dropdown-item" href="#">News Update </a>
+                <a class="dropdown-item" href="news">News Update </a>
                 <a class="dropdown-item" href="#">Games Update</a>
               </div>
             </li>

@@ -34,8 +34,12 @@ class Pages extends CI_Controller {
 		$i = $this->input->get('user');
 		$data = $this->crud->get_where('user',['USERNAME' => $i])->row_array();
 		if($data){
-			$data['content'] = 'contents/v_profil';
-			$this->load->view('tamplate/page',$data);
+			if($data['STATUS'] != 1){
+				redirect('c_profil');
+			}else{			
+				$data['content'] = 'contents/v_profil';
+				$this->load->view('tamplate/page',$data);
+			}
 		}else{
 			if ($_SESSION['web_sesi']) {
 				redirect('profile?user='.$_SESSION['username']);
@@ -51,9 +55,17 @@ class Pages extends CI_Controller {
 		$data['content'] = 'contents/v_tournament';
 		$this->load->view('tamplate/page',$data);
 	}
-	public function tes()
+	public function news()
 	{
-		$data['content'] = 'contents/v_landing_page';
+		$data['content'] = 'contents/v_news';
 		$this->load->view('tamplate/page',$data);
+	}
+	public function complete_p()
+	{
+		$i = $_SESSION['username'];
+		$data = $this->crud->get_where('user',['USERNAME' => $i])->row_array();
+		$this->load->view('tamplate/header');
+		$this->load->view('contents/v_c_profil',$data);
+		$this->load->view('tamplate/footer');
 	}
 }
