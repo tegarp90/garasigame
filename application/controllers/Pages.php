@@ -34,7 +34,7 @@ class Pages extends CI_Controller {
 		$i = $this->input->get('user');
 		$data = $this->crud->get_where('user',['USERNAME' => $i])->row_array();
 		if($data){
-			if($data['STATUS'] != 1){
+			if($data['STATUS'] == 1){
 				redirect('c_profil');
 			}else{			
 				$data['content'] = 'contents/v_profil';

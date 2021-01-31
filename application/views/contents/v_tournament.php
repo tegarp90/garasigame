@@ -14,29 +14,24 @@
           <!-- carousel items -->
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div class="ig-img br-n bp-c bs-c" style="background-image: url(assets/img/content/bg-3.jpg);"></div>
+              <div class="ig-img br-n bp-c bs-c" style="background-image: url((assets/img/content/carousel/slide_01.jpg);"></div>
               <div class="ig-sl-gr text-light text-uppercase my-5 my-lg-0">
-                <div class="text-center p-3">
-                  <h2><a class="btn btn-xl btn-warning text-secondary mr-2">Daftarkan >></a></h2>
-                </div>
+                
               </div>
             </div>
             <div class="carousel-item">
-              <div class="ig-img br-n bp-c bs-c" style="background-image: url(assets/img/content/bg-4.jpg);"></div>
+              <div class="ig-img br-n bp-c bs-c" style="background-image: url((assets/img/content/carousel/slide_02.jpg);"></div>
               <div class="ig-sl-gr text-light text-uppercase my-5 my-lg-0">
-                <div class="text-center p-7">
-                  <h3 class="mb-0 mb-md-2">Phasellus viverra</h3>
-                  <p class="mb-0 d-none d-md-block">Nam tincidunt dui eget scelerisque tempor. Nulla facilisi. Praesent aliquam venenatis purus at euismod. Fusce lobortis, eros malesuada volutpat fermentum, lorem magna convallis enim, eget mollis lorem nisi id justo. Suspendisse luctus quam id nulla fermentum porttitor.</p>
-                </div>
+                <
               </div>
             </div>
             <div class="carousel-item">
-              <div class="ig-img br-n bp-c bs-c" style="background-image: url(assets/img/content/bg-5.jpg);"></div>
+              <div class="ig-img br-n bp-c bs-c" style="background-image: url((assets/img/content/carousel/slide_03.jpg);"></div>
               <div class="ig-sl-gr text-light text-uppercase my-5 my-lg-0">
-                <div class="text-center p-7">
+                <!-- <div class="text-center p-7">
                   <h3 class="mb-0 mb-md-2">Phasellus viverra</h3>
                   <p class="mb-0 d-none d-md-block">Nam tincidunt dui eget scelerisque tempor. Nulla facilisi. Praesent aliquam venenatis purus at euismod. Fusce lobortis, eros malesuada volutpat fermentum, lorem magna convallis enim, eget mollis lorem nisi id justo. Suspendisse luctus quam id nulla fermentum porttitor.</p>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

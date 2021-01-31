@@ -9,14 +9,14 @@
       <div class="content-section news-section carousel-spotlight ig-carousel text-light">
         <div class="container">
           <header class="header">
-            <nav aria-label="breadcrumb">
+            <!-- <nav aria-label="breadcrumb">
               <ol class="breadcrumb-product breadcrumb breadcrumb-nowrap breadcrumb-angle bg-transparent pl-0 pr-0 mb-0">
                 <li class="breadcrumb-item"><a href="#">All Games</a></li>
                 <li class="breadcrumb-item"><a href="#">Action Games</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Vestibulum</li>
               </ol>
-            </nav>
-            <h2>All News</h2>
+            </nav> -->
+            <h2>News</h2>
           </header>
           <div class="position-relative">
             <div class="row">
@@ -36,6 +36,7 @@
                   <div class="tab-pane fade active show" id="mp-2-01-c" role="tabpanel" aria-labelledby="mp-2-01-tab">
                     <div class="row news-list">
                       <!-- item -->
+                      <?php for ($i=0; $i < 5; $i++) { ?>
                       <div class="news-item col-12 mb-4">
                         <div class="row">
                           <div class="col-lg-4 mb-5 mb-lg-0">
@@ -71,6 +72,7 @@
                           </div>
                         </div>
                       </div>
+                      <?php } ?>
                       <!-- /.item -->
                     </div>
                   </div>
@@ -80,6 +82,7 @@
                   <div class="tab-pane fade" id="mp-2-02-c" role="tabpanel" aria-labelledby="mp-2-02-tab">
                     <div class="row news-list">
                       <!-- item -->
+                      <?php for ($i=0; $i < 5; $i++) { ?>
                       <div class="news-item col-12 mb-4">
                         <div class="row">
                           <div class="col-lg-4 mb-5 mb-lg-0">
@@ -115,6 +118,8 @@
                           </div>
                         </div>
                       </div>
+                      <?php } ?>
+
                       <!-- /.item -->
                     </div>
                   </div>
@@ -162,22 +167,17 @@
                     </li>
                     <li class="nav-item text-light transition mb-2">
                       <a href="" aria-expanded="false" class="nav-link py-2 px-3 text-uppercase nav-link-border">
-                        <span class="p-collapsing-title">Announcements</span>
+                        <span class="p-collapsing-title">PC Games</span>
                       </a>
                     </li>
                     <li class="nav-item text-light transition mb-2">
                       <a href="" aria-expanded="false" class="nav-link py-2 px-3 text-uppercase nav-link-border">
-                        <span class="p-collapsing-title">Press Releases</span>
+                        <span class="p-collapsing-title">Mobile Games</span>
                       </a>
                     </li>
                     <li class="nav-item text-light transition mb-2">
                       <a href="" aria-expanded="false" class="nav-link py-2 px-3 text-uppercase nav-link-border">
-                        <span class="p-collapsing-title">Product Releases</span>
-                      </a>
-                    </li>
-                    <li class="nav-item text-light transition mb-2">
-                      <a href="" aria-expanded="false" class="nav-link py-2 px-3 text-uppercase nav-link-border">
-                        <span class="p-collapsing-title">Product Releases</span>
+                        <span class="p-collapsing-title">Games Realease</span>
                       </a>
                     </li>
                   </ul>
@@ -205,3 +205,8 @@
       <!-- /.content area -->
 
     </main>
+
+
+<?php
+  $this->load->view('tamplate/footer');
+?>

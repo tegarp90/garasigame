@@ -26,7 +26,7 @@
                 <a class="nav-link dropdown-toggle small text-capitalize" href="#" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/img/avatar/default.jpg" class="img-xs rounded-circle mr-2" alt="Avatar"> <?php echo $_SESSION['username']; ?></a>
                 <div class="dropdown-menu position-absolute" aria-labelledby="dropdownUser">
                   <a class="dropdown-item" href="profile?user=<?= $_SESSION['username']; ?>"><span class="mr-2"><i class="fas fa-user"></i></span>My Profile</a>
-                  <a class="dropdown-item" href="#"><span class="mr-2"><i class="fas fa-wallet"></i></span>Wallet</a>
+                  <!-- <a class="dropdown-item" href="#"><span class="mr-2"><i class="fas fa-wallet"></i></span>Wallet</a> -->
                   <a class="dropdown-item" href="#"><span class="mr-2"><i class="fas fa-cog"></i></span>Settings</a>
                   <a class="dropdown-item" href="logout"><span class="mr-2"><i class="fas fa-sign-out-alt"></i></span>Logout</a>
                 </div>

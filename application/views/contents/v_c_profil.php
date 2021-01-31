@@ -42,7 +42,7 @@
             <h3>Complete Your Profile</h3>
             <p class="lead-1">Morbi aliquet felis nec nisl congue interdum. Quisque vitae sapien ullamcorper.</p>
           </div>
-          <form data-form="contact_form" action="assets/php/contact-form.php" class="input-transparent" method="POST">
+          <form action="update/profil" class="input-transparent" method="POST">
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <input class="form-control form-control-lg" type="text" name="f_name" placeholder="First Name" required>
