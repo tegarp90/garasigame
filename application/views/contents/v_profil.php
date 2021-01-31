@@ -44,12 +44,6 @@
                       <span class="small-2 fw-400 ls-1">Groups</span>
                     </a>
                   </li>
-                  <li class="py-2 py-lg-0">
-                    <a id="mp-2-04-tab" data-toggle="tab" href="#mp-2-04-c" role="tab" aria-controls="mp-2-04-c" aria-selected="false" class="profile-nav-link text-uppercase text-center">
-                      <span class="pr-icon-nav ti-settings lead-4 d-block mb-3"></span>
-                      <span class="small-2 fw-400 ls-1">Settings</span>
-                    </a>
-                  </li>
                 </ul>
               </div>
             </nav>

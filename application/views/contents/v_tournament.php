@@ -14,19 +14,19 @@
           <!-- carousel items -->
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div class="ig-img br-n bp-c bs-c" style="background-image: url((assets/img/content/carousel/slide_01.jpg);"></div>
+              <div class="ig-img br-n bp-c bs-c" style="background-image: url(assets/img/content/carousel/slide_01.jpg);"></div>
               <div class="ig-sl-gr text-light text-uppercase my-5 my-lg-0">
                 
               </div>
             </div>
             <div class="carousel-item">
-              <div class="ig-img br-n bp-c bs-c" style="background-image: url((assets/img/content/carousel/slide_02.jpg);"></div>
+              <div class="ig-img br-n bp-c bs-c" style="background-image: url(assets/img/content/carousel/slide_02.jpg);"></div>
               <div class="ig-sl-gr text-light text-uppercase my-5 my-lg-0">
-                <
+
               </div>
             </div>
             <div class="carousel-item">
-              <div class="ig-img br-n bp-c bs-c" style="background-image: url((assets/img/content/carousel/slide_03.jpg);"></div>
+              <div class="ig-img br-n bp-c bs-c" style="background-image: url(assets/img/content/carousel/slide_03.jpg);"></div>
               <div class="ig-sl-gr text-light text-uppercase my-5 my-lg-0">
                 <!-- <div class="text-center p-7">
                   <h3 class="mb-0 mb-md-2">Phasellus viverra</h3>
