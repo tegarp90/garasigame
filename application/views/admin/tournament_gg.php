@@ -47,6 +47,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb-product breadcrumb breadcrumb-nowrap breadcrumb-angle bg-transparent pl-0 pr-0 mb-0">
                         <li class="breadcrumb-item"><a href="admin">Halaman Admin</a></li>
+                        <li class="breadcrumb-item"><a href="games_admin_tournament">Jenis Tournament</a></li>
                         <li class="breadcrumb-item active" aria-current="page"><?= $title; ?></li>
                     </ol>
                 </nav>
@@ -55,21 +56,13 @@
                 <div class="row mb-8 mb-lg-10">
                     <div class="col-12">
                         <header class="text-center mb-6 mb-md-8">
-                            <h2 class="mb-0">GAME</h2>
+                            <h2 class="mb-0">Tournament Garasi Game</h2>
                             <hr class="w-10 border-top-2 mt-5 mb-6 mx-auto border-warning">
                         </header>
-                        <div class="mb-8">
-                            <form class="input-group border-0 input-transparent bg-transparent">
-                                <input class="form-control border border-secondary border-right-0" type="search" placeholder="Search" aria-label="Search">
-                                <div class="input-group-append">
-                                    <button class="btn btn-sm btn-warning text-secondary my-0 mx-0" type="submit"><i class="fas fa-search"></i></button>
-                                </div>
-                            </form>
-                        </div>
                         <div class="mb08 ml-4">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <button type="button" class="btn btn-warning createNewGame" data-toggle="modal" data-target="#formModalGame">Tambah Game</button>
+                                    <button type="button" class="btn btn-warning createNewTournament" data-toggle="modal" data-target="#formModalTournament">Buat Tournament</button>
                                 </div>
                             </div>
                         </div>
@@ -83,36 +76,42 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <table class="table table-bordered">
+                                        <table id="tableTournament" class="table table-striped table-bordered" style="width:100%">
                                             <thead>
                                                 <tr>
                                                     <th style="text-align:center;" scope="col">No.</th>
+                                                    <th style="text-align:center;" scope="col">Nama Tournament</th>
                                                     <th style="text-align:center;" scope="col">Nama Game</th>
-                                                    <th style="text-align:center;" scope="col">Genre</th>
-                                                    <th style="text-align:center;" scope="col">Desc & Image</th>
+                                                    <th style="text-align:center;" scope="col">Tanggal Tournament</th>
+                                                    <th style="text-align:center;" scope="col">Max Peserta</th>
+                                                    <th style="text-align:center;" scope="col">Biaya Pendaftaran</th>
                                                     <th style="text-align:center;" scope="col">Status</th>
                                                     <th scope="col"></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <?php foreach ($game as $g) : ?>
+                                                <?php foreach ($tournament as $tour) : ?>
                                                     <tr>
                                                         <th style="text-align:center;" scope="row"><?= $numbering++ ?></th>
-                                                        <td style="text-align:center;"><?= $g["NAMA_GAME"]; ?></td>
-                                                        <td style="text-align:center;"><?= $g["NAMA_GENRE"]; ?></td>
+                                                        <td style="text-align:center;"><?= $tour["NAMA_TOURNAMENT"]; ?></td>
+                                                        <td style="text-align:center;"><?= $tour["NAMA_GAME"] ?></td>
+                                                        <td style="text-align:center;"><?= $tour["TANGGAL_TOURNAMENT"] ?></td>
+                                                        <td style="text-align:center;"><?= $tour["MAX_PESERTA"] ?></td>
+                                                        <td style="text-align:center; font-size:12px"><?= "Rp. " . number_format($tour["BIAYA_PENDAFTARAN"], 2, ",", "."); ?></td>
                                                         <td style="text-align:center;">
-                                                            <button type="button" class="btn btn-primary modalDetail" data-toggle="modal" data-target="#showDetail" data-id="<?= $g['ID_GAME']; ?>">Show</button>
-                                                        </td>
-                                                        <?php if ($g['IS_ACTIVE'] == 0) : ?>
-                                                            <td style="text-align:center;"><button type="button" class="btn btn-danger">Tidak Aktif</button></td>
-                                                        <?php elseif ($g['IS_ACTIVE'] == 1) : ?>
-                                                            <td style="text-align:center;"><button type="button" class="btn btn-success">Aktif</button></td>
+                                                        <?php if ($tour["STATUS"] == "VALID") : ?>
+                                                        <button type="button" class="btn btn-success"><?= $tour["STATUS"] ?></button>
+                                                        <?php elseif ($tour["STATUS"] == "SELESAI") : ?>
+                                                        <button type="button" class="btn btn-primary"><?= $tour["STATUS"] ?></button>
+                                                        <?php elseif ($tour["STATUS"] == "BATAL") : ?>
+                                                        <button type="button" class="btn btn-danger"><?= $tour["STATUS"] ?></button>
                                                         <?php endif; ?>
+                                                        </td>
                                                         <th scope="col" class="text-center">
-                                                            <button type="button" class="badge badge-primary editGame" data-toggle="modal" data-target="#formModalGame" data-id="<?= $g['ID_GAME']; ?>">
+                                                            <a class="badge badge-primary editModalTournament" data-toggle="modal" data-target="#formModalTournament" data-id="<?= $tour['ID_TOURNAMENT']; ?>">
                                                                 Edit
-                                                            </button>
-                                                            <a onclick="deleteData(<?= $g['ID_GAME']; ?>)" class="badge badge-danger">Hapus</a>
+                                                            </a>
+                                                            <a onclick="deleteData(<?= $tour['ID_TOURNAMENT']; ?>)" class="badge badge-danger">Hapus</a>
                                                         </th>
                                                     </tr>
                                                 <?php endforeach; ?>
@@ -239,55 +238,58 @@
     </div>
     <!-- /.content area -->
 
-
-    <!-- Tambah Game Modal -->
-    <div class="modal fade" id="formModalGame" tabindex="-1" aria-labelledby="formModalGame" aria-hidden="true">
+        <!-- Tambah Tournament Modal -->
+        <div class="modal fade" id="formModalTournament" tabindex="-1" aria-labelledby="formModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-info" id="formModalGameLabel">Tambah Game</h5>
+                    <h5 class="modal-title text-info" id="formModalLabelTournament">Tambah Tournament</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <!-- <form action="<?= base_url(); ?>admin/tambahGame" method="POST" id="formGame"> -->
-                    <?= form_open_multipart('Admin/tambahGame'); ?>
-                    <input type="hidden" class="form-control" id="id" name="id" required>
-                    <div class="form-group">
-                        <label for="nama" class="text-info">Nama Game</label>
-                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Ex : Mobile Legends" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="genre" class="text-info">Genre</label>
-                        <select class="form-control" id="genre" name="genre">
-                            <?php foreach ($genre as $g) : ?>
-                                <option value="<?= $g['ID_GENRE'] ?>"><?= $g['NAMA_GENRE'] ?></option>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="desc" class="text-info">Deskripsi Game</label>
-                        <textarea class="form-control" id="desc" name="desc" required></textarea>
-                    </div>
-                    <div class="form-group" id="imageForEdit">
-                        <label for="image" class="text-info">Upload Gambar</label>
-                        <input type="file" class="form-control" id="image" name="image"></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="status" class="text-info">Status</label>
-                        <select class="form-control" id="status" name="status">
-                            <option value=1>Aktif</option>
-                            <option value=0>Tidak Aktif</option>
-                        </select>
-                    </div>
+                    <form action="admin/tambahTournamentGG" method="POST" id="formTournament">
+                        <input type="hidden" class="form-control" id="id" name="id" required>
+                        <input type="hidden" class="form-control" id="masterTournament" name="masterTournament" value=1>
+                        <div class="form-group">
+                            <label for="game" class="text-info">Pilih Game</label>
+                            <select class="form-control" id="game" name="game">
+                                <?php foreach ($game as $g) : ?>
+                                <option value=<?= $g['ID_GAME']; ?>><?= $g['NAMA_GAME']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="namaTournament" class="text-info">Nama Tournament</label>
+                            <input type="text" class="form-control" id="namaTournament" name="namaTournament" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tanggalTournament" class="text-info">Tanggal Tournament</label>
+                            <input type="date" class="form-control" id="tanggalTournament" name="tanggalTournament" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="maxPeserta" class="text-info">Max Peserta</label>
+                            <input type="number" class="form-control" id="maxPeserta" name="maxPeserta" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="biayaPendaftaran" class="text-info">Biaya Pendaftaran</label>
+                            <input type="text" class="form-control" id="biayaPendaftaran" name="biayaPendaftaran" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="status" class="text-info">Status</label>
+                            <select class="form-control" id="status" name="status">
+                                <option value=VALID>VALID</option>
+                                <option value=BATAL>BATAL</option>
+                                <option value=SELESAI>SELESAI</option>
+                            </select>
+                        </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-primary" id="tambahGame" onclick="Swal.fire('GAME', 'GAME Berhasil Ditambahkan !', 'success')">Tambah Game</button>
+                    <button type="submit" class="btn btn-primary" id="tambahTournament" onclick="Swal.fire('Tournament', 'Tournament Berhasil Ditambahkan !', 'success')">Tambah Tournament</button>
                 </div>
-                <!-- </form> -->
-                <?= form_close(); ?>
+                </form>
             </div>
         </div>
     </div>
@@ -308,98 +310,26 @@
                 if (result.value) {
                     $.ajax({
                         type: "POST",
-                        url: "<?php echo base_url(); ?>admin/hapusGame",
+                        url: "<?php echo base_url(); ?>admin/hapusTournament",
                         data: {
                             id: id
                         },
                         success: function() {
                             Swal.fire({
                                 title: "Konfirmasi",
-                                text: "Game Berhasil Dihapus",
+                                text: "Data Tournament Berhasil Dihapus",
                                 icon: "success"
                             });
                             setTimeout(function() {
-                                window.location.href = "games_admin";
+                                window.location.href = "admin_list_tournament_gg";
                             }, 2000);
                         },
                         error: function() {
-                            alert('error');
-                        }
-
-
-                    });
-                }
-            })
-        }
-    </script>
-
-    <!-- Modal Detail Game -->
-    <div class="modal fade" id="showDetail" tabindex="-1" role="dialog" aria-labelledby="showDetail" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <input type="hidden" class="form-control" id="id" name="id" required>
-                    <h5 class="modal-title" id="showDetailLabel">Details</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <h6 id="detailGame" name="detailGame" style="text-align:center;"></h6>
-                        <!-- <input type="text" class="form-control" id="namagame" name="namagame"> -->
-                    </div>
-                    <hr>
-                    <div class="container" id=showImage></div>
-                    <br>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Change Image</span>
-                        </div>
-                        <?= form_open_multipart('Admin/ubahGambarGame'); ?>
-                        <div class="custom-file" style="background-color:powderblue;">
-                            <input type="file" id="image" name="image"></input>
-                            <button onclick="editGambar(<?= $game[0]['ID_GAME']; ?>)" type="submit" class="btn btn-primary" id="ubahGambarGame">Ganti</button>
-                        </div>
-                        <?= form_close(); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Sweet Alert Ubah Gambar Game Confirmation -->
-    <script>
-        function editGambar(id) {
-            console.log(id);
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, update it!'
-            }).then((result) => {
-                if (result.value) {
-                    $.ajax({
-                        type: "POST",
-                        url: "<?php echo base_url(); ?>admin/ubahGambarGame",
-                        data: {
-                            id: id
-                        },
-                        success: function() {
                             Swal.fire({
-                                title: "Konfirmasi",
-                                text: "Gambar Game Berhasil Diubah",
-                                icon: "success"
+                                title: "Error",
+                                text: "Data Tournament Tidak Bisa Dapat Dihapus",
+                                icon: "warning"
                             });
-                            // setTimeout(function() {
-                            //     window.location.href = "games_admin";
-                            // }, 2000);
-                        },
-                        error: function() {
-                            alert('error');
                         }
 
 

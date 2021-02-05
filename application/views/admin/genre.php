@@ -295,7 +295,7 @@
                                 icon: "success"
                             });
                             setTimeout(function() {
-                                window.location.href = "genre";
+                                window.location.href = "genre_admin";
                             }, 2000);
                         },
                         error: function() {

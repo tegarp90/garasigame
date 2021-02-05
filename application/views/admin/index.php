@@ -60,7 +60,7 @@
                 </header>
                 <div class="help_m row gutters-y text-center">
                   <div class="col-md-6 col-lg-3">
-                    <a href="genre">
+                    <a href="genre_admin">
                       <div class="card help_card">
                         <div class="card-body py-7">
                           <span class="ti-user lead-7 d-block mb-3"></span>
@@ -70,7 +70,7 @@
                     </a>
                   </div>
                   <div class="col-md-6 col-lg-3">
-                    <a href="games">
+                    <a href="games_admin">
                       <div class="card help_card">
                         <div class="card-body py-7">
                           <span class="ti-game lead-7 d-block mb-3"></span>
@@ -80,7 +80,7 @@
                     </a>
                   </div>
                   <div class="col-md-6 col-lg-3">
-                    <a href="help-center-article.html">
+                    <a href="admin_news">
                       <div class="card help_card">
                         <div class="card-body py-7">
                           <span class="ti-wallet lead-7 d-block mb-3"></span>
@@ -90,7 +90,7 @@
                     </a>
                   </div>
                   <div class="col-md-6 col-lg-3">
-                    <a href="help-center-article.html">
+                    <a href="games_admin_tournament">
                       <div class="card help_card">
                         <div class="card-body py-7">
                           <span class="ti-settings lead-7 d-block mb-3"></span>
@@ -100,7 +100,7 @@
                     </a>
                   </div>
 
-                  <div class="col-md-6 col-lg-3">
+                  <!-- <div class="col-md-6 col-lg-3">
                     <a href="help-center-article.html">
                       <div class="card help_card">
                         <div class="card-body py-7">
@@ -139,7 +139,7 @@
                         </div>
                       </div>
                     </a>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
