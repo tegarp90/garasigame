@@ -26,6 +26,7 @@ class Login extends CI_Controller {
 	public function index()
 	{
 		redirect('profile?user='.$_SESSION['username']);
+
 	}
 	public function formlogin()
 	{
@@ -78,7 +79,9 @@ class Login extends CI_Controller {
 					}else{
 						$cekpass = $this->crud->cekpass('user','USERNAME',$username,$password);
 						if ($cekpass == false) {
+
 							echo json_encode(['authp'=>'<p>Password Invalid!</p>']);
+
 						}else{
 							$arraysesi = array('username' => $username, 'web_sesi' => true);
 							$this->session->set_userdata($arraysesi);

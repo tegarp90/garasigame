@@ -1910,6 +1910,7 @@
     </main>
     <!-- /.main content -->
 
+
    <?php
   $this->load->view('tamplate/footer');
-?>
+  ?>

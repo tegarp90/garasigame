@@ -14,8 +14,6 @@
           <!-- carousel-item -->
           <div class="carousel-item active">
             <div class="h-fullscreen__page bs-c br-n ow-h" style="background-image: url(assets/img/content/carousel/slide_01.jpg);">
-              
-            
             </div>
           </div>
           <!-- /.carousel-item -->
@@ -23,7 +21,6 @@
           <!-- carousel-item -->
           <div class="carousel-item">
             <div class="h-fullscreen__page bs-c br-n ow-h" style="background-image: url(assets/img/content/carousel/slide_02.jpg);">
-              
             </div>
           </div>
           <!-- /.carousel-item -->
@@ -31,8 +28,6 @@
           <!-- carousel-item -->
           <div class="carousel-item">
             <div class="h-fullscreen__page bs-c br-n ow-h" style="background-image: url(assets/img/content/carousel/slide_03.jpg);">
-              
-              
             </div>
           </div>
           <!-- /.carousel-item -->

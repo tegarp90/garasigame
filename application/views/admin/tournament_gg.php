@@ -47,6 +47,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb-product breadcrumb breadcrumb-nowrap breadcrumb-angle bg-transparent pl-0 pr-0 mb-0">
                         <li class="breadcrumb-item"><a href="admin">Halaman Admin</a></li>
+                        <li class="breadcrumb-item"><a href="games_admin_tournament">Jenis Tournament</a></li>
                         <li class="breadcrumb-item active" aria-current="page"><?= $title; ?></li>
                     </ol>
                 </nav>
@@ -55,13 +56,13 @@
                 <div class="row mb-8 mb-lg-10">
                     <div class="col-12">
                         <header class="text-center mb-6 mb-md-8">
-                            <h2 class="mb-0">News Garasi Game</h2>
+                            <h2 class="mb-0">Tournament Garasi Game</h2>
                             <hr class="w-10 border-top-2 mt-5 mb-6 mx-auto border-warning">
                         </header>
                         <div class="mb08 ml-4">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <button type="button" class="btn btn-warning createNewNews" data-toggle="modal" data-target="#formModalNews">Buat Berita</button>
+                                    <button type="button" class="btn btn-warning createNewTournament" data-toggle="modal" data-target="#formModalTournament">Buat Tournament</button>
                                 </div>
                             </div>
                         </div>
@@ -79,26 +80,38 @@
                                             <thead>
                                                 <tr>
                                                     <th style="text-align:center;" scope="col">No.</th>
-                                                    <th style="text-align:center;" scope="col">Judul Berita</th>
-                                                    <th style="text-align:center;" scope="col">Tanggal Berita</th>
-                                                    <th style="text-align:center;" scope="col">Tampilkan Isi & Gambar</th>
+                                                    <th style="text-align:center;" scope="col">Nama Tournament</th>
+                                                    <th style="text-align:center;" scope="col">Nama Game</th>
+                                                    <th style="text-align:center;" scope="col">Tanggal Tournament</th>
+                                                    <th style="text-align:center;" scope="col">Max Peserta</th>
+                                                    <th style="text-align:center;" scope="col">Biaya Pendaftaran</th>
+                                                    <th style="text-align:center;" scope="col">Status</th>
                                                     <th scope="col"></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <?php foreach ($news as $n) : ?>
+                                                <?php foreach ($tournament as $tour) : ?>
                                                     <tr>
                                                         <th style="text-align:center;" scope="row"><?= $numbering++ ?></th>
-                                                        <td style="text-align:center;"><?= $n["JUDUL"]; ?></td>
-                                                        <td style="text-align:center;"><?= $n["CREATED_DATE"] ?></td>
+                                                        <td style="text-align:center;"><?= $tour["NAMA_TOURNAMENT"]; ?></td>
+                                                        <td style="text-align:center;"><?= $tour["NAMA_GAME"] ?></td>
+                                                        <td style="text-align:center;"><?= $tour["TANGGAL_TOURNAMENT"] ?></td>
+                                                        <td style="text-align:center;"><?= $tour["MAX_PESERTA"] ?></td>
+                                                        <td style="text-align:center; font-size:12px"><?= "Rp. " . number_format($tour["BIAYA_PENDAFTARAN"], 2, ",", "."); ?></td>
                                                         <td style="text-align:center;">
-                                                            <button type="button" class="btn btn-primary modalDetailNews" data-toggle="modal" data-target="#showDetailNews" data-id="<?= $n['ID_NEWS'] ?>">Show</button>
+                                                        <?php if ($tour["STATUS"] == "VALID") : ?>
+                                                        <button type="button" class="btn btn-success"><?= $tour["STATUS"] ?></button>
+                                                        <?php elseif ($tour["STATUS"] == "SELESAI") : ?>
+                                                        <button type="button" class="btn btn-primary"><?= $tour["STATUS"] ?></button>
+                                                        <?php elseif ($tour["STATUS"] == "BATAL") : ?>
+                                                        <button type="button" class="btn btn-danger"><?= $tour["STATUS"] ?></button>
+                                                        <?php endif; ?>
                                                         </td>
                                                         <th scope="col" class="text-center">
-                                                            <a class="badge badge-primary" data-toggle="modal" data-target="#" data-id="<?= $n['ID_NEWS'] ?>">
+                                                            <a class="badge badge-primary editModalTournament" data-toggle="modal" data-target="#formModalTournament" data-id="<?= $tour['ID_TOURNAMENT']; ?>">
                                                                 Edit
                                                             </a>
-                                                            <a onclick="deleteData(<?= $n['ID_NEWS']; ?>)" class="badge badge-danger">Hapus</a>
+                                                            <a onclick="deleteData(<?= $tour['ID_TOURNAMENT']; ?>)" class="badge badge-danger">Hapus</a>
                                                         </th>
                                                     </tr>
                                                 <?php endforeach; ?>
@@ -225,71 +238,58 @@
     </div>
     <!-- /.content area -->
 
-    <!-- Tambah News Modal -->
-    <div class="modal fade" id="formModalNews" tabindex="-1" aria-labelledby="formModalNews" aria-hidden="true">
+        <!-- Tambah Tournament Modal -->
+        <div class="modal fade" id="formModalTournament" tabindex="-1" aria-labelledby="formModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-info" id="formModalNewsLabel">Tambah Berita</h5>
+                    <h5 class="modal-title text-info" id="formModalLabelTournament">Tambah Tournament</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <?= form_open_multipart('Admin/tambahNews'); ?>
-                    <input type="hidden" class="form-control" id="id" name="id" required>
-                    <div class="form-group">
-                        <label for="nama" class="text-info">Judul Berita</label>
-                        <input type="text" class="form-control" id="judulBerita" name="judulBerita" required>
-                    </div>
-                    <div class="form-group" id="imageForEdit">
-                        <label for="image" class="text-info">Upload Gambar</label>
-                        <input type="file" class="form-control" id="image" name="image"></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="desc" class="text-info">Isi Berita</label>
-                        <textarea class="form-control" id="isi" name="isi" required></textarea>
-                    </div>
+                    <form action="admin/tambahTournamentGG" method="POST" id="formTournament">
+                        <input type="hidden" class="form-control" id="id" name="id" required>
+                        <input type="hidden" class="form-control" id="masterTournament" name="masterTournament" value=1>
+                        <div class="form-group">
+                            <label for="game" class="text-info">Pilih Game</label>
+                            <select class="form-control" id="game" name="game">
+                                <?php foreach ($game as $g) : ?>
+                                <option value=<?= $g['ID_GAME']; ?>><?= $g['NAMA_GAME']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="namaTournament" class="text-info">Nama Tournament</label>
+                            <input type="text" class="form-control" id="namaTournament" name="namaTournament" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tanggalTournament" class="text-info">Tanggal Tournament</label>
+                            <input type="date" class="form-control" id="tanggalTournament" name="tanggalTournament" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="maxPeserta" class="text-info">Max Peserta</label>
+                            <input type="number" class="form-control" id="maxPeserta" name="maxPeserta" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="biayaPendaftaran" class="text-info">Biaya Pendaftaran</label>
+                            <input type="text" class="form-control" id="biayaPendaftaran" name="biayaPendaftaran" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="status" class="text-info">Status</label>
+                            <select class="form-control" id="status" name="status">
+                                <option value=VALID>VALID</option>
+                                <option value=BATAL>BATAL</option>
+                                <option value=SELESAI>SELESAI</option>
+                            </select>
+                        </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-primary" id="tambahNews" onclick="Swal.fire('BERITA', 'Berita Berhasil Ditambahkan !', 'success')">Tambah Berita</button>
+                    <button type="submit" class="btn btn-primary" id="tambahTournament" onclick="Swal.fire('Tournament', 'Tournament Berhasil Ditambahkan !', 'success')">Tambah Tournament</button>
                 </div>
-                <?= form_close(); ?>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Detail Game -->
-    <div class="modal fade" id="showDetailNews" tabindex="-1" role="dialog" aria-labelledby="showDetailNews" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <input type="hidden" class="form-control" id="id" name="id" required>
-                    <h5 class="modal-title" id="showDetailNewsLabel">Details</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container" id=showImageNews></div>
-                    <hr>
-                    <div class="container">
-                        <h6 id="detailNews" name="detailNews" style="text-align:center;"></h6>
-                    </div>
-                    <br>
-                    <!-- <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Change Image</span>
-                        </div>
-                        <?= form_open_multipart('Admin/ubahGambarNews'); ?>
-                        <div class="custom-file" style="background-color:powderblue;">
-                            <input type="file" id="image" name="image"></input>
-                            <button onclick="editGambar(<?= $game[0]['ID_NEWS']; ?>)" type="submit" class="btn btn-primary" id="ubahGambarNews">Ganti</button>
-                        </div>
-                        <?= form_close(); ?>
-                    </div> -->
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -310,24 +310,24 @@
                 if (result.value) {
                     $.ajax({
                         type: "POST",
-                        url: "<?php echo base_url(); ?>admin/hapusNews",
+                        url: "<?php echo base_url(); ?>admin/hapusTournament",
                         data: {
                             id: id
                         },
                         success: function() {
                             Swal.fire({
                                 title: "Konfirmasi",
-                                text: "Berita Berhasil Dihapus",
+                                text: "Data Tournament Berhasil Dihapus",
                                 icon: "success"
                             });
                             setTimeout(function() {
-                                window.location.href = "admin_news";
+                                window.location.href = "admin_list_tournament_gg";
                             }, 2000);
                         },
                         error: function() {
                             Swal.fire({
                                 title: "Error",
-                                text: "Berita Tidak Bisa Dapat Dihapus",
+                                text: "Data Tournament Tidak Bisa Dapat Dihapus",
                                 icon: "warning"
                             });
                         }

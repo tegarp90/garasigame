@@ -22,6 +22,7 @@ class Pages extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('crud');
+
 	}
 	public function index()
 	{
@@ -47,7 +48,6 @@ class Pages extends CI_Controller {
 				redirect(base_url());
 			}
 		}
-		
 	}
 	public function turnamen()
 	{

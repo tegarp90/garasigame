@@ -60,7 +60,11 @@
                 </header>
                 <div class="help_m row gutters-y text-center">
                   <div class="col-md-6 col-lg-3">
+<<<<<<< HEAD
                     <a href="genre">
+=======
+                    <a href="genre_admin">
+>>>>>>> tes
                       <div class="card help_card">
                         <div class="card-body py-7">
                           <span class="ti-user lead-7 d-block mb-3"></span>
@@ -70,7 +74,11 @@
                     </a>
                   </div>
                   <div class="col-md-6 col-lg-3">
+<<<<<<< HEAD
                     <a href="games">
+=======
+                    <a href="games_admin">
+>>>>>>> tes
                       <div class="card help_card">
                         <div class="card-body py-7">
                           <span class="ti-game lead-7 d-block mb-3"></span>
@@ -80,7 +88,11 @@
                     </a>
                   </div>
                   <div class="col-md-6 col-lg-3">
+<<<<<<< HEAD
                     <a href="help-center-article.html">
+=======
+                    <a href="admin_news">
+>>>>>>> tes
                       <div class="card help_card">
                         <div class="card-body py-7">
                           <span class="ti-wallet lead-7 d-block mb-3"></span>
@@ -90,7 +102,11 @@
                     </a>
                   </div>
                   <div class="col-md-6 col-lg-3">
+<<<<<<< HEAD
                     <a href="help-center-article.html">
+=======
+                    <a href="games_admin_tournament">
+>>>>>>> tes
                       <div class="card help_card">
                         <div class="card-body py-7">
                           <span class="ti-settings lead-7 d-block mb-3"></span>
@@ -100,7 +116,11 @@
                     </a>
                   </div>
 
+<<<<<<< HEAD
                   <div class="col-md-6 col-lg-3">
+=======
+                  <!-- <div class="col-md-6 col-lg-3">
+>>>>>>> tes
                     <a href="help-center-article.html">
                       <div class="card help_card">
                         <div class="card-body py-7">
@@ -139,7 +159,11 @@
                         </div>
                       </div>
                     </a>
+<<<<<<< HEAD
                   </div>
+=======
+                  </div> -->
+>>>>>>> tes
                 </div>
               </div>
             </div>
