@@ -69,11 +69,9 @@
                         <div class="mb08 ml-4">
                             <div class="row">
                                 <div class="col-md-6">
-<<<<<<< HEAD
-                                    <button type="button" class="btn btn-warning createNew" data-toggle="modal" data-target="#formModalGame">Tambah Game</button>
-=======
+
                                     <button type="button" class="btn btn-warning createNewGame" data-toggle="modal" data-target="#formModalGame">Tambah Game</button>
->>>>>>> tes
+
                                 </div>
                             </div>
                         </div>
@@ -93,11 +91,9 @@
                                                     <th style="text-align:center;" scope="col">No.</th>
                                                     <th style="text-align:center;" scope="col">Nama Game</th>
                                                     <th style="text-align:center;" scope="col">Genre</th>
-<<<<<<< HEAD
-                                                    <th style="text-align:center;" scope="col">Detail</th>
-=======
+
                                                     <th style="text-align:center;" scope="col">Desc & Image</th>
->>>>>>> tes
+
                                                     <th style="text-align:center;" scope="col">Status</th>
                                                     <th scope="col"></th>
                                                 </tr>
@@ -117,11 +113,8 @@
                                                             <td style="text-align:center;"><button type="button" class="btn btn-success">Aktif</button></td>
                                                         <?php endif; ?>
                                                         <th scope="col" class="text-center">
-<<<<<<< HEAD
-                                                            <button type="button" class="badge badge-primary" data-toggle="modal" data-target="#formModalGame" data-id="<?= $g['ID_GAME']; ?>">
-=======
+
                                                             <button type="button" class="badge badge-primary editGame" data-toggle="modal" data-target="#formModalGame" data-id="<?= $g['ID_GAME']; ?>">
->>>>>>> tes
                                                                 Edit
                                                             </button>
                                                             <a onclick="deleteData(<?= $g['ID_GAME']; ?>)" class="badge badge-danger">Hapus</a>
@@ -282,11 +275,8 @@
                         <label for="desc" class="text-info">Deskripsi Game</label>
                         <textarea class="form-control" id="desc" name="desc" required></textarea>
                     </div>
-<<<<<<< HEAD
-                    <div class="form-group">
-=======
+
                     <div class="form-group" id="imageForEdit">
->>>>>>> tes
                         <label for="image" class="text-info">Upload Gambar</label>
                         <input type="file" class="form-control" id="image" name="image"></input>
                     </div>
@@ -335,11 +325,8 @@
                                 icon: "success"
                             });
                             setTimeout(function() {
-<<<<<<< HEAD
-                                window.location.href = "<?php echo base_url(); ?>admin/indexGame";
-=======
+
                                 window.location.href = "games_admin";
->>>>>>> tes
                             }, 2000);
                         },
                         error: function() {
@@ -370,10 +357,7 @@
                         <!-- <input type="text" class="form-control" id="namagame" name="namagame"> -->
                     </div>
                     <hr>
-<<<<<<< HEAD
-                    <div class="container" id=showImage>
-                        
-=======
+
                     <div class="container" id=showImage></div>
                     <br>
                     <div class="input-group mb-3">
@@ -386,14 +370,12 @@
                             <button onclick="editGambar(<?= $game[0]['ID_GAME']; ?>)" type="submit" class="btn btn-primary" id="ubahGambarGame">Ganti</button>
                         </div>
                         <?= form_close(); ?>
->>>>>>> tes
+
                     </div>
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-    </div>
-=======
+
     </div>
 
     <!-- Sweet Alert Ubah Gambar Game Confirmation -->
@@ -436,4 +418,3 @@
             })
         }
     </script>
->>>>>>> tes

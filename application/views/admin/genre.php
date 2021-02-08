@@ -295,11 +295,9 @@
                                 icon: "success"
                             });
                             setTimeout(function() {
-<<<<<<< HEAD
-                                window.location.href = "genre";
-=======
+
                                 window.location.href = "genre_admin";
->>>>>>> tes
+
                             }, 2000);
                         },
                         error: function() {
