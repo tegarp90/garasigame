@@ -69,15 +69,15 @@ class Login extends CI_Controller {
 			}else{
 				$username = $this->input->post('username');
 				$password = $this->input->post('password');
-				$cek = $this->crud->cekid('user','USERNAME',$username);
+				$cek = $this->crud->cekid('USER','USERNAME',$username);
 				if ($cek == false) {
 					echo json_encode(['auths'=>'<p>Username is not Exist</p>']);
 				}else{
-					$cekstatus = $this->crud->get_where('user',['USERNAME' => $username])->row_array();
+					$cekstatus = $this->crud->get_where('USER',['USERNAME' => $username])->row_array();
 					if($cekstatus['STATUS'] == 0){
 						echo json_encode(['auth'=>'<p>Your Accounnt Need Activated</p>']);
 					}else{
-						$cekpass = $this->crud->cekpass('user','USERNAME',$username,$password);
+						$cekpass = $this->crud->cekpass('USER','USERNAME',$username,$password);
 						if ($cekpass == false) {
 
 							echo json_encode(['authp'=>'<p>Password Invalid!</p>']);
@@ -135,8 +135,8 @@ class Login extends CI_Controller {
 					'DATE_CREATED' 	=> time()
 				];
 
-				$this->crud->insert('user',$data);
-				$this->crud->insert('user_token',$data_token);
+				$this->crud->insert('USER',$data);
+				$this->crud->insert('USER_TOKEN',$data_token);
 
 				$this->_sendEmail($token,$email,'verify');
 				echo json_encode(['success'=>'registration is successful, please activate via your email']);
@@ -186,15 +186,15 @@ class Login extends CI_Controller {
 
     	$user = $this->crud->get_where('user',['EMAIL' => $email])->row_array();
     	if($user){
-    		$user_token = $this->crud->get_where('user_token',['TOKEN' => $token])->row_array();
+    		$user_token = $this->crud->get_where('USER_TOKEN',['TOKEN' => $token])->row_array();
     		if ($user_token) {
     			if (time() - $user_token['DATE_CREATED'] < (60*60*24)) {
-    				$this->crud->update('user','EMAIL',$email,['STATUS' => 1]);
-    				$this->crud->delete('user_token',['EMAIL' => $email]);
+    				$this->crud->update('USER','EMAIL',$email,['STATUS' => 1]);
+    				$this->crud->delete('USER_TOKEN',['EMAIL' => $email]);
     				redirect(base_url());
     			}else{
-    				$this->crud->delete('user',['EMAIL' => $email]);
-    				$this->crud->delete('user_token',['EMAIL' => $email]);
+    				$this->crud->delete('USER',['EMAIL' => $email]);
+    				$this->crud->delete('USER_TOKEN',['EMAIL' => $email]);
     				show_error('Token was Expired.','103','Activation Failed!!');
     			}
     		}else{

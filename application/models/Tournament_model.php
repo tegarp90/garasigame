@@ -11,7 +11,7 @@ class Tournament_model extends CI_Model
 
     public function getAllTournamentGG()
     {
-        $this->db->select('a.ID_TOURNAMENT, b.JENIS_TOURNAMENT, c.NAMA_GAME, a.TOURNAMENT_CREATOR, a.NAMA_TOURNAMENT, a.TANGGAL_TOURNAMENT, a.MAX_PESERTA, a.BIAYA_PENDAFTARAN, a.STATUS, a.CREATED_DATE, c.IS_ACTIVE')
+        $this->db->select('a.ID_TOURNAMENT, a.ID_GAME,b.JENIS_TOURNAMENT, c.NAMA_GAME, a.TOURNAMENT_CREATOR, a.NAMA_TOURNAMENT, a.TANGGAL_TOURNAMENT, a.MAX_PESERTA, a.BIAYA_PENDAFTARAN, a.STATUS, a.CREATED_DATE, c.IS_ACTIVE, c.IMAGE_GAME' )
             ->from('TOURNAMENT as a')
             ->join('MASTER_TOURNAMENT as b', 'b.ID_MASTER_TOURNAMENT = a.ID_MASTER_TOURNAMENT')
             ->join('GAME as c', 'c.ID_GAME = a.ID_GAME');

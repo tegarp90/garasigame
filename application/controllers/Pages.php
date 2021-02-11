@@ -22,6 +22,9 @@ class Pages extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('crud');
+		$this->load->model('Game_model');
+		$this->load->model('Tournament_model');
+
 
 	}
 	public function index()
@@ -33,7 +36,7 @@ class Pages extends CI_Controller {
 	public function profil()
 	{
 		$i = $this->input->get('user');
-		$data = $this->crud->get_where('user',['USERNAME' => $i])->row_array();
+		$data = $this->crud->get_where('USER',['USERNAME' => $i])->row_array();
 		if($data){
 			if($data['STATUS'] == 1){
 				redirect('c_profil');
@@ -51,6 +54,8 @@ class Pages extends CI_Controller {
 	}
 	public function turnamen()
 	{
+		$data['turgg'] = $this->Tournament_model->getAllTournamentGG();
+		$data['game'] = $this->Game_model->getAllGame();
 		$data['status'] = 'tak login';
 		$data['content'] = 'contents/v_tournament';
 		$this->load->view('tamplate/page',$data);
@@ -63,7 +68,7 @@ class Pages extends CI_Controller {
 	public function complete_p()
 	{
 		$i = $_SESSION['username'];
-		$data = $this->crud->get_where('user',['USERNAME' => $i])->row_array();
+		$data = $this->crud->get_where('USER',['USERNAME' => $i])->row_array();
 		$this->load->view('tamplate/header');
 		$this->load->view('contents/v_c_profil',$data);
 		$this->load->view('tamplate/footer');

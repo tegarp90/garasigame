@@ -58,28 +58,29 @@
             <!-- nav tabs -->
             <ul class="spotlight-tabs spotlight-tabs-dark nav nav-tabs border-0 mb-5 position-relative flex-nowrap" id="most_popular_products-carousel" role="tablist">
               <li class="nav-item text-fnwp pg-none relative">
-                <a class="nav-link active" id="mp-01-tab" data-toggle="tab" href="#mp-01-c" role="tab" aria-controls="mp-01-c" aria-selected="true">All Games</a>
+                <a class="nav-link active" style="font-size: 80%"  id="mp-01-tab" data-toggle="tab" href="#mp-01-c" role="tab" aria-controls="mp-01-c" aria-selected="true">All Games</a>
               </li>
-              <?php for ($i=2; $i < 8; $i++) { ?>
+              
+              <?php foreach ($game as $row) { ?>
               <li class="nav-item text-fnwp relative">
-                <a class="nav-link" id="mp-0<?php echo $i; ?>-tab" data-toggle="tab" href="#mp-0<?php echo $i; ?>-c" role="tab" aria-controls="mp-0<?php echo $i; ?>-c" aria-selected="false">Games <?php echo $i; ?></a>
+                <a class="nav-link" style="font-size: 80%" id="mps-0<?php echo $row["ID_GAME"]; ?>-tab" data-toggle="tab" href="#mps-0<?php echo $row["ID_GAME"]; ?>-c" role="tab" aria-controls="mps-0<?php echo $row["ID_GAME"]; ?>-c" aria-selected="false"><?php echo $row["NAMA_GAME"]; ?></a>
               </li>
               <?php } ?>
             </ul>
             <!-- /.nav tabs -->
             <!-- tab panes -->
-            <div id="color_sel_Carousel-content" class="tab-content fl-scn relative w-100">
+            <div id="color_sel_Carousel-content" class="tab-content fl-scn relative w-100 p-2">
               <!-- tab item -->
               <div class="tab-pane fade show active" id="mp-01-c" role="tabpanel" aria-labelledby="mp-01-tab">
-                <div class="owl-carousel gs-carousel" data-carousel-margin="30" data-carousel-nav="true" data-carousel-navText="<span class='icon-cl-next pe-7s-angle-left'></span>, <span class='icon-cl-next pe-7s-angle-right'></span>">
-                  <?php for ($i=1; $i < 8; $i++) { ?>
+                <div class="row">
+                  <?php foreach ($turgg as $key2) { ?>
                     <!-- item -->
-                  <div class="item">
+                  <div class="item m-3" style="width: 25%">
                     <div class="item-cont">
                       <figure class="owl_item_review">
                         <div>
                           <div class="position-relative overflow-hidden">
-                            <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                            <img class="m-0-auto" style="height: 250px" src="assets/img/game/<?php echo $key2["IMAGE_GAME"]; ?>" alt="Games Store">
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
@@ -88,7 +89,7 @@
                             </div>
                           </div>
                           <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Nama Turnamen <?php echo $i; ?></a></h5>
+                            <h7 class="owl_item_title text-lt"><a href=""> <?php echo $key2["NAMA_TOURNAMENT"]; ?></a></h7>
                             <div class="relative small-1">
                               <span class="owl_item_price">Price pool €44.99</span>
                               <span class="owl_item_genre">
@@ -105,18 +106,20 @@
                 </div>
               </div>
               <!-- /.tab item -->
-              <?php for ($j=2; $j < 8; $j++) { ?>
+              <?php foreach ($game as $key) { ?>
               <!-- tab item -->
-              <div class="tab-pane fade" id="mp-0<?php echo $j; ?>-c" role="tabpanel" aria-labelledby="mp-0<?php echo $j; ?>-tab">
-                <div class="owl-carousel gs-carousel" data-carousel-margin="30" data-carousel-nav="true" data-carousel-navText="<span class='icon-cl-next pe-7s-angle-left'></span>, <span class='icon-cl-next pe-7s-angle-right'></span>">
-                  <?php for ($i=1; $i < 7; $i++) { ?>
+              <div class="tab-pane fade" id="mps-0<?php echo $key["ID_GAME"]; ?>-c" role="tabpanel" aria-labelledby="mps-0<?php echo $key["ID_GAME"]; ?>-tab">
+                <div class="row">
+                  <?php foreach ($turgg as $key2) { ?>
+                    <?php if ($key["ID_GAME"] == $key2["ID_GAME"]) { ?>
+                    
                     <!-- item -->
-                  <div class="item">
+                  <div class="item m-3" style="width: 25%">
                     <div class="item-cont">
                       <figure class="owl_item_review">
                         <div>
                           <div class="position-relative overflow-hidden">
-                            <img class="m-0-auto" src="assets/img/content/cont/cg_01.jpg" alt="Games Store">
+                            <img class="m-0-auto" style="height: 250px"  src="assets/img/game/<?php echo $key2["IMAGE_GAME"]; ?>" alt="Games Store">
                             <div class="review_h text-light">
                               <a href="#">
                                 <i class="item_icon_cart fas fa-shopping-cart"></i>
@@ -125,7 +128,7 @@
                             </div>
                           </div>
                           <div>
-                            <h5 class="owl_item_title text-lt"><a href="">Games <?php echo $j; ?> Turnamen <?php echo $i; ?></a></h5>
+                            <h7 class="owl_item_title text-lt"><a href=""> <?php echo $key2['NAMA_TOURNAMENT']; ?></a></h7>
                             <div class="relative small-1">
                               <span class="owl_item_price">Price pool €44.99</span>
                               <span class="owl_item_genre">
@@ -138,6 +141,7 @@
                     </div>
                   </div>
                   <!-- /.item -->
+                  <?php } ?>
                   <?php } ?>
                 </div>
               </div>

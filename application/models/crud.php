@@ -6,7 +6,7 @@ class Crud extends CI_Model {
     {
         # code...
     }
-    function cekid($table,$column,$id)
+    public function cekid($table,$column,$id)
     {
         $this->db->where($column,$id);
         $query = $this->db->get($table);
@@ -16,7 +16,7 @@ class Crud extends CI_Model {
             return false;
         }
     }
-    function cekpass($table,$column,$id,$pass)
+    public function cekpass($table,$column,$id,$pass)
     {
         $this->db->where($column,$id);
         $query = $this->db->get($table)->row()->PASSWORD;
@@ -28,20 +28,20 @@ class Crud extends CI_Model {
         }
 
     }
-    function update($table,$column,$id,$data)
+    public function update($table,$column,$id,$data)
     {
         $this->db->where($column,$id);
         $this->db->update($table,$data);
     }
-    function insert($table,$data)
+    public function insert($table,$data)
     {
         $this->db->insert($table,$data);
     }
-    function delete($table,$data)
+    public function delete($table,$data)
     {
         $this->db->delete($table,$data);
     }
-    function get_where($table,$where)
+    public function get_where($table,$where)
     {
         return $this->db->get_where($table,$where);
     }

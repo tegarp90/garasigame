@@ -16,12 +16,12 @@
             </form>
           </div>
           <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-4 ml-auto text-right">
-            <?php if (empty($_SESSION['web_sesi']) || $_SESSION['web_sesi'] == false): ?>
-            <button class="btn btn-sm btn-warning text-secondary mr-2 login-button">Sign in</button>
-            <a class="btn btn-sm text-light d-none d-sm-inline-block reg-button" >Sign up</a>
-            <?php endif ?>
+            <?php if (empty($_SESSION['web_sesi']) || $_SESSION['web_sesi'] == false) { ?>
+              <button class="btn btn-sm btn-warning text-secondary mr-2 login-button">Sign in</button>
+              <a class="btn btn-sm text-light d-none d-sm-inline-block reg-button" >Sign up</a>
+            <?php } ?>
             <ul class="nav navbar-nav d-none d-sm-inline-flex flex-row">
-              <?php if (isset($_SESSION['web_sesi']) && $_SESSION['web_sesi'] == true): ?>
+              <?php if (isset($_SESSION['web_sesi']) && $_SESSION['web_sesi'] == true) { ?>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle small text-capitalize" href="#" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/img/avatar/default.jpg" class="img-xs rounded-circle mr-2" alt="Avatar"> <?php echo $_SESSION['username']; ?></a>
                 <div class="dropdown-menu position-absolute" aria-labelledby="dropdownUser">
@@ -31,7 +31,7 @@
                   <a class="dropdown-item" href="logout"><span class="mr-2"><i class="fas fa-sign-out-alt"></i></span>Logout</a>
                 </div>
               </li>
-              <?php endif ?>
+              <?php } ?>
               <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle small" href="#" id="dropdownGaming" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="mr-2 fas fa-globe"></i>ID </a>
                 <div class="dropdown-menu position-absolute" aria-labelledby="dropdownGaming">

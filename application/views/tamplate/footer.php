@@ -69,7 +69,8 @@
           e.preventDefault();
 
           $.ajax({
-            url: "<?= site_url('login/formlogin') ?>",
+            type: "GET",
+            url: "formlogin",
             dataType: "json",
             success: function (response) {
               $('.view_modal').html(response.data).show();
@@ -87,7 +88,8 @@
           e.preventDefault();
 
           $.ajax({
-            url: "<?= site_url('login/formregister') ?>",
+            type: "GET",
+            url: "formregister",
             dataType: "json",
             success: function (response) {
               $('.view_modal2').html(response.data).show();
