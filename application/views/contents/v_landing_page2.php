@@ -53,10 +53,6 @@
                 <img class="w-15 pl-3 mt-3" src="assets/img/content/cont/<?php echo $i; ?>_small.jpg" alt="Responsive image">
               <?php } ?>
             </div>
-            <div class="text-center my-3">
-                <a href="" class="btn btn-lg btn-warning w-100">More Tournament</a>
-                <a href="" class="btn btn-lg btn-warning mt-3 w-100">Create Own Tournament</a>
-            </div>
         </div>
       </section>
       <!-- /.content area -->

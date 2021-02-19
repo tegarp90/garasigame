@@ -61,6 +61,7 @@ $route['logout'] = 'login/logout';
 $route['profile'] = 'pages/profil';
 $route['c_profil'] = 'pages/complete_p';
 $route['tournament'] = 'pages/turnamen';
+$route['news'] = 'pages/news';
 $route['admin'] = 'admin';
 $route['genre_admin'] = 'admin/indexGenre';
 $route['games_admin'] = 'admin/indexGame';

@@ -17,22 +17,22 @@
                 </div>
               </div>
               <div class="mb-7">
-                <h5 class="lead-2 fw-500 text-warning">Office</h5>
+                <!-- <h5 class="lead-2 fw-500 text-warning">Office</h5>
                 <ul class="list-unstyled">
                   <li>2265 N 2453rd Rd, Marseilles, IL, 61341 (815) 795-9748</li>
                   <li>Lee St, Orwigsburg, PA, 17961</li>
                   <li>637 Lee St, Orwigsburg, PA, 17961</li>
                   <li>200 Sunset Ct, Hahnville, LA, 70057</li>
-                </ul>
+                </ul> -->
               </div>
               <div>
-                <h5 class="lead-2 fw-500 text-warning">Follow Us</h5>
+                <!-- <h5 class="lead-2 fw-500 text-warning">Follow Us</h5>
                 <div class="social-buttons">
                   <a class="mr-3 unset social-twitter" href="#"><i class="fab fa-twitter"></i></a>
                   <a class="mr-3 unset social-facebook" href="#"><i class="fab fa-facebook-f"></i></a>
                   <a class="mr-3 unset social-dribbble" href="#"><i class="fab fa-dribbble"></i></a>
                   <a class="mr-3 unset social-instagram" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -53,6 +53,7 @@
                 <div class="form-group col-md-12">
                   <input class="form-control form-control-lg" type="text" name="p_number" placeholder="Phone Number">
                 </div>
+                
               </div>
               <button class="btn btn-lg btn-warning" type="submit">Submit</button>
           </form>

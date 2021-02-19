@@ -83,20 +83,20 @@
                             <img class="m-0-auto" style="height: 250px" src="assets/img/game/<?php echo $key2["IMAGE_GAME"]; ?>" alt="Games Store">
                             <div class="review_h text-light">
                               <a href="#">
-                                <i class="item_icon_cart fas fa-shopping-cart"></i>
+                                <!-- <i class="item_icon_cart fas fa-shopping-cart"></i> -->
                                 <span class="item_atc_text">Daftarkan</span>
                               </a>
                             </div>
                           </div>
                           <div>
                             <h7 class="owl_item_title text-lt"><a href=""> <?php echo $key2["NAMA_TOURNAMENT"]; ?></a></h7>
-                            <div class="relative small-1">
+                            <!-- <div class="relative small-1">
                               <span class="owl_item_price">Price pool €44.99</span>
                               <span class="owl_item_genre">
                                 Nama Game
                               </span>
                             </div>
-                          </div>
+                          </div> -->
                         </div>
                       </figure>
                     </div>
@@ -122,19 +122,19 @@
                             <img class="m-0-auto" style="height: 250px"  src="assets/img/game/<?php echo $key2["IMAGE_GAME"]; ?>" alt="Games Store">
                             <div class="review_h text-light">
                               <a href="#">
-                                <i class="item_icon_cart fas fa-shopping-cart"></i>
+                                <!-- <i class="item_icon_cart fas fa-shopping-cart"></i> -->
                                 <span class="item_atc_text">Daftarkan</span>
                               </a>
                             </div>
                           </div>
                           <div>
                             <h7 class="owl_item_title text-lt"><a href=""> <?php echo $key2['NAMA_TOURNAMENT']; ?></a></h7>
-                            <div class="relative small-1">
+                            <!-- <div class="relative small-1">
                               <span class="owl_item_price">Price pool €44.99</span>
                               <span class="owl_item_genre">
                                 Nama Game
                               </span>
-                            </div>
+                            </div> -->
                           </div>
                         </div>
                       </figure>
