@@ -33,6 +33,12 @@
                     </a>
                   </li>
                   <li class="py-2 py-lg-0">
+                    <a id="mp-2-01-tab" data-toggle="tab" href="#pageTournament" role="tab" aria-controls="pageTournament" aria-selected="true" class="profile-nav-link text-uppercase text-center">
+                      <span class="pr-icon-nav ti-cup lead-4 d-block mb-3"></span>
+                      <span class="small-2 fw-400 ls-1">Tournaments</span>
+                    </a>
+                  </li>
+                  <li class="py-2 py-lg-0">
                     <a id="mp-2-02-tab" data-toggle="tab" href="#mp-2-02-c" role="tab" aria-controls="mp-2-02-c" aria-selected="false" class="profile-nav-link text-uppercase text-center">
                       <span class="pr-icon-nav ti-game lead-4 d-block mb-3"></span>
                       <span class="small-2 fw-400 ls-1">Games</span>
@@ -67,7 +73,7 @@
         <div class="container">
           <!-- tab panes -->
           <div id="profile-tabs-content" class="tab-content position-relative w-100">
-            <!-- tab item -->
+            <!-- tab item POSTS -->
             <div class="tab-pane fade active show" id="mp-2-01-c" role="tabpanel" aria-labelledby="mp-2-01-tab">
               <div class="position-relative">
                 <div class="row">
@@ -81,7 +87,69 @@
                 </div>
               </div>
             </div>
-            <!-- /.tab item -->
+            <!-- /.tab item POSTS -->
+
+            <!-- tab item POSTS -->
+            <div class="tab-pane fade active show" id="pageTournament" role="tabpanel" aria-labelledby="mp-2-01-tab">
+            <div class="row mb-8 mb-lg-10">
+                    <div class="col-12">
+                        <header class="text-center mb-6 mb-md-8">
+                            <h2 class="mb-0">Tournament Yang Diikuti</h2>
+                            <hr class="w-10 border-top-2 mt-5 mb-6 mx-auto border-warning">
+                        </header>
+                        <div class="mb08">
+                            <div class="container">
+                                <div class="row mt-4">
+                                    <div class="col-md-6">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <table id="tableTournament" class="table table-striped table-bordered" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th style="text-align:center;" scope="col">No.</th>
+                                                    <th style="text-align:center;" scope="col">Nama Tournament</th>
+                                                    <th style="text-align:center;" scope="col">Nama Tim/Peserta</th>
+                                                    <th style="text-align:center;" scope="col">Tanggal Tournament</th>
+                                                    <th style="text-align:center;" scope="col">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                  <?php foreach ($tournamentList as $list) : ?>
+                                                    <tr>
+                                                        <th style="text-align:center;" scope="row"><?= $numbering++; ?></th>
+                                                        <td style="text-align:center;"><?= $list['NAMA_TOURNAMENT'] ?></td>
+                                                        <td style="text-align:center;"><?= $list['NAMA_TIM'] ?></td>
+                                                        <td style="text-align:center;"><?= $list['TANGGAL_TOURNAMENT'] ?></td>
+                                                        <td style="text-align:center;">
+                                                        <button type="button" 
+                                                            <?php 
+                                                                if ($list['STATUS'] == "PENDING") {
+                                                                    echo 'class="btn btn-warning"';
+                                                                } elseif ($list['STATUS'] == "CONFIRM") {
+                                                                    echo 'class="btn btn-success"';
+                                                                } elseif ($list['STATUS'] == "REJECT") {
+                                                                    echo 'class="btn btn-danger"';
+                                                                }
+                                                            ?>
+                                                            >
+                                                            <?= $list["STATUS"] ?></button>
+                                                        </td>
+                                                    </tr>
+                                                  <?php endforeach; ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.tab item POSTS -->
 
             <!-- tab item -->
             <div class="tab-pane fade" id="mp-2-02-c" role="tabpanel" aria-labelledby="mp-2-02-tab">
@@ -1913,4 +1981,4 @@
 
    <?php
   $this->load->view('tamplate/footer');
-  ?>
+?>

@@ -25,8 +25,9 @@ class Login extends CI_Controller {
 	}
 	public function index()
 	{
+		// var_dump($_SESSION['username']); exit;
 		redirect('profile?user='.$_SESSION['username']);
-
+	
 	}
 	public function formlogin()
 	{

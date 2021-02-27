@@ -1,4 +1,4 @@
-var base_url = window.location.origin + "/GarasiGames";
+var base_url = window.location.origin + "/garasigame";
 $(function() {
     // ------------------- JS FOR GENRE -------------------------
     $('.createNew').on('click', function() {
@@ -129,10 +129,31 @@ $(function() {
             success: function(data) {
                 $('#id').val(data.ID_TOURNAMENT);
                 $('#namaTournament').val(data.NAMA_TOURNAMENT);
-                $('#game').find(":selected").text(data.NAMA_GAME);
+                $('#game').val(data.NAMA_GAME);
                 $('#tanggalTournament').val(data.TANGGAL_TOURNAMENT);
                 $('#maxPeserta').val(data.MAX_PESERTA);
                 $('#biayaPendaftaran').val(data.BIAYA_PENDAFTARAN);
+                $('#status').val(data.STATUS);
+            }
+        });
+
+    });
+
+    $('.updatePeserta').on('click', function() {
+
+
+        const id = $(this).data('id');
+        console.log(id);
+
+        $.ajax({
+            url: base_url + '/Admin/getPesertaId',
+            data: {
+                id: id
+            },
+            method: 'POST',
+            dataType: 'json',
+            success: function(data) {
+                $('#id').val(data.ID_PESERTA_TOURNAMENT);
                 $('#status').val(data.STATUS);
             }
         });

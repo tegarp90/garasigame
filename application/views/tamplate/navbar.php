@@ -53,30 +53,28 @@
               <a class="nav-link dropdown-toggle pl-lg-0" href="#" id="dropdownTournament" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tournament </a>
               <div class="dropdown-menu dropdown-menu-dark-lg" aria-labelledby="dropdownTournament">
                 <a class="dropdown-item" href="tournament">Tournament Garasi Game</a>
-                <a class="dropdown-item" href="#">Create Tournament</a>
+                <a class="dropdown-item" href="#" onclick="alert('Coming Soon')">Create Tournament</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Marketplace </a>
+              <a class="nav-link" href="#" onclick="alert('Coming Soon')">Marketplace </a>
             </li>
             <li class="nav-item dropdown dropdown-hover">
               <a class="nav-link dropdown-toggle" href="#" id="dropdownNews" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">News </a>
               <div class="dropdown-menu dropdown-menu-dark-lg" aria-labelledby="dropdownNews">
                 <a class="dropdown-item" href="news">News Update </a>
-                <a class="dropdown-item" href="#">Games Update</a>
               </div>
             </li>
             <li class="nav-item dropdown dropdown-hover">
               <a class="nav-link dropdown-toggle" href="#" id="dropdownGaming_community" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community </a>
               <div class="dropdown-menu dropdown-menu-dark-lg" aria-labelledby="dropdownGaming_community">
-                <a class="dropdown-item" href="#">Gamers Forum</a>
-                <a class="dropdown-item" href="#">Media Social</a>
+                <a class="dropdown-item" href="#" onclick="alert('Coming Soon')">Gamers Forum</a>
+                <a class="dropdown-item" href="#" onclick="alert('Coming Soon')">Media Social</a>
               </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About Us</a>
             </li>
-            
           </ul>
         </div>
       </div>

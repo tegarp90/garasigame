@@ -62,6 +62,12 @@
     <!-- Main JS -->
     <script src="assets/js/main.js" id="_mainJS" data-plugins="load"></script>
 
+    <!-- Sweet Alert Plugin -->
+    <script src="assets/js/swal/sweetalert2.all.min.js"></script>
+
+    <!-- My Script -->
+    <script src="assets/js/myscript.js"> </script>
+
     <script type="text/javascript">
       $(document).ready(function () {
 

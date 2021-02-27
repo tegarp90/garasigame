@@ -93,7 +93,7 @@
                                                 <?php foreach ($tournament as $tour) : ?>
                                                     <tr>
                                                         <th style="text-align:center;" scope="row"><?= $numbering++ ?></th>
-                                                        <td style="text-align:center;"><?= $tour["NAMA_TOURNAMENT"]; ?></td>
+                                                        <td style="text-align:center;"><a href="<?= base_url(); ?>daftar_peserta?ID_TOURNAMENT=<?= $tour['ID_TOURNAMENT'] ?>"><?= $tour["NAMA_TOURNAMENT"]; ?></a></td>
                                                         <td style="text-align:center;"><?= $tour["NAMA_GAME"] ?></td>
                                                         <td style="text-align:center;"><?= $tour["TANGGAL_TOURNAMENT"] ?></td>
                                                         <td style="text-align:center;"><?= $tour["MAX_PESERTA"] ?></td>

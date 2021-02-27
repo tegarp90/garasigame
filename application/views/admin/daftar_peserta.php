@@ -47,7 +47,9 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb-product breadcrumb breadcrumb-nowrap breadcrumb-angle bg-transparent pl-0 pr-0 mb-0">
                         <li class="breadcrumb-item"><a href="admin">Halaman Admin</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"><?= $title; ?></li>
+                        <li class="breadcrumb-item"><a href="games_admin_tournament">Jenis Tournament</a></li>
+                        <li class="breadcrumb-item"><a href="admin_list_tournament_gg">Tournament Garasi Game</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><?= $tournament['NAMA_TOURNAMENT']; ?></li>
                     </ol>
                 </nav>
             </header>
@@ -55,16 +57,9 @@
                 <div class="row mb-8 mb-lg-10">
                     <div class="col-12">
                         <header class="text-center mb-6 mb-md-8">
-                            <h2 class="mb-0">News Garasi Game</h2>
+                            <h2 class="mb-0"><?= $tournament['NAMA_TOURNAMENT'] ?></h2>
                             <hr class="w-10 border-top-2 mt-5 mb-6 mx-auto border-warning">
                         </header>
-                        <div class="mb08 ml-4">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <button type="button" class="btn btn-warning createNewNews" data-toggle="modal" data-target="#formModalNews">Buat Berita</button>
-                                </div>
-                            </div>
-                        </div>
                         <div class="mb08">
                             <div class="container">
                                 <div class="row mt-4">
@@ -79,27 +74,33 @@
                                             <thead>
                                                 <tr>
                                                     <th style="text-align:center;" scope="col">No.</th>
-                                                    <th style="text-align:center;" scope="col">Judul Berita</th>
-                                                    <th style="text-align:center;" scope="col">Tanggal Berita</th>
-                                                    <th style="text-align:center;" scope="col">Tampilkan Isi & Gambar</th>
-                                                    <th scope="col"></th>
+                                                    <th style="text-align:center;" scope="col">Username</th>
+                                                    <th style="text-align:center;" scope="col">Nama Tim/Peserta</th>
+                                                    <th style="text-align:center;" scope="col">No. Hp</th>
+                                                    <th style="text-align:center;" scope="col">Status</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <?php foreach ($news as $n) : ?>
+                                                <?php foreach ($daftarPeserta as $peserta) : ?>
                                                     <tr>
                                                         <th style="text-align:center;" scope="row"><?= $numbering++ ?></th>
-                                                        <td style="text-align:center;"><?= $n["JUDUL"]; ?></td>
-                                                        <td style="text-align:center;"><?= $n["CREATED_DATE"] ?></td>
+                                                        <td style="text-align:center;"><a href="#"><?= $peserta["USERNAME"]; ?></a></td>
+                                                        <td style="text-align:center;"><?= $peserta["NAMA_TIM"] ?></td>
+                                                        <td style="text-align:center;"><?= $peserta["NO_HP_AKTIF"] ?></td>
                                                         <td style="text-align:center;">
-                                                            <button type="button" class="btn btn-primary modalDetailNews" data-toggle="modal" data-target="#showDetailNews" data-id="<?= $n['ID_NEWS'] ?>">Show</button>
+                                                            <button id="updatePeserta" type="button" data-toggle="modal" data-target="#updateStatus" data-id="<?= $peserta['ID_PESERTA_TOURNAMENT']; ?>" 
+                                                            <?php 
+                                                                if ($peserta['STATUS'] == "PENDING") {
+                                                                    echo 'class="btn btn-warning updatePeserta"';
+                                                                } elseif ($peserta['STATUS'] == "CONFIRM") {
+                                                                    echo 'class="btn btn-success updatePeserta"';
+                                                                } elseif ($peserta['STATUS'] == "REJECT") {
+                                                                    echo 'class="btn btn-danger updatePeserta"';
+                                                                }
+                                                            ?>
+                                                            >
+                                                            <?= $peserta["STATUS"] ?></button>
                                                         </td>
-                                                        <th scope="col" class="text-center">
-                                                            <a class="badge badge-primary" data-toggle="modal" data-target="#" data-id="<?= $n['ID_NEWS'] ?>">
-                                                                Edit
-                                                            </a>
-                                                            <a onclick="deleteData(<?= $n['ID_NEWS']; ?>)" class="badge badge-danger">Hapus</a>
-                                                        </th>
                                                     </tr>
                                                 <?php endforeach; ?>
                                             </tbody>
@@ -225,116 +226,33 @@
     </div>
     <!-- /.content area -->
 
-    <!-- Tambah News Modal -->
-    <div class="modal fade" id="formModalNews" tabindex="-1" aria-labelledby="formModalNews" aria-hidden="true">
+    <!-- Edit Status -->
+    <div class="modal fade" id="updateStatus" tabindex="-1" aria-labelledby="updateStatus" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-info" id="formModalNewsLabel">Tambah Berita</h5>
+                    <h5 class="modal-title text-info" id="updateStatusLabel">Update Status</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <?= form_open_multipart('Admin/tambahNews'); ?>
-                    <input type="hidden" class="form-control" id="id" name="id" required>
-                    <div class="form-group">
-                        <label for="nama" class="text-info">Judul Berita</label>
-                        <input type="text" class="form-control" id="judulBerita" name="judulBerita" required>
-                    </div>
-                    <div class="form-group" id="imageForEdit">
-                        <label for="image" class="text-info">Upload Gambar</label>
-                        <input type="file" class="form-control" id="image" name="image"></input>
-                    </div>
-                    <div class="form-group">
-                        <label for="desc" class="text-info">Isi Berita</label>
-                        <textarea class="form-control" id="isi" name="isi" required></textarea>
-                    </div>
+                    <form action="admin/ubahStatus" method="POST" id="updateStatus">
+                        <input type="hidden" class="form-control" id="id" name="id" required>
+                        <div class="form-group">
+                            <label for="status" class="text-info">Status</label>
+                            <select class="form-control" id="status" name="status">
+                                <option value="PENDING">PENDING</option>
+                                <option value="CONFIRM">CONFIRM</option>
+                                <option value="REJECT">REJECT</option>
+                            </select>
+                        </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-primary" id="tambahNews" onclick="Swal.fire('BERITA', 'Berita Berhasil Ditambahkan !', 'success')">Tambah Berita</button>
+                    <button type="submit" class="btn btn-primary" id="updateStatus" onclick="Swal.fire('UPDATED', 'Status Berhasil Di Update', 'success')">SUBMIT</button>
                 </div>
-                <?= form_close(); ?>
+                </form>
             </div>
         </div>
     </div>
-
-    <!-- Modal Detail News -->
-    <div class="modal fade" id="showDetailNews" tabindex="-1" role="dialog" aria-labelledby="showDetailNews" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <input type="hidden" class="form-control" id="id" name="id" required>
-                    <h5 class="modal-title" id="showDetailNewsLabel">Details</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container" id=showImageNews></div>
-                    <hr>
-                    <div class="container">
-                        <h6 id="detailNews" name="detailNews" style="text-align:center;"></h6>
-                    </div>
-                    <br>
-                    <!-- <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Change Image</span>
-                        </div>
-                        <?= form_open_multipart('Admin/ubahGambarNews'); ?>
-                        <div class="custom-file" style="background-color:powderblue;">
-                            <input type="file" id="image" name="image"></input>
-                            <button onclick="editGambar(<?= $game[0]['ID_NEWS']; ?>)" type="submit" class="btn btn-primary" id="ubahGambarNews">Ganti</button>
-                        </div>
-                        <?= form_close(); ?>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Sweet Alert Delete Confirmation -->
-    <script>
-        function deleteData(id) {
-            console.log(id);
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-                if (result.value) {
-                    $.ajax({
-                        type: "POST",
-                        url: "<?php echo base_url(); ?>admin/hapusNews",
-                        data: {
-                            id: id
-                        },
-                        success: function() {
-                            Swal.fire({
-                                title: "Konfirmasi",
-                                text: "Berita Berhasil Dihapus",
-                                icon: "success"
-                            });
-                            setTimeout(function() {
-                                window.location.href = "admin_news";
-                            }, 2000);
-                        },
-                        error: function() {
-                            Swal.fire({
-                                title: "Error",
-                                text: "Berita Tidak Bisa Dapat Dihapus",
-                                icon: "warning"
-                            });
-                        }
-
-
-                    });
-                }
-            })
-        }
-    </script>

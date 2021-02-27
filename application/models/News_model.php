@@ -7,6 +7,7 @@ class News_model extends CI_Model
     {
         $this->db->from('NEWS');
         $this->db->order_by('CREATED_DATE', 'DESC');
+        $this->db->order_by('ID_NEWS', 'DESC');
         $query = $this->db->get();
         return $query->result_array();
     }
@@ -15,7 +16,6 @@ class News_model extends CI_Model
     {
         $this->db->from('NEWS');
         $this->db->where('ID_NEWS', $id);
-        $this->db->order_by('CREATED_DATE', 'DESC');
         $query = $this->db->get();
         return $query->row_array();
     }
