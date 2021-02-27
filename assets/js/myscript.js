@@ -1,4 +1,4 @@
-var base_url = window.location.origin + "/garasigame";
+var base_url = window.location.origin + "";
 $(function() {
     // ------------------- JS FOR GENRE -------------------------
     $('.createNew').on('click', function() {

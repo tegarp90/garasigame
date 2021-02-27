@@ -100,8 +100,8 @@ class Login extends CI_Controller {
     public function validatereg() {
 
         if($this->input->is_ajax_request()){
-        	$this->form_validation->set_rules('email-reg', 'Email', 'trim|required|valid_email|is_unique[user.EMAIL]');
-			$this->form_validation->set_rules('username-reg', 'Username', 'trim|required|min_length[6]|is_unique[user.USERNAME]');
+        	$this->form_validation->set_rules('email-reg', 'Email', 'trim|required|valid_email|is_unique[USER.EMAIL]');
+			$this->form_validation->set_rules('username-reg', 'Username', 'trim|required|min_length[6]|is_unique[USER.USERNAME]');
 			$this->form_validation->set_rules('password-reg', 'Password', 'trim|required|min_length[6]');
 			$this->form_validation->set_rules('password-reg2', 'Confirm Password', 'trim|required|matches[password-reg]');
 
@@ -185,7 +185,7 @@ class Login extends CI_Controller {
     	$email = $this->input->get('email');
     	$token = $this->input->get('token');
 
-    	$user = $this->crud->get_where('user',['EMAIL' => $email])->row_array();
+    	$user = $this->crud->get_where('USER',['EMAIL' => $email])->row_array();
     	if($user){
     		$user_token = $this->crud->get_where('USER_TOKEN',['TOKEN' => $token])->row_array();
     		if ($user_token) {

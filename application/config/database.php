@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'sonya.jagoanhosting.com',
+	'hostname' => 'localhost',
 	'username' => 'garasig1_dashboard',
 	'password' => '6&#pZxEl$5nL',
 	'database' => 'garasig1_new',

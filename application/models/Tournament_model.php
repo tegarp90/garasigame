@@ -117,7 +117,6 @@ class Tournament_model extends CI_Model
             ->from('PESERTA_TOURNAMENT as a')
             ->join('TOURNAMENT as b', 'b.ID_TOURNAMENT = a.ID_TOURNAMENT');
         $this->db->where('b.ID_TOURNAMENT', $id);
-        $this->db->order_by('a.NAMA_TOURNAMENT', 'ASC');
         $this->db->order_by('a.STATUS', 'ASC');
         $this->db->order_by('a.CREATED_DATE', 'ASC');
         $query = $this->db->get();
