@@ -115,6 +115,7 @@ class Pages extends CI_Controller
 	{
 		$i = $_SESSION['username'];
 		$data = $this->crud->get_where('USER', ['USERNAME' => $i])->row_array();
+		$data['title'] = "Complete Your Profile";
 		$this->load->view('tamplate/header');
 		$this->load->view('contents/v_c_profil', $data);
 		$this->load->view('tamplate/footer');

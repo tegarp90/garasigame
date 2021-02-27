@@ -124,8 +124,10 @@ class Login extends CI_Controller {
 					'EMAIL'			=> $email,
 					'USERNAME' 		=> $username,
 					'PASSWORD' 		=> password_hash($password,PASSWORD_DEFAULT),
-					'CREATED_DATE' 	=> time(),
-					'UPDATE_DATE' 	=> time(),
+					'ID_GAME' 		=> rand(200000,1000000),
+					'AVATAR' 		=> "default.jpg",
+					'CREATED_DATE' 	=> date("Y-m-d"),
+					'UPDATE_DATE' 	=> date("Y-m-d"),
 					'STATUS'		=> 0,
 					 );
 

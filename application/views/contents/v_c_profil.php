@@ -10,7 +10,7 @@
               <div class="mb-3">
                 <h5 class="lead-2 fw-500 text-warning">Profile Picture</h5>
                 <div class="pb-5 w-100 text-light text-center">
-                  <div class="img-xl position-relative br-n bp-c bs-c article-image ar-1_1 mx-auto rounded-circle border border-secondary mb-6" style="background-image: url(assets/img/avatar/default.jpg)">
+                  <div class="img-xl position-relative br-n bp-c bs-c article-image ar-1_1 mx-auto rounded-circle border border-secondary mb-6" style="background-image: url(assets/img/avatar/<?= $AVATAR ?>)">
                     <span class="position-absolute b-0 r-0 text-secondary lead-3 d-block bg-warning p-2 rounded-circle lh-1"><input type="file" class="custom-file-input position-absolute l-0 t-0 b-0 h-auto" id="customFile"><i class="far fa-image"></i></span>
                   </div>
                   <h3><?= $USERNAME ?></h3>
@@ -53,7 +53,19 @@
                 <div class="form-group col-md-12">
                   <input class="form-control form-control-lg" type="text" name="p_number" placeholder="Phone Number">
                 </div>
-                
+                <div class="form-group col-md-12">
+                  <input class="form-control form-control-lg" type="date" name="birthday" placeholder="Birthday">
+                </div>
+                <div class="form-group col-md-12">
+                  <label class="radio-container">Male
+                    <input type="radio" checked="checked" name="gender" value="M">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="radio-container">Female
+                    <input type="radio" name="gender" value="F">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
               </div>
               <button class="btn btn-lg btn-warning" type="submit">Submit</button>
           </form>

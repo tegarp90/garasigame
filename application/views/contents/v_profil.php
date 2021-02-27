@@ -5,7 +5,7 @@
         <div class="release-subheader center">
           <div class="release-container">
             <div class="pb-3 w-100 text-light text-center profile-nav pt-3 mt-10">
-              <div class="img-xl position-relative br-n bp-c bs-c article-image ar-1_1 mx-auto rounded-circle border border-secondary mb-6" style="background-image: url(assets/img/avatar/default.jpg)">
+              <div class="img-xl position-relative br-n bp-c bs-c article-image ar-1_1 mx-auto rounded-circle border border-secondary mb-6" style="background-image: url(assets/img/avatar/<?= $AVATAR; ?>)">
                 <span class="position-absolute b-0 r-0 text-secondary lead-3 d-block bg-warning p-2 rounded-circle lh-1"><input type="file" class="custom-file-input position-absolute l-0 t-0 b-0 h-auto" id="customFile"><i class="far fa-image"></i></span>
               </div>
               <div class="w-100">
