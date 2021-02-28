@@ -45,4 +45,10 @@ class Crud extends CI_Model {
     {
         return $this->db->get_where($table,$where);
     }
+    public function input_foto($table, $data)
+    {
+        $this->db->set('foto', $data['foto']);
+        $this->db->where('nip', $data['nip']);
+        $this->db->update($table);
+    }
 }

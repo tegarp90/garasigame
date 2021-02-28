@@ -108,6 +108,25 @@
           });
 
         });
+
+        $('.upload_foto').click(function(e){
+          e.preventDefault();
+
+          $.ajax({
+            type: "GET",
+            url: "formlogin",
+            dataType: "json",
+            success: function (response) {
+              $('.view_modal').html(response.data).show();
+              
+              $('#userLogin').modal('show');
+            },
+            error: function(xhr, ajaxOptions, thrownError){
+              alert(xhr.status + "\n" + xhr.responseText + "\n" + thrownError);
+            }
+          });
+
+        });
         
       });
     </script>

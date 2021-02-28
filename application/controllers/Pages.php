@@ -43,7 +43,7 @@ class Pages extends CI_Controller
 				redirect('c_profil');
 			} else {
 				$data['numbering'] = 1;
-				$sessionid = $_SESSION['username'];
+				$sessionid = $_GET['user'];
 				$data['title'] = 'Profil Garasi Game';
 				$data['tournamentList'] = $this->Tournament_model->getAllTournamentForPeserta($sessionid);
 				$data['content'] = 'contents/v_profil';
@@ -116,7 +116,7 @@ class Pages extends CI_Controller
 		$i = $_SESSION['username'];
 		$data = $this->crud->get_where('USER', ['USERNAME' => $i])->row_array();
 		$data['title'] = "Complete Your Profile";
-		$this->load->view('tamplate/header');
+		$this->load->view('tamplate/header',$data);
 		$this->load->view('contents/v_c_profil', $data);
 		$this->load->view('tamplate/footer');
 	}

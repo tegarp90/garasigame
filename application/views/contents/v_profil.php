@@ -6,7 +6,7 @@
           <div class="release-container">
             <div class="pb-3 w-100 text-light text-center profile-nav pt-3 mt-10">
               <div class="img-xl position-relative br-n bp-c bs-c article-image ar-1_1 mx-auto rounded-circle border border-secondary mb-6" style="background-image: url(assets/img/avatar/<?= $AVATAR; ?>)">
-                <span class="position-absolute b-0 r-0 text-secondary lead-3 d-block bg-warning p-2 rounded-circle lh-1"><input type="file" class="custom-file-input position-absolute l-0 t-0 b-0 h-auto" id="customFile"><i class="far fa-image"></i></span>
+                <a class="upload_foto"><span class="position-absolute b-0 r-0 text-secondary lead-3 d-block bg-warning p-2 rounded-circle lh-1"><i class="far fa-image"></i></span></a>
               </div>
               <div class="w-100">
                 <h3><?= $NAMA; ?></h3>
@@ -26,14 +26,14 @@
             
               <div class="collapse navbar-collapse" id="navbarProfile">
                 <ul class="profile-tabs nav nav-tabs list-unstyled mb-0 d-flex justify-content-around w-100 flex-row" id="profile-tabs" role="tablist">
-                  <li class="py-2 py-lg-0">
+                  <!-- <li class="py-2 py-lg-0">
                     <a id="mp-2-01-tab" data-toggle="tab" href="#mp-2-01-c" role="tab" aria-controls="mp-2-01-c" aria-selected="true" class="profile-nav-link text-uppercase text-center active show">
                       <span class="pr-icon-nav ti-layout-cta-left lead-4 d-block mb-3"></span>
                       <span class="small-2 fw-400 ls-1">Posts</span>
                     </a>
-                  </li>
+                  </li> -->
                   <li class="py-2 py-lg-0">
-                    <a id="mp-2-01-tab" data-toggle="tab" href="#pageTournament" role="tab" aria-controls="pageTournament" aria-selected="true" class="profile-nav-link text-uppercase text-center">
+                    <a id="mp-2-01-tab" data-toggle="tab" href="#pageTournament" role="tab" aria-controls="pageTournament" aria-selected="true" class="profile-nav-link text-uppercase text-center ">
                       <span class="pr-icon-nav ti-cup lead-4 d-block mb-3"></span>
                       <span class="small-2 fw-400 ls-1">Tournaments</span>
                     </a>
@@ -45,9 +45,9 @@
                     </a>
                   </li>
                   <li class="py-2 py-lg-0">
-                    <a id="mp-2-06-tab" data-toggle="tab" href="#mp-2-06-c" role="tab" aria-controls="mp-2-06-c" aria-selected="false" class="profile-nav-link text-uppercase text-center">
+                    <a id="mp-2-06-tab" data-toggle="tab" href="#mp-2-06-c" role="tab" aria-controls="mp-2-06-c" aria-selected="false" class="profile-nav-link text-uppercase text-center active show">
                       <span class="pr-icon-nav ti-user lead-4 d-block mb-3"></span>
-                      <span class="small-2 fw-400 ls-1">Groups</span>
+                      <span class="small-2 fw-400 ls-1">Profile</span>
                     </a>
                   </li>
                 </ul>
@@ -74,7 +74,7 @@
           <!-- tab panes -->
           <div id="profile-tabs-content" class="tab-content position-relative w-100">
             <!-- tab item POSTS -->
-            <div class="tab-pane fade active show" id="mp-2-01-c" role="tabpanel" aria-labelledby="mp-2-01-tab">
+            <!-- <div class="tab-pane fade active show" id="mp-2-01-c" role="tabpanel" aria-labelledby="mp-2-01-tab">
               <div class="position-relative">
                 <div class="row">
                   <div class="col-lg-12 row">
@@ -86,11 +86,11 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <!-- /.tab item POSTS -->
 
             <!-- tab item POSTS -->
-            <div class="tab-pane fade active show" id="pageTournament" role="tabpanel" aria-labelledby="mp-2-01-tab">
+            <div class="tab-pane fade " id="pageTournament" role="tabpanel" aria-labelledby="mp-2-01-tab">
             <div class="row mb-8 mb-lg-10">
                     <div class="col-12">
                         <header class="text-center mb-6 mb-md-8">
@@ -1748,7 +1748,7 @@
             <!-- /.tab item -->
 
             <!-- tab item -->
-            <div class="tab-pane fade" id="mp-2-06-c" role="tabpanel" aria-labelledby="mp-2-06-tab">
+            <div class="tab-pane fade active show" id="mp-2-06-c" role="tabpanel" aria-labelledby="mp-2-06-tab">
               <div class="position-relative">
                 
                 <div class="row">

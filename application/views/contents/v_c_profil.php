@@ -40,7 +40,6 @@
         <div class="col-lg-7 text-light">
           <div class="mb-6">
             <h3>Complete Your Profile</h3>
-            <p class="lead-1">Morbi aliquet felis nec nisl congue interdum. Quisque vitae sapien ullamcorper.</p>
           </div>
           <form action="update/profil" class="input-transparent" method="POST">
               <div class="form-row">
@@ -55,6 +54,15 @@
                 </div>
                 <div class="form-group col-md-12">
                   <input class="form-control form-control-lg" type="date" name="birthday" placeholder="Birthday">
+                </div>
+                <div class="form-group col-md-6">
+                  <input class="form-control form-control-lg" type="text" name="facebook" placeholder="Facebook" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <input class="form-control form-control-lg" type="text" name="instagram" placeholder="Instagram" required>
+                </div>
+                <div class="form-group col-md-12">
+                  <textarea class="form-control" name="address" placeholder="Your Address"></textarea>
                 </div>
                 <div class="form-group col-md-12">
                   <label class="radio-container">Male
